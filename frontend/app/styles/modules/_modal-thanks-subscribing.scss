@@ -1,0 +1,54 @@
+.#{$prefix}-m-thanks-subscribing{
+	.modal-dialog{
+		.modal-content{
+			.modal-body{
+				button{
+					border-radius: 28px;
+					border: 1px solid $links;
+					width: 92px;
+					height: 42px;
+					background: $white;
+					color: $links;
+					font-size: 12px;
+					@include fontBold;
+					display: block;
+					margin: 1em auto;
+				}
+				h2{
+					font-size: 22px;
+					@include fontBold;
+					color: $header;
+				}
+				p{
+					font-size: 14px;
+					color: $paragraph-a;
+					margin: 2em 3em 3em 3em;
+				}
+				.close{
+					font-size: 30px;
+					color: $header;
+					margin: 0.1em 0.8em;
+				}
+			}
+		}
+	}
+	@include breakpoint('phone'){
+		.modal-dialog{
+			width: 100%;
+			margin: 0;
+			height: 100%;
+			.modal-content{
+				height: 100%;
+				.modal-body{
+					h2{
+						font-size: 22px;
+						margin-top: 3em;
+					}
+					p{
+						margin: 2em 1em 3em 1em
+					}
+				}
+			}
+		}
+	}
+}

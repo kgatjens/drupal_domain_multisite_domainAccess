@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="arrows131" sketch:type="MSLayerGroup" transform="translate(8.000000, 6.500000) rotate(-180.000000) translate(-8.000000, -6.500000) translate(-1.000000, -1.000000)" fill="#508FBB">
+            <g id="Group" transform="translate(1.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <path d="M14,0.5 L4,0.5 C2.896,0.5 2,1.396 2,2.5 L2,6.1 L4,4.5 L4,2.5 L14,2.5 L14,9.5 L11.75,9.5 L9.25,11.5 L14,11.5 C15.104,11.5 16,10.604 16,9.5 L16,2.5 C16,1.396 15.104,0.5 14,0.5 L14,0.5 Z" id="Shape"></path>
+                <path d="M3.55271368e-15,9.5 L5,13.5 L5,11.523 C8.54,11.488 12.033,8.399 12.033,4.476 C10.339,6.127 8.333,7.612 5,7.492 L5,5.5 L3.55271368e-15,9.5 L3.55271368e-15,9.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

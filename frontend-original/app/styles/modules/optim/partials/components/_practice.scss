@@ -1,0 +1,43 @@
+.our-practice{
+    @extend .what-hurts;
+
+    .view-our-practice{
+        @extend .view-what-hurts;
+
+        .view-header{
+            // font-family: $adr;
+            @include adelleRegular();
+            font-size: 14px;
+            color: #7D7D7D;
+            line-height: 32px;
+            width: 100%;
+            background: none;
+            float: none;
+            box-shadow: none;
+            height: auto;
+            position: inherit;
+            padding: 0;
+            @include breakpoint($desk-md){
+                width: 65%;
+            }
+        }
+
+        .view-content{
+            @extend .custom_content;
+            .views-row{
+                min-height: 320px;
+                @include breakpoint($tab){
+                    min-height: 340px;
+                }
+
+                .views-field-title{
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.node_practice{
+  @extend .node_condition;
+}

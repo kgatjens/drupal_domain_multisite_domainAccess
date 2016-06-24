@@ -1,0 +1,48 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layout, and design partials.
+////////////////////////
+
+////////////////////////
+// Base Import
+////////////////////////
+@import 'partials/global/base';
+
+////////////////////////
+// Import Style Guide
+////////////////////////
+@import 'partials/styleguide/style-guide';
+
+////////////////////////
+// Import Layout
+////////////////////////
+@import 'partials/layout/layout';
+
+////////////////////////
+// Import Design
+////////////////////////
+@import 'partials/design/design';
+
+////////////////////////
+// Import components
+////////////////////////
+@import 'partials/components/header';
+@import 'partials/components/home';
+@import 'partials/components/sidebar';
+@import 'partials/components/share';
+@import 'partials/components/footer';
+@import 'partials/components/search';
+@import 'partials/components/hurts';
+@import 'partials/components/practice';
+@import 'partials/components/treatments';
+@import 'partials/components/tips';
+@import 'partials/components/overlay';
+@import 'partials/components/appointment';
+@import 'partials/components/team';
+@import 'partials/components/locations';
+@import 'partials/components/contact';
+@import 'partials/components/newsletter';
+@import 'partials/components/testimonials';
+@import 'partials/components/offer';
+@import 'partials/components/static';

@@ -1,0 +1,138 @@
+.front{
+
+	#header{
+		position: relative;
+		z-index: 10;
+		margin-top: 2em;
+		margin-left: 1.5em;
+		@include breakpoint(668px){
+			margin-left: 5em;
+            margin-top: 3em;
+		}
+
+		.search_icon{
+			position: absolute;
+			right: 1.5em;
+			top: 0;
+			@include breakpoint($desk){
+				right: 3em;
+                top: 1rem;
+			}
+		}
+	}
+
+  .logo_light{
+    display: block;
+    max-width: 155px;
+    @include breakpoint(668px){
+      max-width: 100%;
+    }
+  }
+
+  .logo_dark{
+    display: none;
+  }
+}
+
+.not-front{
+  .header-wrapper{
+    background: #f5f5f5;
+
+    .logo_dark{
+      max-width: 155px;
+      @include breakpoint($desk){
+        max-width: 100%;
+      }
+    }
+
+    header#header{
+        @include fluid_layout;
+    }
+  }
+}
+
+.logo_light{
+  display: none;
+}
+
+.header-queue{
+    @include fluid_layout;
+}
+
+#page-title{
+  @include center_layout;
+  // font-family: $pnb;
+  @include pnovaBold();
+  color: $dark-blue;
+  width: 90%;
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  @include breakpoint($desk){
+    font-size: 36px;
+  }
+
+  @include breakpoint($desk-md){
+    font-size: 42px;
+  }
+}
+
+#block-menu-menu-top-menu{
+  margin-top: 1em;
+  @include breakpoint($desk){
+    margin-right: 2em;
+    margin-top: -2em;
+    float: right;
+  }
+  @include breakpoint($desk-md){
+    margin-right: 6em;
+  }
+  ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  ul{
+    li{
+      display: inline-block;
+      margin: 0 4px;
+
+      @include breakpoint($desk){
+        margin: 0 15px;
+      }
+      a{
+        // font-family: $pnb;
+        @include pnovaBold();
+        font-size: 12px;
+        color: #90BEDC;
+        line-height: 14px;
+        @include breakpoint($desk){
+          font-size: 14px;
+          line-height: 17px;
+        }
+        &.active{
+          color: #1E4166;
+        }
+      }
+    }
+  }
+}
+
+.not-front .search_icon{
+  float: right;
+  margin-top: -4.5em;
+  margin-right: 1em;
+  @include breakpoint($desk){
+    margin-top: -2.25em;
+    margin-right: 0;
+  }
+
+  a{
+    color: #1E4166;
+    @include breakpoint($desk){
+      color:#508FBB;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// core/_fonts.scss
+@mixin adelleBoldItalic() {
+  font-family: '#{$adellebold-italic}';
+}
+@mixin adelleRegular() {
+  font-family: '#{$adelle-regular}';
+}
+@mixin adelleBold() {
+  font-family:  '#{$adelle-bold}';
+}
+@mixin adelleItalic() {
+  font-family:  '#{$adelle-italic}';
+}
+
+@mixin pnovaBlack() {
+  font-family: '#{$pnova-black}';
+}
+@mixin pnovaBold() {
+  font-family: '#{$pnova-bold}';
+}
+@mixin pnovaBoldItalic() {
+  font-family: '#{$pnova-bold-italic}';
+}
+@mixin pnovaExtraBold() {
+  font-family: '#{$pnova-extrabold}';
+}
+@mixin pnovaLight() {
+  font-family: '#{$pnova-light}';
+}
+@mixin pnovaLightItalic() {
+  font-family: '#{$pnova-light-italic}';
+}
+@mixin pnovaRegItalic() {
+  font-family: '#{$pnova-regitalic}';
+}
+@mixin pnovaRegular() {
+  font-family: '#{$pnova-regular}';
+}
+@mixin pnovaSemiBold() {
+  font-family: '#{$pnova-semibold}';
+}
+@mixin pnovaSemiBoldItalic() {
+  font-family: '#{$pnova-semibold-italic}';
+}
+@mixin pnovacondLight() {
+  font-family: '#{$pnovacond-light}';
+}
+@mixin pnovacondLightItalic() {
+  font-family: '#{$pnovacond-lightit}';
+}
+@mixin pnovacondRegular() {
+  font-family: '#{$pnovacond-regular}';
+}
+@mixin pnovacondRegularItalic() {
+  font-family: '#{$pnovacond-regularit}';
+}
+@mixin pnovacondSemiBold() {
+  font-family: '#{$pnovacond-semibold}';
+}
+@mixin pnovacondSemiBoldItalic() {
+  font-family: '#{$pnovacond-semiboldit}';
+}
+
+
+@mixin breakpoint($points) {
+  @each $point in $points {
+    @if $point == large {
+      @media (min-width: $screen-lg-min) { @content; }
+    }
+    @else if $point == desktop {
+      @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) { @content; }
+    }
+    @else if $point == tablet {
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+    }
+    @else if $point == phone {
+      @media (max-width: $screen-xs-max)  { @content; }
+    }
+  }
+}
+
+@mixin retinabg($img, $width: 0, $height: 0) {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+    background-image: $img;
+    @if $width != 0 {
+      background-size: $width $height;
+    }
+    @if $width == 0 {
+      background-size: contain;
+    }
+  }
+}
+
+

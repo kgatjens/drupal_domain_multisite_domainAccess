@@ -1,0 +1,438 @@
+.what-hurts{
+    #page-title{
+        margin-bottom: 0;
+    }
+
+    .view-what-hurts{
+        @include center_layout;
+        position: relative;
+
+        .views-row{
+            background: $white;
+            max-width: 95%;
+            width: 100%;
+            display: inline-block;
+            box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.10);
+            border-radius: 3px;
+            vertical-align: top;
+            text-align: left;
+            margin-bottom: 1em;
+            position: relative;
+            min-height: auto;
+            transform: scale(1);
+            transition: transform 0.15s linear;
+            padding-bottom: 58px;
+            @include breakpoint($tab){
+                margin: 0 5px;
+                margin-bottom: 1em;
+            }
+            @include breakpoint(960px){
+                max-width: 46%;
+                min-height: 450px;
+            }
+            @include breakpoint($desk){
+                margin-right: 1%;
+                margin-left: 0;
+                max-width: 32%;
+            }
+
+            @include breakpoint($desk-hd){
+                max-width: 340px;
+                min-height: 475px;
+            }
+
+            &:nth-child(3n){
+                @include breakpoint($desk){
+                    margin-right: 0;
+                }
+            }
+
+            &:hover{
+                transform: scale(1.04);
+            }
+
+            .views-field-title a{
+                color: $dark-blue;
+                // font-family: $pnb;
+                @include pnovaBold();
+                font-size: 2rem;
+                line-height: 0;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .views-field-body,
+            .views-field-views-conditional-2{
+                // font-family: $adelle-regular;
+                @include adelleRegular();
+                font-size: 14px;
+                color: #7D7D7D;
+                line-height: 20px;
+            }
+
+            .views-field-view-node a,
+            .views-field-views-conditional-2 a{
+                // font-family: $pnb;
+                @include pnovaBold();
+                color: $mild-blue;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 17px;
+                background: url('../images/svg/arrow_right_ico.svg') no-repeat left center;
+                background-size: 15px;
+                padding-left: 1.5em;
+                display: block;
+                margin: 0.75em 0;
+            }
+
+            .views-field-views-conditional-2 a{
+                padding: 1em;
+                padding-left: 1.5em;
+            }
+
+            .card_buttons{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                border-top: 1px solid #d3d3d3;
+            }
+
+            .card_button{
+                // font-family: $pnb;
+                @include pnovaBold();
+                line-height: 17px;
+                font-size: 14px;
+                text-transform: uppercase;
+                float: left;
+                height: 58px;
+                width: 50%;
+                text-align: center;
+
+                &.full-width{
+                    width: 100%;
+                }
+                p{
+                    margin: 0;
+                }
+
+                a{
+                    text-decoration: none;
+                    line-height: 58px;
+                }
+            }
+
+            .views-field-title,
+            .views-field-body,
+            .views-field-view-node,
+            .views-field-views-conditional-2{
+                padding: 0 24px;
+            }
+
+            .views-field-title{
+                padding-top: 24px;
+            }
+
+            .views-field-body{
+                padding-bottom: 0;
+            }
+
+            .views-field-views-conditional img,
+            .views-field-field-image img{
+                width: 100%;
+                height: auto;
+                border-radius: 3px 3px 0px 0px;
+            }
+
+            .card_download{
+                border-right: 1px solid #d3d3d3;
+            }
+
+            .views-field-views-conditional{
+                position: relative;
+
+                .play-overlay{
+                    position: absolute;
+                    display: none;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    #views-exposed-form-what-hurts-page-1{
+        @include long_search;
+    }
+
+    .views-widget-filter-title{
+        max-width: 100%;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .view-header + .view-content,
+    .view-filters + .view-content,
+    .custom_content{
+        margin-top: 2rem;
+        text-align: center;
+        @include breakpoint($tab){
+            padding:0;
+            text-align: left;
+        }
+        @include breakpoint($desk){
+            margin: 0;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .view-filters{
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        @include breakpoint($desk){
+            width: 100%;
+        }
+    }
+
+    .view-header{
+        // font-family: $pnb;
+        @include pnovaBold();
+        background: $white;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+        padding: 0;
+        height: 58px;
+        max-width: 95%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 3px;
+        @include breakpoint($desk){
+            width: 32%;
+            top: 0.5em;
+            padding-left: 0.5em;
+            right: 0.7rem;
+            text-align: left;
+            position: absolute;
+        }
+        @include breakpoint($desk-md){
+            right: 1.4rem;
+            padding-left: 2em;
+        }
+
+        .view-what-hurts-tabs{
+            @include breakpoint($tab){
+                text-align: center;
+            }
+
+            @include breakpoint($desk-md){
+                text-align: left;
+            }
+        }
+
+        .views-row{
+            box-shadow: none;
+            background: none;
+            width: auto;
+            height: auto;
+            margin-right: 0 !important;
+            margin-left: 0;
+            position: initial;
+            max-width: 100%;
+            min-width: auto;
+            min-height: auto;
+            transform: none;
+
+            &:hover{
+                transform: none;
+            }
+
+            &-2 .views-field:first-child{
+                display: none;
+            }
+        }
+
+        .views-field{
+            display: inline-block;
+            padding: 0 !important;
+            border: 0 !important;
+            margin: 0 1.25em;
+            width: auto !important;
+            @include breakpoint($desk){
+                margin: 0 0.25em;
+            }
+            @include breakpoint($desk-md){
+                margin: 0 1.25em;
+            }
+        }
+
+        a{
+            // font-family: $pnb;
+            @include pnovaBold();
+            text-decoration: none;
+            color: $light-gray;
+            background: none;
+            box-shadow: none;
+            line-height: 58px;
+            text-transform: uppercase;
+
+            &.active{
+                color: $dark-blue;
+            }
+        }
+    }
+
+    .header-queue{
+        padding: 0 !important;
+        p{
+            @include header_text;
+            line-height: 32px;
+        }
+    }
+}
+
+.node_condition{
+    top: -0.5em;
+    padding-right: 0 !important;
+    height: auto;
+    @include breakpoint(737px){
+        height: 100vh;
+    }
+
+    #overlay-close-wrapper{
+        @include overlay_close_wrapper;
+
+        #overlay-close{
+            @include close_button(25, 25);
+        }
+    }
+
+    #overlay-title{
+        display: none;
+    }
+
+    #overlay-content{
+        padding: 0;
+        background: #f5f5f5;
+        @include breakpoint(737px){
+            background: white;
+        }
+        @include breakpoint($desk){
+            padding-left: 5em;
+            padding-bottom: 3em;
+        }
+    }
+
+    #main{
+        margin-top: 2em;
+        height: 100vh;
+        @include breakpoint($desk){
+            margin-top: 5em;
+        }
+    }
+
+    #block-system-main{
+        float: none;
+        background: #f5f5f5;
+        @include breakpoint(737px){
+            height: 82vh;
+            overflow-y: scroll;
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar{
+            @include scrollbar;
+        }
+
+        &::-webkit-scrollbar-track{
+            @include scrollbar_track;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            @include scrollbar_thumb;
+        }
+    }
+
+    iframe{
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .node .content{
+        @include breakpoint($tab){
+            padding: 0 1em;
+        }
+        @include breakpoint($desk){
+            padding: 0 2em;
+        }
+    }
+
+    h1#page-title{
+        margin: 0 0 0.5em !important;
+        padding-left: 2.5rem;
+        margin-top: 7rem !important;
+        font-size: 32px;
+        @include breakpoint($desk){
+            width: 66.10169%;
+            padding-left: 5.5rem;
+        }
+    }
+
+    .field-name-field-image,
+    .field-name-field-moa-thumb{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .field-name-field-pdf {
+        margin-bottom: 4em;
+    }
+
+    .field-name-body{
+        padding: 0 1em;
+        // font-family: $adelle-regular;
+        @include adelleRegular();
+        color: #404040;
+        font-size: 18px;
+        line-height: 36px;
+        overflow: hidden;
+    }
+
+    .views-field-field-pdf,
+    .views-field-nothing{
+        // font-family: $pnb;
+        @include pnovaBold();
+        font-size: 14px;
+        color: #508FBB;
+        line-height: 17px;
+        display: inline-block;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        width: 40%;
+        text-align: right;
+        @include breakpoint($tab){
+            width: 25%;
+            text-align: left;
+            margin-left: 2rem;
+        }
+    }
+
+    .field-name-field-treatment{
+        .field-item{
+            display: inline-block;
+            margin-right: 10px;
+            a:after{
+                content: ",";
+                line-height: 2;
+            }
+
+            &:last-child a:after{
+                content: "";
+            }
+        }
+    }
+}
+
+

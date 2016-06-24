@@ -1,0 +1,98 @@
+#single-page{
+	a{
+		color: $links;
+		@include setThemeColors(links, links);
+	}
+	.the-permalink{
+		@include setThemeColors(cardButton);
+	}
+	h1, h2, p{
+		margin: 0;
+	}
+	h1{
+		font-size: 36px;
+		line-height: 44px;
+		text-transform: initial;
+	}
+	h2, cite, .cite{
+		color: #1E4166;
+		@include setThemeColors(mainColor);
+		font-size: 24px;
+		line-height: 32px;
+		@include fontBold;
+		a{
+			color: $header;
+		}
+	}
+	p, p a, li a{
+		color: $general-paragraph;
+		@each $theme, $map in $themes {
+		  .#{$theme} &{
+		    color: map-get($map, general-paragraph);
+		  }
+		}
+	}
+	p, li{
+		font-size: 14px;
+		@include fontARegular;
+		line-height: 32px;
+		margin-bottom: 13px;
+	}
+	ol, ul{
+		padding-left: 0;
+		list-style-position: inside;
+
+		li{
+			margin-bottom: 0;
+		}
+	}
+
+	.post-date{
+		@include fontBRegular;
+		margin-bottom: 0;
+	}
+	img{
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 0 30px;
+	}
+	.share-action{
+		@include fontBold;
+		color: #5090BD;
+		line-height: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		@include onHover;
+		@include setThemeColors(links, links);
+	}
+// Work-comp
+	&.work-comp{
+		h1{
+			margin-bottom: 20px;
+		}
+		h2{
+			margin: 20px 0;
+		}
+		a{
+			color: $links;
+			@include setThemeColors(links);
+		}
+	}
+	.media_embed{
+		margin-bottom: 13px;
+	}
+
+	//pages by category
+	&.patient-support{
+		.cards{
+			margin-bottom: 20px;
+		}
+		.panel{
+			h2{
+				padding: 20px;
+			}
+		}
+	}
+
+}
+

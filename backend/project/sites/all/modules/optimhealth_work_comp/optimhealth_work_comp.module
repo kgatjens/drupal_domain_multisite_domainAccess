@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the optimhealth_work_comp feature.
+ */
+
+include_once 'optimhealth_work_comp.features.inc';

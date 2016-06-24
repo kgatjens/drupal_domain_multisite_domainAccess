@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11//EN
+N:Healthcare;Optim;;;
+FN:Optim Healthcare
+ORG:Healthcare;
+TEL;type=pref:800.827.6536
+item1.TEL:912.644.5240
+item1.X-ABLabel:Referral Fax
+ADR;type=WORK;type=pref:;;210 East DeRenne Avenue;Savannah;GA;31405;USA
+item2.URL;type=pref:www.OptimHealth.com
+item2.X-ABLabel:_$!<HomePage>!$_
+item3.URL:Info@OptimHealth.com
+item3.X-ABLabel:Email
+UID:5113e85414117c07
+X-ABUID:FC0A3D89-30A1-4548-89F7-E1D62AD70939:ABPerson
+END:VCARD

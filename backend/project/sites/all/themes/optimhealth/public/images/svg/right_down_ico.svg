@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="510px" height="510px" viewBox="0 0 510 510" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>play-circle-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="right_ico" sketch:type="MSLayerGroup" fill="#508FBB">
+            <g id="play-circle-outline" transform="translate(255.000000, 255.000000) scale(1, -1) rotate(-90.000000) translate(-255.000000, -255.000000) " sketch:type="MSShapeGroup">
+                <path d="M204,369.75 L357,255 L204,140.25 L204,369.75 L204,369.75 Z M255,0 C114.75,0 0,114.75 0,255 C0,395.25 114.75,510 255,510 C395.25,510 510,395.25 510,255 C510,114.75 395.25,0 255,0 L255,0 Z M255,459 C142.8,459 51,367.2 51,255 C51,142.8 142.8,51 255,51 C367.2,51 459,142.8 459,255 C459,367.2 367.2,459 255,459 L255,459 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

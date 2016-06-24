@@ -1,0 +1,1274 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Spine Optim Health</title>
+        <meta name="description" content="description">
+        <meta name="keywords" content="webapp, templates, es6">
+        <meta name="author" content="">
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        <script src="https://maps.google.com/maps/api/js"></script>
+        <script type="text/javascript" src="https://www.swarminteractive.com/js/vm.js"></script>
+        <style>
+        .temp-divider {
+        height: 2px;
+        margin: 10px 0px;
+        display: block;
+        width: 100%;
+        background-color: #508FBB;
+        }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div style="height: 0; width: 0; position: absolute; top: 0; visibility: hidden;">
+            <!-- inject:svg -->
+<svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow-left" viewBox="0 0 15 13"><title>Line + Line + Line Copy</title><g stroke-linecap="round" stroke="#1E4166" stroke-width="3" fill="none" fill-rule="evenodd"><path d="M1.5 6.5h12M1.5 6.5l5-5M6.5 11.5L1.983 6.983"/></g></symbol><symbol id="directions" viewBox="110.4 106.4 67.2 67.2"><path fill="#508FBB" d="M110.4 140c0 18.6 15 33.6 33.6 33.6s33.6-15 33.6-33.6-15-33.6-33.6-33.6-33.6 15-33.6 33.6zm59.9 0c0 14.5-11.8 26.3-26.3 26.3s-26.3-11.8-26.3-26.3 11.8-26.3 26.3-26.3 26.3 11.8 26.3 26.3zm-40.4-6.6v13.1h14.9v8.2l13.9-14.8-13.9-14.8v8.2h-14.9z"/></symbol><symbol id="info_ico" viewBox="0 0 100 100"><path d="M62.162 0c6.696 0 10.043 4.567 10.043 9.789 0 6.522-5.814 12.555-13.391 12.555-6.344 0-10.045-3.752-9.869-9.947C48.945 7.176 53.35 0 62.162 0zM41.543 100c-5.287 0-9.164-3.262-5.463-17.615l6.07-25.457c1.057-4.077 1.23-5.707 0-5.707-1.588 0-8.451 2.816-12.51 5.59L27 52.406C39.863 41.48 54.662 35.072 61.004 35.072c5.285 0 6.168 6.361 3.525 16.148L57.58 77.98c-1.234 4.729-.703 6.359.527 6.359 1.586 0 6.787-1.963 11.896-6.041L73 82.377C60.488 95.1 46.83 100 41.543 100z" fill="#1f4265"/></symbol><symbol id="info_ico_2" viewBox="0 0 543.906 543.906"><path d="M271.953 0C121.759 0 0 121.759 0 271.953s121.759 271.953 271.953 271.953 271.953-121.759 271.953-271.953S422.148 0 271.953 0zm45.041 76.316a31.943 31.943 0 0 1 3.231 0c14.724-.484 27.533 10.622 29.578 24.987 6.576 27.581-22.719 55.228-49.631 44.192-32.14-14.919-15.948-67.586 16.822-69.179zm-13.255 120.002c20.875-1.327 24.519 22.964 18.014 47.592-12.695 56.583-32.455 111.403-43.175 168.442 5.178 22.523 33.575-3.312 45.721-11.558 10.329-8.213 12.124 2.083 15.637 10.71-25.776 18.058-51.687 36.447-80.395 50.991-26.972 16.361-49.049-9.072-42.321-37.394 11.128-52.841 25.776-104.882 37.736-157.564 3.737-28.468-33.728.511-44.872 7.136-8.985 11.292-13.25 3.051-16.997-7.136 29.871-21.816 60.325-48.593 93.313-65.949 6.738-3.35 12.52-4.966 17.339-5.27z" fill="#508fbb"/></symbol><symbol id="map_fold_ico" viewBox="0 0 413 400"><title>Group</title><g fill="currentColor" fill-rule="evenodd"><path d="M126.192 348.953c0 4.438-3.857 9.44-8.571 11.119L8.572 398.861C3.856 400.539 0 398.279 0 393.84V51.399c0-4.438 3.856-9.441 8.572-11.119L117.621 1.49c4.714-1.677 8.571.582 8.571 5.021v342.442zM269.271 393.841c0 4.438-3.857 6.697-8.572 5.021l-109.048-38.79c-4.715-1.678-8.571-6.682-8.571-11.117V6.51c0-4.438 3.856-6.697 8.571-5.021l109.048 38.79c4.715 1.678 8.572 6.682 8.572 11.119v342.443zM412.351 348.953c0 4.438-3.854 9.44-8.571 11.119l-109.05 38.789c-4.715 1.678-8.571-.582-8.571-5.021V51.399c0-4.438 3.856-9.441 8.571-11.119L403.779 1.49c4.717-1.677 8.571.582 8.571 5.021v342.442h.001z"/></g></symbol><symbol id="optim_icon" viewBox="38.5 120.2 24.8 33"><path fill="#1E4166" d="M50.9 120.2c-6.8 0-12.4 5.5-12.4 12.3s10.2 20.7 12.4 20.7 12.4-14 12.4-20.7c0-6.8-5.6-12.3-12.4-12.3zm0 19.2c-4 0-7.2-3.2-7.2-7.2s3.2-7.2 7.2-7.2 7.2 3.2 7.2 7.2c.1 3.9-3.2 7.2-7.2 7.2z"/></symbol><symbol id="optim_logo_dark" viewBox="0 0 239 42"><path fill="#90BEDC" d="M24.2.7c-4.9-1.1-9.9.6-12.7 5.2-.2.3 0 .4.2.2L12.8 5c3-3.1 5.9-3.4 9-2.9 6.2 1.1 9.9 9.1 8.2 17.5-.5 2.7-1.5 5.1-2.9 7.1 3 .1 5.7-.6 8-1.7C37.2 13 32.4 2.5 24.2.7"/><path fill="#508FBB" d="M42.1 23.5c1.1-4.8-.6-9.8-5.3-12.5-.3-.1-.4 0-.2.2l1.1 1.1c3.1 3 3.4 5.9 2.9 8.9-1.1 6.1-9.2 9.8-17.6 8.1-2.7-.5-5.1-1.5-7.2-2.8-.1 2.9.6 5.7 1.8 7.9 12.1 2 22.7-2.8 24.5-10.9"/><path fill="#1E4166" d="M18.7 41c4.9 1.1 9.9-.6 12.7-5.2.1-.3 0-.4-.2-.2l-1.1 1.1c-3 3.1-5.9 3.4-9 2.9-6.2-1.1-9.8-9.1-8.2-17.5.5-2.7 1.5-5.1 2.8-7.1-3-.1-5.7.6-8 1.7-2 11.9 2.9 22.5 11 24.3"/><path fill="#508FBB" d="M.8 18.5c-1.1 4.8.6 9.8 5.3 12.5.3.1.4 0 .2-.2l-1.1-1.1c-3.1-3-3.4-5.9-2.9-8.9 1.1-6.1 9.2-9.8 17.6-8.1 2.7.5 5.1 1.5 7.2 2.8.1-3-.6-5.7-1.8-7.9-12-2-22.7 2.8-24.5 10.9"/><path fill="#1E4166" d="M32.6 35.5c0-.7.5-1.2 1.2-1.2s1.2.6 1.2 1.2c0 .7-.5 1.2-1.2 1.2s-1.2-.5-1.2-1.2zm2.3 0c0-.6-.5-1.1-1.1-1.1-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1zm-1.6-.6h.6c.2 0 .3 0 .4.1.1.1.1.1.1.2 0 .2-.1.3-.3.4l.4.5h-.2l-.4-.5h-.3v.5h-.2v-1.2h-.1zm.6.6c.2 0 .3-.1.3-.2s-.1-.2-.3-.2h-.4v.4h.4zM52 23c0-5.6 4.4-10.2 10.3-10.2s10.3 4.5 10.3 10v.1c0 5.5-4.4 10-10.4 10-5.8 0-10.2-4.4-10.2-9.9zm16.3 0c0-3.5-2.5-6.3-5.9-6.3-3.6 0-5.8 2.8-5.8 6.1v.1c0 3.4 2.5 6.2 5.9 6.2 3.5 0 5.8-2.8 5.8-6.1zM74.7 13.3h4.6v3.1c1.5-1.9 3.5-3.5 6.7-3.5 4.7 0 9.3 3.5 9.3 9.6v.1c0 6.1-4.5 9.9-9.3 9.9-3.3 0-5.3-1.5-6.7-3.2v7.1h-4.6V13.3zm16 9.2c0-3.6-2.6-6-5.7-6s-5.8 2.4-5.8 5.9v.1c0 3.6 2.7 5.9 5.8 5.9 3.1 0 5.7-2.2 5.7-5.9zM98.4 27.5V16.9h-2.5v-3.6h2.5V8.7h4.6v4.6h5.3v3.6H103v10c0 1.6.9 2.3 2.4 2.3 1 0 1.9-.2 2.8-.6V32c-1.1.6-2.4.9-4.1.9-3.4 0-5.7-1.3-5.7-5.4M111.2 13.2h4.6v19.5h-4.6V13.2zM119.2 13.2h4.6v3c1.3-1.6 3-3.2 6.1-3.2 2.9 0 4.9 1.3 5.9 3.3 1.6-2 3.7-3.3 6.7-3.3 4.3 0 7 2.6 7 7.1v12.7h-4.6V21.4c0-2.9-1.5-4.5-4-4.5s-4.3 1.6-4.3 4.6v11.4H132V21.4c0-2.9-1.5-4.5-4-4.5s-4.2 1.7-4.2 4.6v11.3h-4.6V13.2M164.1 21.7c-2.5-.7-5.1-1.4-5.1-3.4v-.1c0-1.8 1.7-3.1 4.1-3.1 1.8 0 3.8.6 5.6 1.8l.1.1 1.1-1.7-.1-.1c-1.9-1.3-4.5-2-6.7-2-3.7 0-6.3 2.2-6.3 5.2v.1c0 3.3 3.4 4.3 6.3 5.2h.2c2.6.7 4.8 1.5 4.8 3.5v.1c0 2-1.8 3.3-4.3 3.3-2.3 0-4.5-.8-6.6-2.4l-.1-.1-1.2 1.7.1.1c2 1.6 5.1 2.7 7.7 2.7 3.8 0 6.6-2.3 6.6-5.5V27c0-3.3-3.1-4.4-6.2-5.3M183.1 13.1c-3 0-5.5 1.4-7.5 4.2v-3.8h-2.1V38h2.1v-9.4c1.9 2.7 4.5 4.1 7.5 4.1 4.5 0 9.2-3.7 9.2-9.8v-.1c0-3.6-1.6-5.9-2.9-7.1-1.7-1.7-4-2.6-6.3-2.6zm7 9.8c0 4.6-2.9 7.8-7.1 7.8-4.6 0-7.4-4-7.4-7.8v-.1c0-4.8 3.9-7.8 7.4-7.8 4 .1 7.1 3.4 7.1 7.9zM195.6 13.5h2.1v18.7h-2.1V13.5zM210.9 13.1c-2.9 0-5.1 1.2-6.6 3.5v-3h-2.1v18.7h2.1V21.5c0-3.7 2.7-6.4 6.3-6.4 3.5 0 5.8 2.3 5.8 6.1v11.1h2.1V20.9c0-4.8-3-7.8-7.6-7.8M230.1 13.1c-5 0-9 4.3-9 9.8v.1c0 5.6 4 9.8 9.3 9.8 3.2 0 5.5-1.1 7.8-3.5l.1-.1-1.5-1.3-.1.1c-1.8 1.9-3.8 2.8-6.3 2.8-3.9 0-6.8-2.8-7.1-6.9h15.4v-.1-.7c.1-6-3.4-10-8.6-10zm-6.7 8.8c.4-4 3.2-6.8 6.7-6.8 4.4 0 6.2 3.6 6.5 6.8h-13.2z"/></symbol><symbol id="optim_logo_light" viewBox="0 0 239 42"><title>optim_logo_white</title><g fill="#FFF" fill-rule="evenodd"><path d="M24.227.661c-4.855-1.082-9.903.55-12.664 5.225-.152.298.032.366.236.193.22-.186.51-.508 1.079-1.077 3.027-3.051 5.943-3.417 8.998-2.877 6.2 1.101 9.852 9.078 8.2 17.459-.526 2.667-1.529 5.076-2.852 7.082 2.982.056 5.748-.565 7.97-1.746C37.225 13.009 32.371 2.476 24.226.661"/><path d="M42.134 23.512c1.094-4.808-.558-9.805-5.279-12.54-.3-.148-.37.033-.197.234.19.22.514.506 1.093 1.069 3.08 2.997 3.45 5.88 2.902 8.907-1.11 6.139-9.168 9.755-17.635 8.114-2.694-.517-5.127-1.509-7.153-2.818-.058 2.95.57 5.688 1.762 7.888 12.035 2.012 22.673-2.793 24.507-10.854"/><path d="M18.724 40.995c4.856 1.083 9.904-.55 12.668-5.222.15-.3-.033-.371-.239-.196-.22.189-.51.507-1.077 1.079-3.027 3.05-5.943 3.415-9 2.874-6.199-1.099-9.85-9.077-8.198-17.457.526-2.667 1.527-5.076 2.849-7.08-2.98-.057-5.744.563-7.967 1.744-2.033 11.913 2.822 22.445 10.964 24.259"/><path d="M.799 18.49c-1.094 4.81.558 9.805 5.279 12.54.3.15.37-.033.195-.236-.19-.217-.512-.504-1.09-1.067-3.08-2.996-3.45-5.881-2.903-8.909 1.11-6.136 9.169-9.752 17.635-8.115 2.694.52 5.126 1.513 7.151 2.822.06-2.952-.567-5.688-1.762-7.888C13.273 5.623 2.632 10.431.8 18.49M32.556 35.528v-.006c0-.668.549-1.225 1.242-1.225.695 0 1.235.551 1.235 1.219v.006c0 .667-.547 1.226-1.242 1.226a1.224 1.224 0 0 1-1.235-1.22zm2.365-.006v-.006a1.11 1.11 0 0 0-1.123-1.115c-.642 0-1.129.507-1.129 1.121v.006c0 .614.484 1.114 1.122 1.114.643 0 1.13-.508 1.13-1.12zm-1.613-.664h.57c.159 0 .292.05.375.133a.325.325 0 0 1 .101.244v.007c0 .202-.136.323-.325.366l.39.506h-.231l-.367-.473h-.324v.473h-.189v-1.256zm.552.617c.177 0 .3-.082.3-.222v-.008c0-.132-.109-.218-.29-.218h-.373v.448h.363zM52.04 22.973v-.07c0-5.522 4.4-10.087 10.345-10.087 5.944 0 10.305 4.494 10.305 10.014v.073c0 5.48-4.4 10.045-10.379 10.045-5.906 0-10.27-4.492-10.27-9.975zm16.211 0v-.07c0-3.397-2.458-6.212-5.94-6.212-3.559 0-5.832 2.775-5.832 6.139v.073c0 3.36 2.456 6.207 5.906 6.207 3.595 0 5.866-2.811 5.866-6.137zM74.742 13.264h4.554v3.075c1.469-1.925 3.54-3.464 6.74-3.464 4.704 0 9.258 3.464 9.258 9.576v.07c0 6.117-4.518 9.928-9.259 9.928-3.279 0-5.344-1.536-6.74-3.247v7.134h-4.553V13.264zm15.921 9.258v-.07c0-3.563-2.596-5.905-5.683-5.905-3.085 0-5.799 2.377-5.799 5.904v.07c0 3.564 2.714 5.906 5.8 5.906 3.127 0 5.682-2.272 5.682-5.905zM98.361 27.53V16.897H95.84v-3.633h2.522V8.71h4.553v4.554h5.344v3.633h-5.344v9.967c0 1.642.904 2.306 2.448 2.306a6.58 6.58 0 0 0 2.82-.624v3.457c-1.127.593-2.406.945-4.097.945-3.353 0-5.724-1.367-5.724-5.418M111.231 13.219h4.553v19.538h-4.553V13.219zM119.212 13.219h4.556v3.006c1.276-1.643 3.008-3.181 6.06-3.181 2.857 0 4.855 1.291 5.908 3.25 1.62-1.959 3.723-3.25 6.735-3.25 4.328 0 6.963 2.553 6.963 7.062v12.721h-4.552v-11.43c0-2.936-1.47-4.505-4.028-4.505-2.484 0-4.256 1.606-4.256 4.573v11.362h-4.552V21.364c0-2.866-1.505-4.472-4.03-4.472-2.52 0-4.248 1.744-4.248 4.612v11.323h-4.556V13.22M164.08 21.682c-2.49-.71-5.066-1.444-5.066-3.426v-.072c0-1.801 1.676-3.058 4.076-3.058 1.842 0 3.844.644 5.638 1.815l.133.087 1.116-1.74-.127-.084c-1.914-1.264-4.478-2.048-6.689-2.048-3.699 0-6.282 2.156-6.282 5.245v.072c0 3.345 3.368 4.309 6.34 5.158l.156.045c2.631.734 4.81 1.507 4.81 3.534v.072c0 1.97-1.782 3.347-4.33 3.347-2.283 0-4.496-.803-6.578-2.387l-.126-.096-1.242 1.654.116.093c2.037 1.644 5.069 2.707 7.721 2.707 3.809 0 6.573-2.329 6.573-5.535v-.072c0-3.303-3.082-4.435-6.238-5.311M183.11 13.084c-3.035 0-5.493 1.375-7.504 4.2v-3.767h-2.1v24.498h2.1v-9.402c1.934 2.695 4.456 4.059 7.503 4.059 4.524 0 9.201-3.663 9.201-9.795v-.072c0-3.597-1.57-5.87-2.888-7.141-1.697-1.64-3.998-2.58-6.313-2.58zm6.954 9.793v.073c0 4.543-2.935 7.716-7.138 7.716-4.589 0-7.429-4.024-7.429-7.752v-.072c0-4.788 3.856-7.752 7.43-7.752 4.068 0 7.137 3.348 7.137 7.787zM195.641 13.517h2.1v18.722h-2.1V13.517zM210.93 13.084c-2.853 0-5.055 1.165-6.553 3.462v-3.029h-2.1v18.722h2.1V21.433c0-3.657 2.708-6.416 6.299-6.416 3.547 0 5.751 2.349 5.751 6.127V32.24h2.1v-11.42c0-4.699-2.982-7.735-7.596-7.735M230.149 13.084c-5.036 0-8.981 4.287-8.981 9.758v.072c0 5.563 3.986 9.758 9.272 9.758 3.162 0 5.497-1.05 7.808-3.515l.11-.116-1.474-1.288-.103.11c-1.828 1.937-3.82 2.839-6.268 2.839-3.852 0-6.76-2.849-7.124-6.948h15.393l.018-.135c.038-.299.038-.41.038-.742 0-5.765-3.573-9.793-8.69-9.793zm-6.759 8.773c.389-3.973 3.178-6.84 6.685-6.84 4.382 0 6.234 3.646 6.505 6.84h-13.19z"/></g></symbol><symbol id="phn_ico" viewBox="0 0 10 31"><title>phone_icon</title><path d="M3.485 29.532a3.764 3.764 0 0 1-.295-.318 45.508 45.508 0 0 0-.248-.319c-.11-.142-.26-.417-.449-.826a24.036 24.036 0 0 1-.708-1.795 27.653 27.653 0 0 1-.767-2.68C.79 22.627.594 21.438.43 20.03a41.085 41.085 0 0 1-.27-4.356c-.008-1.488.08-2.944.261-4.369.276-2.259.685-4.195 1.229-5.809.551-1.621.941-2.586 1.17-2.893l.437-.555c.283-.347.673-.625 1.169-.838C4.921.996 5.707.894 6.786.901c1.078.007 1.885.169 2.42.484.535.315.79.853.767 1.617 0 1.243-.316 3.022-.946 5.336-.189.709-.646 1.126-1.37 1.252-.235.047-.598.111-1.086.19-.487.079-.81.126-.968.142-.818.126-1.315.574-1.487 1.346-.309 1.362-.462 2.83-.463 4.404 0 1.574.153 3.042.46 4.404.173.755.668 1.203 1.487 1.345l.661.095c.276.038.532.082.768.13.236.046.444.073.626.082.732.117 1.191.538 1.38 1.262.622 2.37.936 4.148.944 5.336.015.771-.245 1.315-.78 1.63-.535.315-1.338.473-2.409.473-1.07 0-1.778-.071-2.124-.212a6.096 6.096 0 0 1-.733-.33 2.229 2.229 0 0 1-.448-.355z" fill="#508FBB" fill-rule="evenodd"/></symbol><symbol id="phn_slant_ico" viewBox="0 0 579 578"><title>telephone5</title><path d="M569.262 480.608l-81.396 80.781c-3.672 4.08-8.465 7.551-14.381 10.404-5.916 2.857-11.729 4.693-17.439 5.508-.408 0-1.635.105-3.676.309-2.037.203-4.689.307-7.953.307-7.754 0-20.301-1.326-37.641-3.979s-38.555-9.182-63.645-19.584c-25.096-10.404-53.553-26.012-85.376-46.818-31.823-20.805-65.688-49.367-101.592-85.68-28.56-28.152-52.224-55.08-70.992-80.783-18.768-25.705-33.864-49.471-45.288-71.299-11.425-21.828-19.993-41.616-25.705-59.364-5.712-17.748-9.588-33.048-11.628-45.9C.51 151.658-.306 141.56.102 134.216c.408-7.344.612-11.424.612-12.24.816-5.712 2.652-11.526 5.508-17.442s6.324-10.71 10.404-14.382L98.022 8.756c5.712-5.712 12.24-8.568 19.584-8.568 5.304 0 9.996 1.53 14.076 4.59 4.08 3.06 7.548 6.834 10.404 11.322l65.484 124.236c3.672 6.528 4.692 13.668 3.06 21.42-1.632 7.752-5.1 14.28-10.404 19.584l-29.988 29.988c-.816.816-1.53 2.142-2.142 3.978-.612 1.836-.918 3.366-.918 4.59 1.632 8.568 5.304 18.36 11.016 29.376 4.896 9.792 12.444 21.726 22.644 35.802 10.2 14.076 24.684 30.293 43.452 48.653 18.36 18.77 34.68 33.354 48.96 43.76 14.277 10.4 26.215 18.053 35.803 22.949 9.588 4.896 16.932 7.854 22.031 8.871l7.648 1.531c.816 0 2.145-.307 3.979-.918 1.836-.613 3.162-1.326 3.979-2.143l34.883-35.496c7.348-6.527 15.912-9.791 25.705-9.791 6.938 0 12.443 1.223 16.523 3.672l118.726 69.768c8.571 5.308 13.67 12.038 15.303 20.198 1.225 9.385-1.635 17.545-8.568 24.48z" fill="currentColor" fill-rule="evenodd"/></symbol><symbol id="play-button" viewBox="0 0 40 53"><title>Imported Layers Copy</title><path d="M39.23 26.152c0 1.746-.804 3.25-2.41 4.506L9.396 50.965c-1.695 1.324-3.685 1.637-5.97.943C1.14 51.215 0 49.95 0 48.118V4.306c0-1.84 1.14-3.14 3.426-3.9 2.285-.762 4.275-.45 5.97.943L36.82 21.733c1.606 1.2 2.41 2.674 2.41 4.42z" fill="#FFF" fill-rule="evenodd"/></symbol><symbol id="right_down_ico" viewBox="0 0 510 510"><title>play-circle-outline</title><path d="M369.75 204L255 357 140.25 204h229.5zM0 255C0 114.75 114.75 0 255 0s255 114.75 255 255-114.75 255-255 255S0 395.25 0 255zm459 0c0-112.2-91.8-204-204-204S51 142.8 51 255s91.8 204 204 204 204-91.8 204-204z" fill="#508FBB" fill-rule="evenodd"/></symbol><symbol id="right_ico" viewBox="0 489 21 21"><path fill="currentColor" d="M8.4 504.2l6.3-4.7-6.3-4.7v9.4zm2.1-15.2C4.7 489 0 493.7 0 499.5S4.7 510 10.5 510 21 505.3 21 499.5 16.3 489 10.5 489zm0 18.9c-4.6 0-8.4-3.8-8.4-8.4s3.8-8.4 8.4-8.4 8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></symbol><symbol id="search_ico" viewBox="0 0 23 23"><title>Imported Layers</title><path d="M23.061 20.446l-5.215-5.216a9.53 9.53 0 0 0 1.842-5.63c0-5.29-4.304-9.593-9.594-9.593C4.804.007.5 4.31.5 9.6c0 5.29 4.304 9.593 9.594 9.593a9.535 9.535 0 0 0 5.631-1.842l5.215 5.215 2.121-2.121zm-12.967-4.252A6.602 6.602 0 0 1 3.5 9.6a6.602 6.602 0 0 1 6.594-6.594A6.601 6.601 0 0 1 16.688 9.6a6.601 6.601 0 0 1-6.594 6.593z" fill="#508FBB" fill-rule="evenodd"/></symbol><symbol id="share_fb" viewBox="0 0 75 90"><title>facebook</title><g fill="none" fill-rule="evenodd"><path d="M66.445 31.934c0 17.195-13.94 31.135-31.135 31.135-17.196 0-31.136-13.94-31.136-31.135C4.174 14.738 18.114.798 35.31.798c17.195 0 31.135 13.94 31.135 31.136z" fill="currentColor"/><path d="M35.85 48.262V34.137h5.038l.755-5.504H35.85v-3.514c0-1.594.47-2.68 2.899-2.68l3.098-.001v-4.924c-.536-.067-2.375-.217-4.514-.217-4.467 0-7.525 2.566-7.525 7.276v4.06h-5.051v5.504h5.051v14.125h6.042" fill="#FFF"/></g></symbol><symbol id="share_mail" viewBox="0 0 63 89"><title>email</title><g fill="none" fill-rule="evenodd"><path d="M62.445 31.934c0 17.195-13.94 31.135-31.135 31.135-17.196 0-31.136-13.94-31.136-31.135C.174 14.738 14.114.798 31.31.798c17.195 0 31.135 13.94 31.135 31.136z" fill="currentColor"/><path d="M46.877 26.303v13.406c0 .478-.177.882-.534 1.218a1.908 1.908 0 0 1-1.311.52H17.587a1.908 1.908 0 0 1-1.311-.52 1.608 1.608 0 0 1-.534-1.218V26.303c.012-.362.183-.619.513-.774.327-.153.642-.122.942.098l12.82 9.705a1.95 1.95 0 0 0 1.273.455c.477 0 .906-.153 1.29-.455l12.839-9.705c.303-.22.618-.251.945-.098a.839.839 0 0 1 .513.774zm-2.604-3.883c.423 0 .702.192.84.58.135.386.033.689-.31.906l-12.634 9.12c-.258.18-.552.268-.879.268-.33 0-.624-.087-.882-.268l-12.596-9.12c-.342-.243-.444-.553-.306-.926.135-.373.417-.56.84-.56h25.927z" fill="#FFF"/></g></symbol><symbol id="share_twitter" viewBox="0 0 63 89"><title>twitter</title><g fill="none" fill-rule="evenodd"><path d="M62.445 31.934c0 17.195-13.94 31.135-31.135 31.135-17.196 0-31.136-13.94-31.136-31.135C.174 14.738 14.114.798 31.31.798c17.195 0 31.135 13.94 31.135 31.136z" fill="currentColor"/><path d="M44.435 26.499c.011.276.018.553.018.832 0 8.482-6.456 18.262-18.263 18.262-3.625 0-6.999-1.062-9.84-2.883.502.059 1.012.09 1.531.09 3.008 0 5.775-1.027 7.972-2.749a6.423 6.423 0 0 1-5.995-4.458c.39.076.792.117 1.206.117.585 0 1.153-.08 1.69-.226a6.422 6.422 0 0 1-5.147-6.294v-.08c.866.48 1.855.768 2.907.802a6.417 6.417 0 0 1-2.855-5.342c0-1.178.316-2.28.87-3.228 3.166 3.883 7.895 6.44 13.23 6.707a6.495 6.495 0 0 1-.166-1.464 6.419 6.419 0 0 1 11.104-4.39 12.856 12.856 0 0 0 4.076-1.559 6.432 6.432 0 0 1-2.823 3.55c1.299-.153 2.536-.498 3.687-1.01a13.052 13.052 0 0 1-3.202 3.323" fill="#FFF"/></g></symbol></svg>
+<!-- endinject -->
+        </div>
+
+        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-details" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetails">
+        	<div class="modal-loader"></div>
+        	<div class="modal-dialog modal-lg">
+        		<div class="modal-content">
+        			<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        			<div class="container-fluid">
+        				<div class="row">
+        					<div class="col-xs-12 col-sm-7 col-md-9 leftcol">
+        						<div class="modal-header"></div>
+        						<div class="modal-body">
+        							<figure class="modal-img">
+        							</figure>
+        							<span class="modal-icons-group">
+        								<a href="#" class="link-share card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i>  Share</a>
+        								<span class="down-icon"></span>
+        							</span>
+        							<div class="details modal-info"></div>
+        							<div class="custom-embed"></div>
+        							<div class="references"></div>
+        						</div>
+        					</div>
+        					<div class="col-sm-5 col-md-3 rightcol">
+        						<section class="pure-oh-m-sidebar">
+        							<div class="sidebar hidden-xs sidebar-modal">
+        								<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        								<h2 class="heading-flat">After Hours Orthopedic Urgent Care</h2>
+        								<p class="first first-modal">Is neck or back pain getting in the way of your life?</p>
+        								<p class="line">________</p>
+        								<p class="second second-modal">We can help you get back to you.</p>
+        								<a href="#" class="appointment appointment-modal" data-toggle="modal" data-target="#modalRequestAppointment" data-dismiss="modal"><i class="fa fa-calendar"></i> Request Appointment</a>
+        								<ul class="contacts contacts-modal text-left">
+        									<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        									<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        									<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        								</ul>
+        							</div>
+        							<div class="visible-xs">
+        								<div class="mobile-footer">
+        									<svg class="info-icon pull-right show-sidebar">
+        										<use xlink:href="#info_ico"></use>
+        									</svg>
+        									<svg class="phn-icon">
+        										<use xlink:href="#phn_ico"></use>
+        									</svg>
+        									<div class="contact-mobile">
+        										<p>Call us</p>
+        										<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        									</div>
+        								</div>
+        							</div>
+        						</section>					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-share" id="modalShare" tabindex="-1" role="dialog" aria-labelledby="modalShare">
+        	<div class="modal-dialog" role="document">
+        		<div class="modal-content">
+        			<div class="modal-header text-center">
+        				<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        				<h2><i class='fa fa-share-square-o'></i> Share</h2>
+        			</div>
+        			<div class="modal-body">
+        				<div class="row pure-oh-m-share">
+        					<div class="col-xs-4 col-sm-4 text-center">
+        						<a class="facebook-share" href="" target="_blank">
+        							<svg class="svg-icon share-facebook"><use xlink:href="#share_fb"></use></svg>
+        							<span class="facebook share-facebook">Facebook</span>
+        						</a>
+        					</div>
+        					<div class="col-xs-4 col-sm-4 text-center">
+        						<a class="twitter-share" href="" target="_blank">		
+        							<svg class="svg-icon share-twitter"><use xlink:href="#share_twitter"></use></svg>
+        							<span class="twitter share-twitter">Twitter</span>
+        						</a>
+        					</div>
+        					<div class="col-xs-4 col-sm-4 text-center">
+        					<a class="mail-share" href="" data-subject="Name">
+        						<svg class="svg-icon share-email"><use xlink:href="#share_mail"></use></svg>
+        						<span class="email share-email">Email</span>
+        					</a>
+        					</div>
+        				</div>			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-contact" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalContact">
+        	<div class="modal-dialog" role="document">
+        		<div class="modal-content">
+        			<div class="modal-body">
+        				<div class="container-fluid">
+        					<div class="row background">
+        						<div class="col-sm-5 col-xs-12 contact-col">
+        							<h2 class="text-center">Contact</h2>
+        							<div class="row line">
+        								<div class="col-xs-1">
+        									<i class="fa fa-phone"></i>
+        								</div>
+        								<div class="col-xs-10">
+        									<p class="phone"><a href="tel:855.600.0933">855.600.0933</a></p>
+        								</div>
+        							</div>
+        							<div class="row line">
+        								<div class="col-xs-1">
+        									<i class="fa fa-envelope"></i>
+        								</div>
+        								<div class="col-xs-10">
+        									<p class="email"> <a href="mailto:Info@OptimHealth.com">Info@OptimHealth.com</a></p>
+        								</div>
+        							</div>
+        							<div class="row address-container">
+        								<div class="col-xs-1">
+        									<i class="fa fa-envelope"></i>
+        								</div>
+        								<div class="col-xs-10">
+        									<div class="info-details">
+        										<p class="institution">Optim Healthcare</p>
+        										<p class="info">210 East DeRenne Avenue </p>
+        										<p class="info">Savannah, GA 31405</p>
+        										<p class="info">912.644.5300</p>
+        										<p class="info">8:30-5pm</p>
+        									</div>
+        								</div>
+        							</div>
+        							<a href="#" download class="save-contact">Save Contact <i class="fa fa-newspaper-o"></i></a>
+        						</div>
+        						<div class="col-sm-7 col-xs-12 signup-col">
+        							<div class="row pull-rigth">
+        								<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        							</div>
+        							<h4>Sign up for our newsletter</h4>
+        							<p class="paragraph">Receive a free, monthly email featuring information and updates of your choosing from Optim Healthcare</p>
+        							<div class="error-details"></div>
+        							<form class="webform-client-form webform-client-form-142 has-validation-callback" enctype="multipart/form-data" action="/" method="post" id="webform-client-form-142" accept-charset="UTF-8">
+        								<div>
+        									<div class="form-item webform-component webform-component-textfield webform-component--name">
+        										<label for="edit-submitted-name">Name <span class="form-required" title="This field is required." >*</span></label>
+        									 	<input required="required" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required field-name">
+        									</div>
+        									<div class="form-item webform-component webform-component-textfield webform-component--email">
+        										<label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>
+        									 	<input required="required" type="text" id="edit-submitted-email" name="submitted[email]" value="" size="60" maxlength="128" class="form-text required field-email">
+        									</div>
+        									<input type="hidden" name="details[sid]">
+        									<input type="hidden" name="details[page_num]" value="1">
+        									<input type="hidden" name="details[page_count]" value="1">
+        									<input type="hidden" name="details[finished]" value="0">
+        									<input type="hidden" name="form_build_id" value="form-9gG-99SWSc8dzZB8tA8Pz1XnMyr3Uy2jRAHQtzYx1bU">
+        									<input type="hidden" name="form_id" value="webform_client_form_142">
+        									<div class="captcha"><input type="hidden" name="captcha_sid" value="36010">
+        										<input type="hidden" name="captcha_token" value="771a71ef52b536255fb3065c359a2370">
+        										<input type="hidden" name="captcha_response" value="Google no captcha">
+        										<div class="g-recaptcha" data-sitekey="6LdRnRMTAAAAAH6SLpIFTEerd7Jy27fQhcfkE54Q" data-theme="light" data-type="image">
+        											<div>
+        												<div style="width: 304px; height: 78px;">
+        													<iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LdRnRMTAAAAAH6SLpIFTEerd7Jy27fQhcfkE54Q&amp;co=aHR0cDovLzEwNC4xMzAuMTIuMzM6ODA.&amp;hl=en&amp;type=image&amp;v=r20160105165243&amp;theme=light&amp;size=normal&amp;cb=jv5a94y0x5h5" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no"></iframe>
+        												</div>
+        												<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
+        											</div>
+        										</div>
+        									</div>
+        									<div class="form-actions form-actions-submit">
+        										<input class="webform-submit button-primary form-submit disabled" type="submit" name="op" value="Submit">
+        									</div>
+        								</div>
+        							</form>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-about" id="modalAbout" tabindex="-1" role="dialog" aria-labelledby="modalCAbout">
+        	<div class="modal-dialog modal-lg" role="document">
+        		<div class="modal-content">
+        			<div id="modal-header">
+        				<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        				<h1>Optim Spine</h1>
+        			</div>
+        			<div class="modal-body">
+        				<div class="container-fluid">
+        					<div class="row">
+        						<div class="col-xs-12">
+        							<div class="leftcol">
+        								<p class="description">At Optim Spine, we have assembled a team of experts serving all areas of spine care—entirely under one roof.</p>
+        								<p class="description">We’re different in the way that we listen to our patients and think about and their problems – it’s evident from the first moment that we meet right through the process of getting you back to feeling good again.</p>
+        								<p class="description">We are a unique group of specialists and our expertise covers the full spectrum of spine care. With dedicated physical therapists, anesthesia and rehabilitation pain management specialists and surgeons with both orthopedic and neurosurgical training, our comprehensive team is like no other in Georgia. Our spine-focused network allows us to offer each patient the full spectrum of care including comprehensive non-operative strategies and the latest and most advanced minimally-invasive and reconstructive surgical treatments.</p>
+        								<p class="description">We understand the importance of offering specialized care to patients in both larger metropolitan areas and rural locations.  We are conveniently found in over 20 satellite offices throughout southeast Georgia and have a state-of-the-art outpatient Surgery Center in Savannah, GA (Optim Surgery Center) and a full service Orthopedic specialty hospital located in Reidsville, GA (the physician-owned Optim Medical Center-Tattnall).  Together, Optim Medical Center-Tattnall and Optim Surgery Center have exceptionally low complication rates. In 2013-2014 Optim’s spine surgery infection rate was 0.97% and 0% for pain management procedures.</p>
+        								<p class="description">Our spine patients are some of the most interesting and remarkable people that we encounter. Some have been dealing with pain for years while others have had recent injuries. Hear some of their experiences on our Patient Stories page.</p>
+        								<p class="description">For whatever spinal problems you may be having we hope that you will experience the Optim difference. Let Optim Spine help get you back to your pain-free self.</p>
+        								<p class="description">Optim Spine is a collaboration of Optim Orthopedics and the physician-owned Optim Medical Center-Tattnall.</p>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-team" id="modalTeam" tabindex="-1" role="dialog" aria-labelledby="modalTeam">
+        	<div class="modal-loader"></div>
+        	<div class="modal-dialog" role="document">
+        		<div class="modal-content">
+        			<div class="modal-body">
+        				<div class="leftcol">
+        					<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        					<figure class="modal-img">
+        					</figure>
+        					<header class="main-header-info">
+        					</header>
+        			    	<div>
+        			    		<ul class="nav nav-pills nav-tabs" role="tablist">
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#info" aria-controls="info" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-info-circle icon"></i>Info</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-map-marker icon"></i>Locations</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-envelope icon"></i>Contact</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#share" class="card-share" aria-controls="share" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-share-square-o icon"></i>Share</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#links" aria-controls="links" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-link icon"></i>Links</a>
+        			    			</li>
+        			    		</ul>
+        			    		<div class="tab-content">
+        			    			<div role="tabpanel" class="tab-pane active certifications-info" id="info">
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane locations-tab" id="locations">
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane" id="contact">
+        			    				<div class="row">
+        			    					<div class="col-xs-10 col-xs-offset-1">
+        			    						<p class="description">Complete the following form to contact this doctor.</p>
+        			    					</div>
+        			    				</div>
+        			    				<div class="error-details col-xs-10 col-xs-offset-1"></div>
+        			    				<form class="webform-client-form webform-client-form-143 has-validation-callback" enctype="multipart/form-data" action="/team-optim" method="post" id="webform-client-form-143" accept-charset="UTF-8">
+        			    					<div>
+        			    						<div class="form-item webform-component webform-component-textfield webform-component--name">
+        											<label class="element-invisible" for="edit-submitted-name--3">Name <span class="form-required" title="This field is required.">*</span></label>
+        										 	<input required="required" placeholder="Name*" type="text" id="edit-submitted-name--3" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required field-name">
+        										</div>
+        										<div class="form-item webform-component webform-component-email webform-component--email">
+        											<label class="element-invisible" for="edit-submitted-email--3">Email <span class="form-required" title="This field is required.">*</span></label>
+        										 	<input required="required" class="email form-text form-email required field-email" placeholder="Email Address*" type="email" id="edit-submitted-email--3" name="submitted[email]" size="60" required="required">
+        										</div>
+        										<div class="form-item webform-component webform-component-textarea webform-component--message">
+        										  	<label class="element-invisible" for="edit-submitted-message">Message <span class="form-required" title="This field is required.">*</span></label>
+        										 	<div class="form-textarea-wrapper">
+        										 		<textarea required="required" placeholder="Message*" id="edit-submitted-message" name="submitted[message]" cols="60" rows="5" class="form-textarea required field-message" required="required"></textarea>
+        										 	</div>
+        										</div>
+        										<input type="hidden" name="details[sid]">
+        										<input type="hidden" name="details[page_num]" value="1">
+        										<input type="hidden" name="details[page_count]" value="1">
+        										<input type="hidden" name="details[finished]" value="0">
+        										<input type="hidden" name="form_build_id" value="form-ukydY_Q8O_sbhaE0EUpnA8gm4gXWWOTFe7LO-_4N8zc">
+        										<input type="hidden" name="form_id" value="webform_client_form_143">
+        										<div class="form-actions">
+        											<input class="webform-submit button-primary form-submit" type="submit" name="op" value="Submit">
+        										</div>
+        									</div>
+        								</form>
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane" id="share">
+        			    				<div class="row">
+        			    					<div class="col-xs-10 col-xs-offset-1 text-center">
+        			    						<p class="share-info">Get social, share Dr. Jack Considine’s information through:</p>
+        			    					</div>
+        			    				</div>
+        			    				<div class="row">
+        			    					<div class="col-xs-12 text-center">
+        			    						<div class="row pure-oh-m-share">
+        			    							<div class="col-xs-4 col-sm-4 text-center">
+        			    								<a class="facebook-share" href="" target="_blank">
+        			    									<svg class="svg-icon share-facebook"><use xlink:href="#share_fb"></use></svg>
+        			    									<span class="facebook share-facebook">Facebook</span>
+        			    								</a>
+        			    							</div>
+        			    							<div class="col-xs-4 col-sm-4 text-center">
+        			    								<a class="twitter-share" href="" target="_blank">		
+        			    									<svg class="svg-icon share-twitter"><use xlink:href="#share_twitter"></use></svg>
+        			    									<span class="twitter share-twitter">Twitter</span>
+        			    								</a>
+        			    							</div>
+        			    							<div class="col-xs-4 col-sm-4 text-center">
+        			    							<a class="mail-share" href="" data-subject="Name">
+        			    								<svg class="svg-icon share-email"><use xlink:href="#share_mail"></use></svg>
+        			    								<span class="email share-email">Email</span>
+        			    							</a>
+        			    							</div>
+        			    						</div>			    					</div>
+        			    				</div>
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane links-tab" id="links">
+        
+        			    			</div>
+        
+        			    		</div>
+        			    	</div>
+        				</div>
+        		    	<div class="visible-xs footer">
+        		    		<section class="pure-oh-m-sidebar">
+        		    			<div class="sidebar hidden-xs sidebar-modal">
+        		    				<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        		    				<h2 class="heading-flat">After Hours Orthopedic Urgent Care</h2>
+        		    				<p class="first first-modal">Is neck or back pain getting in the way of your life?</p>
+        		    				<p class="line">________</p>
+        		    				<p class="second second-modal">We can help you get back to you.</p>
+        		    				<a href="#" class="appointment appointment-modal" data-toggle="modal" data-target="#modalRequestAppointment" data-dismiss="modal"><i class="fa fa-calendar"></i> Request Appointment</a>
+        		    				<ul class="contacts contacts-modal text-left">
+        		    					<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        		    					<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        		    					<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        		    				</ul>
+        		    			</div>
+        		    			<div class="visible-xs">
+        		    				<div class="mobile-footer">
+        		    					<svg class="info-icon pull-right show-sidebar">
+        		    						<use xlink:href="#info_ico"></use>
+        		    					</svg>
+        		    					<svg class="phn-icon">
+        		    						<use xlink:href="#phn_ico"></use>
+        		    					</svg>
+        		    					<div class="contact-mobile">
+        		    						<p>Call us</p>
+        		    						<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        		    					</div>
+        		    				</div>
+        		    			</div>
+        		    		</section>		    	</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-request-appointment" id="modalRequestAppointment" tabindex="-1" role="dialog" aria-labelledby="modalRequestAppointment">
+        	<div class="modal-dialog modal-lg" role="document">
+        		<div class="modal-content">
+        			<div class="modal-header">
+        				<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        				<h1>Request an Appointment</h1>
+        			</div>
+        			<div class="modal-body">
+        				<div class="error-details"></div>
+        				<form class="webform-client-form webform-client-form-141 has-validation-callback" enctype="multipart/form-data" action="/treatments" method="post" id="webform-client-form-141" accept-charset="UTF-8">
+        					<div>
+        						<div class="form-item webform-component webform-component-textfield webform-component--name">
+          							<label class="element-invisible" for="edit-submitted-name--2">My Name is<span class="form-required" title="This field is required.">*</span></label>
+         							<input required="required" placeholder="your name" type="text" id="edit-submitted-name--2" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required field-name">
+        						</div>
+        						<div class="form-item webform-component webform-component-textfield webform-component--condition">
+          							<label class="element-invisible" for="edit-submitted-condition">and I would like to request an appointment because<span class="form-required" title="This field is required.">*</span></label>
+         							<input required="required" placeholder="your condition" type="text" id="edit-submitted-condition" name="submitted[condition]" value="" size="60" maxlength="128" class="form-text required field-condition"> <span class="field-suffix">.</span>
+        						</div>
+        						<div class="form-item webform-component webform-component-markup webform-component--markup1">
+         							<p><br><br></p>
+        						</div>
+        						<div class="form-item webform-component webform-component-textfield webform-component--phone">
+          							<label class="element-invisible" for="edit-submitted-phone">You may contact me at<span class="form-required" title="This field is required.">*</span></label>
+         							<input required="required" placeholder="phone number*" type="text" id="edit-submitted-phone" name="submitted[phone]" value="" size="60" maxlength="128" class="form-text required field-phone">
+        						</div>
+        						<div class="form-item webform-component webform-component-textfield webform-component--email">
+        							<label class="element-invisible" for="edit-submitted-email--2">Email
+        						 	or email me at <span class="form-required" title="This field is required.">*</span></label>
+        						 	<input required="required" placeholder="type your email here*" type="text" id="edit-submitted-email--2" name="submitted[email]" value="" size="60" maxlength="128" class="form-text field-email"> <span class="field-suffix">.</span>
+        						</div>
+        						<input type="hidden" name="details[sid]">
+        						<input type="hidden" name="details[page_num]" value="1">
+        						<input type="hidden" name="details[page_count]" value="1">
+        						<input type="hidden" name="details[finished]" value="0">
+        						<input type="hidden" name="form_build_id" value="form-v4RzCmwzkByUW_AkHhhWMZekX_XV2OrLdfNrX8Q7NCo">
+        						<input type="hidden" name="form_id" value="webform_client_form_141">
+        						<div class="form-actions">
+        							<input class="webform-submit button-primary form-submit btn-submit disabled" type="submit" name="op" value="Submit">
+        						</div>
+        					</div>
+        				</form>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-thanks-subscribing" id="modalThanksSubscribing" tabindex="-1" role="dialog" aria-labelledby="modalThanksSubscribing">
+        	<div class="modal-dialog" role="document">
+        		<div class="modal-content">
+        			<div class="modal-body">
+        				<div class="container-fluid">
+        					<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        					<h2 class="text-center">Thank you for subscribing</h2>
+        					<p class="text-center">Morbi sagittis nunc ac pulvinar tempus. Fusce faucibus sem at lobortis dictum. Mauris mollis neque neque, at scelerisque lorem suscipit id.</p>
+        					<button data-dismiss="modal">DONE</button>
+        					<div class="col-xs-12 visible-xs">
+        						<section class="pure-oh-m-sidebar">
+        							<div class="sidebar hidden-xs" id="sticktSidebar">
+        								<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        								<div class="header hidden-xs" data-background="#666666">
+        									<p>Send us your MRI using the file uploader below so we can evaluate it ahead of your first visit. If your file is on a removable CD or thumbdrive, insert or connect it to upload your MRI directly from your media source.</p>
+        									<a href="#">Click Here</a>
+        								</div>
+        								<p class="first">Is neck or back pain getting in the way of your life?</p>
+        								<p class="second">We can help you get back to you.</p>
+        								<a href="#" class="appointment" data-toggle="modal" data-target="#modalRequestAppointment"><i class="fa fa-calendar"></i> Request Appointment</a>
+        								<ul class="options text-left">
+        									<li><a href="#">Locations</a></li>
+        									<li><a href="#">Our Practice</a></li>
+        									<li><a href="#">Tools & Tips</a></li>
+        									<li><a href="#">News & Events</a></li>
+        								</ul>
+        								<ul class="contacts text-left">
+        									<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        									<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        									<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        								</ul>
+        							</div>
+        							<div class="visible-xs">
+        								<div class="mobile-footer">
+        									<svg class="info-icon pull-right show-sidebar">
+        										<use xlink:href="#info_ico"></use>
+        									</svg>
+        									<svg class="phn-icon">
+        										<use xlink:href="#phn_ico"></use>
+        									</svg>
+        									<div class="contact-mobile">
+        										<p>Call us</p>
+        										<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        									</div>
+        								</div>
+        							</div>
+        						</section>					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-details" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetails">
+        	<div class="modal-loader"></div>
+        	<div class="modal-dialog modal-lg">
+        		<div class="modal-content">
+        			<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        			<div class="container-fluid">
+        				<div class="row">
+        					<div class="col-xs-12 col-sm-7 col-md-9 leftcol">
+        						<div class="modal-header"></div>
+        						<div class="modal-body">
+        							<figure class="modal-img">
+        							</figure>
+        							<span class="modal-icons-group">
+        								<a href="#" class="link-share card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i>  Share</a>
+        								<span class="down-icon"></span>
+        							</span>
+        							<div class="details modal-info"></div>
+        							<div class="custom-embed"></div>
+        							<div class="references"></div>
+        						</div>
+        					</div>
+        					<div class="col-sm-5 col-md-3 rightcol">
+        						<section class="pure-oh-m-sidebar">
+        							<div class="sidebar hidden-xs sidebar-modal">
+        								<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        								<h2 class="heading-flat">After Hours Orthopedic Urgent Care</h2>
+        								<p class="first first-modal">Is neck or back pain getting in the way of your life?</p>
+        								<p class="line">________</p>
+        								<p class="second second-modal">We can help you get back to you.</p>
+        								<a href="#" class="appointment appointment-modal" data-toggle="modal" data-target="#modalRequestAppointment" data-dismiss="modal"><i class="fa fa-calendar"></i> Request Appointment</a>
+        								<ul class="contacts contacts-modal text-left">
+        									<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        									<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        									<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        								</ul>
+        							</div>
+        							<div class="visible-xs">
+        								<div class="mobile-footer">
+        									<svg class="info-icon pull-right show-sidebar">
+        										<use xlink:href="#info_ico"></use>
+        									</svg>
+        									<svg class="phn-icon">
+        										<use xlink:href="#phn_ico"></use>
+        									</svg>
+        									<div class="contact-mobile">
+        										<p>Call us</p>
+        										<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        									</div>
+        								</div>
+        							</div>
+        						</section>					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-team" id="modalTeam" tabindex="-1" role="dialog" aria-labelledby="modalTeam">
+        	<div class="modal-loader"></div>
+        	<div class="modal-dialog" role="document">
+        		<div class="modal-content">
+        			<div class="modal-body">
+        				<div class="leftcol">
+        					<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        					<figure class="modal-img">
+        					</figure>
+        					<header class="main-header-info">
+        					</header>
+        			    	<div>
+        			    		<ul class="nav nav-pills nav-tabs" role="tablist">
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#info" aria-controls="info" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-info-circle icon"></i>Info</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-map-marker icon"></i>Locations</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-envelope icon"></i>Contact</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#share" class="card-share" aria-controls="share" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-share-square-o icon"></i>Share</a>
+        			    			</li>
+        			    			<li role="presentation" class="text-center">
+        			    				<a href="#links" aria-controls="links" role="tab" data-toggle="tab">
+        			    				<i class="fa fa-link icon"></i>Links</a>
+        			    			</li>
+        			    		</ul>
+        			    		<div class="tab-content">
+        			    			<div role="tabpanel" class="tab-pane active certifications-info" id="info">
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane locations-tab" id="locations">
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane" id="contact">
+        			    				<div class="row">
+        			    					<div class="col-xs-10 col-xs-offset-1">
+        			    						<p class="description">Complete the following form to contact this doctor.</p>
+        			    					</div>
+        			    				</div>
+        			    				<div class="error-details col-xs-10 col-xs-offset-1"></div>
+        			    				<form class="webform-client-form webform-client-form-143 has-validation-callback" enctype="multipart/form-data" action="/team-optim" method="post" id="webform-client-form-143" accept-charset="UTF-8">
+        			    					<div>
+        			    						<div class="form-item webform-component webform-component-textfield webform-component--name">
+        											<label class="element-invisible" for="edit-submitted-name--3">Name <span class="form-required" title="This field is required.">*</span></label>
+        										 	<input required="required" placeholder="Name*" type="text" id="edit-submitted-name--3" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required field-name">
+        										</div>
+        										<div class="form-item webform-component webform-component-email webform-component--email">
+        											<label class="element-invisible" for="edit-submitted-email--3">Email <span class="form-required" title="This field is required.">*</span></label>
+        										 	<input required="required" class="email form-text form-email required field-email" placeholder="Email Address*" type="email" id="edit-submitted-email--3" name="submitted[email]" size="60" required="required">
+        										</div>
+        										<div class="form-item webform-component webform-component-textarea webform-component--message">
+        										  	<label class="element-invisible" for="edit-submitted-message">Message <span class="form-required" title="This field is required.">*</span></label>
+        										 	<div class="form-textarea-wrapper">
+        										 		<textarea required="required" placeholder="Message*" id="edit-submitted-message" name="submitted[message]" cols="60" rows="5" class="form-textarea required field-message" required="required"></textarea>
+        										 	</div>
+        										</div>
+        										<input type="hidden" name="details[sid]">
+        										<input type="hidden" name="details[page_num]" value="1">
+        										<input type="hidden" name="details[page_count]" value="1">
+        										<input type="hidden" name="details[finished]" value="0">
+        										<input type="hidden" name="form_build_id" value="form-ukydY_Q8O_sbhaE0EUpnA8gm4gXWWOTFe7LO-_4N8zc">
+        										<input type="hidden" name="form_id" value="webform_client_form_143">
+        										<div class="form-actions">
+        											<input class="webform-submit button-primary form-submit" type="submit" name="op" value="Submit">
+        										</div>
+        									</div>
+        								</form>
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane" id="share">
+        			    				<div class="row">
+        			    					<div class="col-xs-10 col-xs-offset-1 text-center">
+        			    						<p class="share-info">Get social, share Dr. Jack Considine’s information through:</p>
+        			    					</div>
+        			    				</div>
+        			    				<div class="row">
+        			    					<div class="col-xs-12 text-center">
+        			    						<div class="row pure-oh-m-share">
+        			    							<div class="col-xs-4 col-sm-4 text-center">
+        			    								<a class="facebook-share" href="" target="_blank">
+        			    									<svg class="svg-icon share-facebook"><use xlink:href="#share_fb"></use></svg>
+        			    									<span class="facebook share-facebook">Facebook</span>
+        			    								</a>
+        			    							</div>
+        			    							<div class="col-xs-4 col-sm-4 text-center">
+        			    								<a class="twitter-share" href="" target="_blank">		
+        			    									<svg class="svg-icon share-twitter"><use xlink:href="#share_twitter"></use></svg>
+        			    									<span class="twitter share-twitter">Twitter</span>
+        			    								</a>
+        			    							</div>
+        			    							<div class="col-xs-4 col-sm-4 text-center">
+        			    							<a class="mail-share" href="" data-subject="Name">
+        			    								<svg class="svg-icon share-email"><use xlink:href="#share_mail"></use></svg>
+        			    								<span class="email share-email">Email</span>
+        			    							</a>
+        			    							</div>
+        			    						</div>			    					</div>
+        			    				</div>
+        			    			</div>
+        			    			<div role="tabpanel" class="tab-pane links-tab" id="links">
+        
+        			    			</div>
+        
+        			    		</div>
+        			    	</div>
+        				</div>
+        		    	<div class="visible-xs footer">
+        		    		<section class="pure-oh-m-sidebar">
+        		    			<div class="sidebar hidden-xs sidebar-modal">
+        		    				<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        		    				<h2 class="heading-flat">After Hours Orthopedic Urgent Care</h2>
+        		    				<p class="first first-modal">Is neck or back pain getting in the way of your life?</p>
+        		    				<p class="line">________</p>
+        		    				<p class="second second-modal">We can help you get back to you.</p>
+        		    				<a href="#" class="appointment appointment-modal" data-toggle="modal" data-target="#modalRequestAppointment" data-dismiss="modal"><i class="fa fa-calendar"></i> Request Appointment</a>
+        		    				<ul class="contacts contacts-modal text-left">
+        		    					<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        		    					<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        		    					<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        		    				</ul>
+        		    			</div>
+        		    			<div class="visible-xs">
+        		    				<div class="mobile-footer">
+        		    					<svg class="info-icon pull-right show-sidebar">
+        		    						<use xlink:href="#info_ico"></use>
+        		    					</svg>
+        		    					<svg class="phn-icon">
+        		    						<use xlink:href="#phn_ico"></use>
+        		    					</svg>
+        		    					<div class="contact-mobile">
+        		    						<p>Call us</p>
+        		    						<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        		    					</div>
+        		    				</div>
+        		    			</div>
+        		    		</section>		    	</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <div class="modal fade pure-oh-h-modals pure-oh-m-modal-videos" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="modalVideos">
+        	<div class="modal-loader"></div>
+        	<div class="modal-dialog modal-lg">
+        		<div class="modal-content">
+        			<div class="modal-header">
+        				<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+        			</div>
+        			<div class="modal-body">
+        				<div class="container-fluid">
+        					<div class="row">
+        						<div class="col-md-12">
+        							<figure class="modal-video">
+        								<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+        							</figure>
+        							<h2>Optim Interventional Pain Management</h2>
+        							<p class="video modal-info">Featuring Joseph C. Hegarty, MD, FIPP...</p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>        <section class="pure-oh-m-page">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        				<header class="pure-oh-m-header-dark">
+        					<div class="header-container row">
+        						<div class="col-lg-5 col-xs-10">
+        							<a class="logo-optim-spine dinamic-logo" href="#" data-logo="images/optim-spine_logo.png">
+        								<img src="images/optim-spine_logo.png" alt="" />
+        							</a>
+        						</div>
+        						<div class="col-lg-1 col-lg-push-8 col-xs-2">
+        						    <a class="search-home-icon" href="#" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search icon-search"></i></a>
+        						</div>
+        						<div class="col-lg-6 col-xs-12 col-lg-pull-1">
+        							<nav>
+        								<ul>
+        									<li><a href="#">Who we are</a></li>
+        									<li><a href="#">What’s Hurting</a></li>
+        									<li><a href="#">How we can help</a></li>
+        								</ul>
+        							</nav>
+        						</div>
+        					</div>
+        				</header>				<div class="row">
+        					<ol class="breadcrumb">
+        						<li><a href="#">Home</a></li>
+        					  	<li><a href="#">Conditions</a></li>
+        					</ol>				</div>
+        				<div id="single-page">
+        					<p class="post-date"><time datetime="2001-05-15T19:00">October 1, 2015</time></p>
+        					<h1>Optim Primary Care-Tattnall Adds Roger Beville, MD Primary Care Physycian to Cobbtown and Glenville</h1>
+        					<p class="share-box">
+        						<a href="#" class="the-permalink share-action modal-action" data-toggle="modal" data-target="#modalShare"><i class="fa fa-share-square-o"></i> share</a>
+        					</p>
+        					<div class="row">
+        						<div class="col-md-12">
+        							<p>
+        								REIDSVILLE, GA, October 1, 2015 –Optim Primary Care-Tattnall, a department of the physician-owned Optim Medical Center-Tattnall, adds Primary Care Physician Roger Beville, MD who will be seeing patients in Cobbtown and Glennville starting October 1, 2015. Dr. Beville will be joining Optim after most recently working for St. Joseph’s Candler Medical Group in Metter, GA.
+        							</p>
+        							<p>
+        								Born and raised in Vinita, Oklahoma Dr. Beville lived in a few towns in Oklahoma and Missouri before moving to Georgia where he finished high school in Atlanta. He attended Georgia Southern University and completed Medical School at Medical College of Georgia in Macon, GA and Residency at Naval Regional Medical Center in Charleston, SC.
+        							</p>
+        							<h2>
+        								“I am really excited about Optim’s commitment to Primary Care and preventative medicine,”
+        								said Dr. Beville.
+        							</h2>
+        							<p>
+        								For more information about Roger Beville, MD please visitOptimHealth.com/RogerBeville and to make an appointment, please call 912.654.4599 (Glennville: 1000 B. North Veterans Blvd. • Glennville, GA 30427) and 912.684.2071 (Cobbtown: 36671 Hwy 23 • Cobbtown, GA 30420).
+        							</p>
+        						</div>
+        						<div class="col-md-12">
+        							<h2>About Optim Medical Center-Tattnall</h2>
+        							<p>
+        								Optim Medical Center-Tattnall is a premier, physician-owned healthcare facility providing the highest quality of patient care and clinical outcomes for the communities it serves. The Optim network provides its patients 20 convenient locations across southeastern Georgia. With over 30 highly-trained physicians in the Optim Healthcare network (a collaboration of Optim Medical Center-Tattnall and Optim Orthopedics), Optim offers specialized treatment in multiple areas including orthopedics, neurosurgery, interventional pain management, general surgery and primary care.
+        							</p>
+        							<p>
+        								Optim Medical Center-Tattnall in Reidsville, GA has consistently received accolades for its orthopedic outcomes which include the following: one of Healthgrades® America’s 100 Best Hospitals for Joint Replacement 2 Years in Row (2014-2015), Healthgrades® Five-Star Recipient for Total Knee Replacement 4 Years in a Row (2012-2015) and Healthgrades® Five-Star Recipient for Total Hip Replacement 2 Years in a Row (2014-2015).
+        							</p>
+        						</div>
+        					</div>
+        
+        
+        				</div>
+        				<div class="row pure-oh-m-footer">
+        					<div class="col-md-12 footer-menu">
+        							<ul class="menu">
+        								<li class="first"><a href="#" data-toggle="modal" data-target="#modalAbout" title="">About</a></li>
+        								<li class="last"><a href="/patient-testimonials" title="">Patient Stories</a></li>
+        							</ul>
+        					</div>
+        				</div>			</div>
+        			<div class="col-lg-3 col-md-3 col-sm-4">
+        				<section class="pure-oh-m-sidebar">
+        					<div class="sidebar hidden-xs" id="sticktSidebar">
+        						<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        						<div class="header hidden-xs" data-background="#666666">
+        							<p>Send us your MRI using the file uploader below so we can evaluate it ahead of your first visit. If your file is on a removable CD or thumbdrive, insert or connect it to upload your MRI directly from your media source.</p>
+        							<a href="#">Click Here</a>
+        						</div>
+        						<p class="first">Is neck or back pain getting in the way of your life?</p>
+        						<p class="second">We can help you get back to you.</p>
+        						<a href="#" class="appointment" data-toggle="modal" data-target="#modalRequestAppointment"><i class="fa fa-calendar"></i> Request Appointment</a>
+        						<ul class="options text-left">
+        							<li><a href="#">Locations</a></li>
+        							<li><a href="#">Our Practice</a></li>
+        							<li><a href="#">Tools & Tips</a></li>
+        							<li><a href="#">News & Events</a></li>
+        						</ul>
+        						<ul class="contacts text-left">
+        							<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        							<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        							<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        						</ul>
+        					</div>
+        					<div class="visible-xs">
+        						<div class="mobile-footer">
+        							<svg class="info-icon pull-right show-sidebar">
+        								<use xlink:href="#info_ico"></use>
+        							</svg>
+        							<svg class="phn-icon">
+        								<use xlink:href="#phn_ico"></use>
+        							</svg>
+        							<div class="contact-mobile">
+        								<p>Call us</p>
+        								<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        							</div>
+        						</div>
+        					</div>
+        				</section>			</div>
+        		</div>
+        
+        	</div>
+        </div>
+        </section>
+
+        <!-- in order to see single page for providers only clear the parameter, example : mainImage="" -->
+
+        <section class="pure-oh-m-page">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-md-12">
+        				<header class="pure-oh-m-header-dark">
+        					<div class="header-container row">
+        						<div class="col-lg-5 col-xs-10">
+        							<a class="logo-optim-spine dinamic-logo" href="#" data-logo="images/optim-spine_logo.png">
+        								<img src="images/optim-spine_logo.png" alt="" />
+        							</a>
+        						</div>
+        						<div class="col-lg-1 col-lg-push-8 col-xs-2">
+        						    <a class="search-home-icon" href="#" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search icon-search"></i></a>
+        						</div>
+        						<div class="col-lg-6 col-xs-12 col-lg-pull-1">
+        							<nav>
+        								<ul>
+        									<li><a href="#">Who we are</a></li>
+        									<li><a href="#">What’s Hurting</a></li>
+        									<li><a href="#">How we can help</a></li>
+        								</ul>
+        							</nav>
+        						</div>
+        					</div>
+        				</header>				<div class="row">
+        					<ol class="breadcrumb">
+        						<li><a href="#">Home</a></li>
+        					  	<li><a href="#">Conditions</a></li>
+        					</ol>				</div>
+        				<div id="single-page" class="patient-support">
+        					<h1>Bill Pay</h1>
+        					<p class="description">For Hospital Services, please select the appropriate site below "Relay Solutions/Patient Compass" or "PatientCo" for making payments based on your date of service. These sites are to be used for payments on your hospital services only. Please select "E-Pay" if you have received your bill from E-Pay.</p>
+        					<div class="cards">
+        						<div class="row">
+        							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 .card-item">
+        								<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        								    <div class="panel">
+        								    	<div class="panel-body col-eq-height">
+        							    			<h2><a href="#">Lower Back Pain</a></h2>
+        									    	<p><a heref="#">At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</a></p>
+        								    	</div>
+        								    	<div class="panel-footer">
+        											<div class="btn-group btn-group-justified buttons">
+        											    <div class="btn-group">
+        											    	<a href="#" class="btn the-permalink">
+        												    	Click Here
+        											    	</a>
+        											    </div>
+        											</div>
+        										</div>
+        								    </div>
+        								</div>
+        							</div>
+        							
+        							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 .card-item">
+        								<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        								    <div class="panel">
+        								    	<div class="panel-body col-eq-height">
+        							    			<h2><a href="#">Lower Back Pain</a></h2>
+        									    	<p><a heref="#">At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</a></p>
+        								    	</div>
+        								    	<div class="panel-footer">
+        											<div class="btn-group btn-group-justified buttons">
+        											    <div class="btn-group">
+        											    	<a href="#" class="btn the-permalink">
+        												    	Click Here
+        											    	</a>
+        											    </div>
+        											</div>
+        										</div>
+        								    </div>
+        								</div>
+        							</div>
+        							
+        							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        								<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        								    <div class="panel">
+        								    	<div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="59">
+        							    			<h2>Lower Back Pain</h2>
+        									    	<p>At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</p>
+        								    	</div>
+        								    	<div class="panel-footer">
+        											<div class="btn-group btn-group-justified buttons">
+        											    <div class="btn-group">
+        											    	<button type="button" class="btn" data-toggle="modal" data-target="#modalDetails">
+        												    	<i class=" fa fa-play"></i> Watch
+        											    	</button>
+        											    </div>
+        											</div>
+        										</div>
+        								    </div>
+        								</div>
+        							</div>
+        							
+        						</div>
+        					</div>
+        					<div class="row">
+        						<div class="col-md-6">
+        						<h2>FRACTURE CARE BILLING</h2>
+        						<p>
+        							If we treat you or your dependent for a fracture, your insurance company requires that we bill our services to you using a coding system known as CPT (Current Procedure Terminology). The codes used to describe the services we completed for you are found in the “surgery” section of the CPT codebook. This does not mean that you had an operation. This is merely the way the CPT codebook is organized for ease of use by both insurance companies and physicians.
+        						</p>
+        						<p>
+        							According to the CPT guidelines, fracture care is billed as a “packaged” service.
+        						</p>
+        						<p>
+        							This means that at the time of initial care, a bill is generated that includes:
+        						</p>
+        						<ul>
+        							<li>Treatment of the fracture </li>
+        							<li>The first cast or splint application </li>
+        							<li>90 days of normal, uncomplicated, follow up care</li>
+        						</ul>
+        						</div>
+        						<div class="col-md-6">
+        							<h2>About Optim Medical Center-Tattnall</h2>
+        							<p>
+        								Optim Medical Center-Tattnall is a premier, physician-owned healthcare facility providing the highest quality of patient care and clinical outcomes for the communities it serves. The Optim network provides its patients 20 convenient locations across southeastern Georgia. With over 30 highly-trained physicians in the Optim Healthcare network (a collaboration of Optim Medical Center-Tattnall and Optim Orthopedics), Optim offers specialized treatment in multiple areas including orthopedics, neurosurgery, interventional pain management, general surgery and primary care.
+        							</p>
+        							<ol type="1">
+        							  <li>X-rays</li>
+        							  <li>All casting supplies (including those used with the first cast application)</li>
+        							  <li>Any replacement cast application</li>
+        							  <li>The evaluation and management of any additional problems or injuries</li>
+        							  <li>The treatment of complications</li>
+        							</ol> 
+        							<p>There will be a separate charge for these services.</p>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="row pure-oh-m-footer">
+        					<div class="col-md-12 footer-menu">
+        							<ul class="menu">
+        								<li class="first"><a href="#" data-toggle="modal" data-target="#modalAbout" title="">About</a></li>
+        								<li class="last"><a href="/patient-testimonials" title="">Patient Stories</a></li>
+        							</ul>
+        					</div>
+        				</div>			</div>
+        		</div>
+        	</div>
+        </section>        <section class="pure-oh-m-page">
+        	<div class="pure-oh-m-testimonials">
+        		<div class="banner">
+        			<div class="container">
+        				<div class="row">
+        					<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        						<header class="pure-oh-m-header-dark pure-oh-m-header-white">
+        							<div class="header-container row">
+        								<div class="col-lg-5 col-xs-10">
+        									<a class="logo-optim-spine dinamic-logo" href="#" data-logo="images/optim-spine_logo.png">
+        										<img src="images/optim-spine_logo.png" alt="" />
+        									</a>
+        								</div>
+        								<div class="col-lg-1 col-lg-push-8 col-xs-2">
+        									<a class="search-home-icon" href="#" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search pull-right icon-search"></i></a>
+        								</div>
+        								<div class="col-lg-6 col-xs-12 col-lg-pull-1">
+        									<nav>
+        										<ul>
+        											<li><a href="#">Who we are</a></li>
+        											<li><a href="#">What’s Hurting</a></li>
+        											<li><a href="#">How we can help</a></li>
+        										</ul>
+        									</nav>
+        								</div>
+        							</div>
+        						</header>					</div>
+        				</div>
+        				<div class="wrap-hero-description">
+        					<div class="modal-detail">
+        						<div class="hero-title">
+        							<a href="" class="modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="58">MEET HAROLD ROGERS</a>
+        						</div>
+        						<div class="hero-description">
+        							<p> To learn what a difference Optim Spine can make in your life,
+        								<a href="" class="modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="58">listen</a> to patients like Harold Rogers tell their own stories.
+        							</p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<img src="../images/temp/Optim_Spine_Harold_Rogers_hero_image.jpg" class="bannerImage" alt="" width="1180" height="839" data-bg-color="#13212e">
+        		</div>
+        	</div>
+        	<div class="container patient-stories">
+        		<div class="row">
+        			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        				<div class="cards">
+        					<div class="row row-eq-height">
+        						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        							<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        							    <div class="panel">
+        							    	<div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="60">
+        							    		<figure>
+        							        		<img src="../images/temp/_RBC3884_2_2.jpg" alt="" />
+        							    		</figure>
+        							    			<h2> Pete Blocker</h2>
+        									    <p>At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</p>
+        									    <span><i class="fa fa-arrow-right"></i>  Continue Reading</span>
+        							    	</div>
+        							    	<div class="panel-footer">
+        										<div class="btn-group btn-group-justified buttons">
+        										    <div class="btn-group">
+        										    	<button type="button" class="btn modal-action" data-toggle="modal" data-target="#modalDetails"><i class=" fa fa-play"></i>  Watch</button>
+        										    </div>
+        										    <div class="btn-group">
+        										      	<button type="button" class="btn card-share" data-toggle="modal" data-target="#modalShare" data-node="60"><i class="fa fa-share-square-o"></i>  Share</button>
+        										    </div>
+        										</div>
+        							    	</div>
+        							    </div>
+        							</div>
+        						</div>
+        						
+        						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        							<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        							    <div class="panel">
+        							    	<div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="59">
+        							    		<figure>
+        							        		<img src="../images/temp/th_02-Lower-back-pain.png" alt="">
+        							    		</figure>
+        						    			<h2>Lower Back Pain</h2>
+        								    	<p>At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</p>
+        								    	<span><i class="fa fa-arrow-right"></i>  Continue Reading</span>
+        							    	</div>
+        							    	<div class="panel-footer">
+        										<div class="btn-group btn-group-justified buttons">
+        										    <div class="btn-group">
+        										    	<button type="button" class="btn" data-toggle="modal" data-target="#modalDetails">
+        											    	<i class=" fa fa-play"></i> Watch
+        										    	</button>
+        										    </div>
+        										</div>
+        									</div>
+        							    </div>
+        							</div>
+        						</div>
+        						
+        						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        						    <div class="pure-oh-m-cards modal-cards modal-team" data-filter="Hand">
+        						        <div class="panel">
+        						            <div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalTeam" data-node="907">
+        						                <figure>
+        						                    <img src="../images/temp/th_02-Lower-back-pain.png" alt="">
+        						                </figure>
+        						                <h4>
+        						Radiology/Imaging
+        						                </h4>
+        						                <h2 class="name">
+        						Hewatt Sims
+        						                </h2>
+        						                <h3>
+        						                    MD
+        						                </h3>
+        						            </div>
+        						            <div class="panel-footer">
+        						                <div class="btn-group btn-group-justified buttons">
+        						                    <div class="btn-group">
+        						                        <button type="button" class="btn modal-action" data-toggle="modal" data-target="#modalTeam"><i class=" fa fa fa-eye"></i>  View</button>
+        						                    </div>
+        						                </div>
+        						            </div>
+        						        </div>
+        						    </div>
+        						</div>						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        							<div class="pure-oh-m-cards modal-cards modal-detail">
+        							    <div class="panel">
+        							    	<div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="99">
+        							    		<figure>
+        							        		<img src="../images/temp/th_02-Lower-back-pain.png" alt="" />
+        							    		</figure>
+        							    		<h2>Vertebral Subluxation 2</h2>
+        							    	</div>
+        							    	<div class="panel-footer">
+        										<div class="btn-group btn-group-justified buttons">
+        										    <div class="btn-group">
+        										    	<a href="#" type="button" class="btn button"><i class=" fa fa-file-text-o"></i> Download</a>
+        										    </div>
+        										    <div class="btn-group">
+        										      	<button type="button" class="btn card-share" data-toggle="modal" data-target="#modalShare"><i class="fa fa-share-square-o"></i>  Share</button>
+        										    </div>
+        										</div>
+        							    	</div>
+        							    </div>
+        							</div>
+        						</div>						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        						    <div class="pure-oh-m-cards modal-cards modal-detail" data-filter="">
+        						        <div class="panel">
+        						            <div class="panel-body col-eq-height modal-action modal-node" data-toggle="modal" data-target="#modalDetails" data-node="157">
+        						            <a href="#">
+        						                <figure>
+        						                    <img src="../images/temp/th_02-Lower-back-pain.png" alt="">
+        						                </figure>
+        						                <h2>Spine Glossary</h2>
+        						                <p> 2 At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</p>
+        						            </a>
+        						            </div>
+        						            <div class="panel-footer link-box">
+        						                <a href="#" class="the-permalink"><i class="fa fa-arrow-right"></i> Continue Reading</a>
+        						            </div>
+        						        </div>
+        						    </div>
+        						</div>
+        						
+        						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        						    <div class="pure-oh-m-cards">
+        						        <div class="panel">
+        						            <div class="panel-body col-eq-height">
+        						                <a href='#' class="test">
+        						                    <h2 class="card-title">
+        						                        Optim Primary Care-Tattnall Adds Roger Beville, MD Primary Care Physician to Cobbtown and Glennville
+        						                    </h2>
+        						                    <p>REIDSVILLE, GA, October 1, 2015 –Optim Primary Care-Tattnall, a department of the physician-owned Optim Medical Center...></p>
+        						                </a>
+        						            </div>
+        						            <div class="panel-footer link-box">
+        						                <a href="#" class="the-permalink"><i class="fa fa-arrow-right"></i> Continue Reading</a>
+        						            </div>
+        						        </div>
+        						    </div>
+        						</div>						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        							<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        							    <div class="panel">
+        							    	<div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="35">
+        							    		<figure>
+        							        		<img src="../images/temp/th_02-Lower-back-pain.png" alt="" />
+        							    		</figure>
+        							    		<h3 class="patient-testimonial">Patient Testimonial</h3>
+        							    		<h2>Frank Hook</h2>
+        							    	</div>
+        							    	<div class="panel-footer">
+        										<div class="btn-group btn-group-justified buttons">
+        										    <div class="btn-group">
+        										    	<button type="button" class="btn modal-action" data-toggle="modal" data-target="#modalDetails"><i class=" fa fa-arrow-right"></i>  Read</button>
+        										    </div>
+        										    <div class="btn-group">
+        										      	<button type="button" class="btn card-share" data-toggle="modal" data-target="#modalShare"><i class="fa fa-share-square-o"></i>  Share</button>
+        										    </div>
+        										</div>
+        							    	</div>
+        							    </div>
+        							</div>
+        						</div>
+        						
+        						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+        							<div class="pure-oh-m-cards modal-cards modal-detail" data-filter="Hand">
+        							    <div class="panel">
+        							    	<div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalDetails" data-node="59">
+        							    			<h2 class="card-title"> Vertebral Subluxation</h2>
+        									    <p>At some point in our lives almost everyone will experience back or neck pain, occasionally nagging...</p>
+        									    <span><i class="fa fa-arrow-right"></i>  Continue Reading</span>
+        							    	</div>
+        							    	<div class="panel-footer">
+        										<div class="btn-group btn-group-justified buttons">
+        										    <div class="btn-group">
+        										    	<button type="button" class="btn"><i class=" fa fa-cloud-download"></i>  Download</button>
+        										    </div>
+        										    <div class="btn-group">
+        										      	<button type="button" class="btn card-share"><i class="fa fa-share-square-o"></i>  Share</button>
+        										    </div>
+        										</div>
+        							    	</div>
+        							    </div>
+        							</div>
+        						</div>
+        						
+        					</div>
+        				</div>
+        				<div class="row pure-oh-m-footer">
+        					<div class="col-md-12 footer-menu">
+        							<ul class="menu">
+        								<li class="first"><a href="#" data-toggle="modal" data-target="#modalAbout" title="">About</a></li>
+        								<li class="last"><a href="/patient-testimonials" title="">Patient Stories</a></li>
+        							</ul>
+        					</div>
+        				</div>			</div>
+        			<div class="col-lg-3 col-md-3 col-sm-4">
+        				<section class="pure-oh-m-sidebar">
+        					<div class="sidebar hidden-xs" id="sticktSidebar">
+        						<span class="pull-right close visible-xs"><i class="fa fa-times"></i></span>
+        						<div class="header hidden-xs" data-background="#666666">
+        							<p>Send us your MRI using the file uploader below so we can evaluate it ahead of your first visit. If your file is on a removable CD or thumbdrive, insert or connect it to upload your MRI directly from your media source.</p>
+        							<a href="#">Click Here</a>
+        						</div>
+        						<p class="first">Is neck or back pain getting in the way of your life?</p>
+        						<p class="second">We can help you get back to you.</p>
+        						<a href="#" class="appointment" data-toggle="modal" data-target="#modalRequestAppointment"><i class="fa fa-calendar"></i> Request Appointment</a>
+        						<ul class="options text-left">
+        							<li><a href="#">Locations</a></li>
+        							<li><a href="#">Our Practice</a></li>
+        							<li><a href="#">Tools & Tips</a></li>
+        							<li><a href="#">News & Events</a></li>
+        						</ul>
+        						<ul class="contacts text-left">
+        							<li><a href="#" class="card-share" data-toggle="modal" data-target="#modalShare" data-dismiss="modal"><i class="fa fa-share-square-o"></i> Share</a></li>
+        							<li><a href="#" data-toggle="modal" data-target="#modalContact" data-dismiss="modal"><i class="fa fa-envelope"></i> Contact</a></li>
+        							<li><a href="tel:855.600.0933"><i class="fa fa-phone"></i> 855.600.0933</a></li>
+        						</ul>
+        					</div>
+        					<div class="visible-xs">
+        						<div class="mobile-footer">
+        							<svg class="info-icon pull-right show-sidebar">
+        								<use xlink:href="#info_ico"></use>
+        							</svg>
+        							<svg class="phn-icon">
+        								<use xlink:href="#phn_ico"></use>
+        							</svg>
+        							<div class="contact-mobile">
+        								<p>Call us</p>
+        								<p><a href="tel:855.600.0933">855.600.0933</a></p>
+        							</div>
+        						</div>
+        					</div>
+        				</section>			</div>
+        		</div>
+        	</div>
+        </section>        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='https://www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="/bower_components/gmaps/gmaps.js"></script>
+        <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="/bower_components/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
+        <script src="/bower_components/handlebars/handlebars.js"></script>
+        <script src="/bower_components/matchHeight/dist/jquery.matchHeight.js"></script>
+        <script src="/bower_components/enquire/dist/enquire.js"></script>
+        <script src="/bower_components/jquery-address/src/jquery.address.js"></script>
+        <script src="/bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+        
+        <script type="text/javascript" src="http://swarminteractive.com/vm/js/viewmedica/viewmedica.min.js"></script>
+    </body>
+</html>

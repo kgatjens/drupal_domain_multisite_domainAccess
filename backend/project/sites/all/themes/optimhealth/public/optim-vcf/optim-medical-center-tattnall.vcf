@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11//EN
+N:Medical Center-Tattnall;Optim;;;
+FN:Optim Medical Center-Tattnall
+item1.EMAIL;type=INTERNET;type=pref:tattnallsupport@optimhealth.com
+item1.X-ABLabel:email
+TEL;type=pref:912.557.1000
+ADR;type=HOME;type=pref:;;247 South Main St.;Reidsville;GA;30453;USA
+item2.URL;type=pref:www.Tattnall.OptimHealth.com
+item2.X-ABLabel:_$!<HomePage>!$_
+UID:45f84fae96b777a1
+X-ABUID:C292F04A-EFBA-432E-AE8B-2B32C39370A0:ABPerson
+END:VCARD

@@ -1,0 +1,66 @@
+//
+// Typography
+// --------------------------------------------------
+
+// $font-name:       "name";
+// $font-url:        "../fonts";
+
+// // DIN Light font-face
+@font-face {
+    font-family: '#{$font-italic}';
+    src: url('#{$font-url}/#{$font-italic}.eot');
+    src: url('#{$font-url}/#{$font-italic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-italic}.woff2') format('woff2'),
+         url('#{$font-url}/#{$font-italic}.woff') format('woff'),
+         url('#{$font-url}/#{$font-italic}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-italic}.svg#{$font-italic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$font-bold}';
+    src: url('#{$font-url}/#{$font-bold}.eot');
+    src: url('#{$font-url}/#{$font-bold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-bold}.woff2') format('woff2'),
+         url('#{$font-url}/#{$font-bold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-bold}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$font-b-bold}';
+    src: url('#{$font-url}/#{$font-b-bold}.eot');
+    src: url('#{$font-url}/#{$font-b-bold}.eot?#iefix') format('embedded-opentype'),
+         // url('#{$font-url}/#{$font-b-bold}.woff2') format('woff2'),
+         // url('#{$font-url}/#{$font-b-bold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-b-bold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-b-bold}.svg#{$font-b-bold}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$font-a-regular}';
+    src: url('#{$font-url}/#{$font-a-regular}.eot');
+    src: url('#{$font-url}/#{$font-a-regular}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-a-regular}.woff2') format('woff2'),
+         url('#{$font-url}/#{$font-a-regular}.woff') format('woff'),
+         url('#{$font-url}/#{$font-a-regular}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-a-regular}.svg#{$font-a-regular}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$font-b-regular}';
+    src: url('#{$font-url}/#{$font-b-regular}.eot');
+    src: url('#{$font-url}/#{$font-b-regular}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-b-regular}.woff2') format('woff2'),
+         url('#{$font-url}/#{$font-b-regular}.woff') format('woff'),
+         url('#{$font-url}/#{$font-b-regular}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-b-regular}.svg#{$font-b-regular}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

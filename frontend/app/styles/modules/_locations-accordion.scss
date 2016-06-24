@@ -1,0 +1,187 @@
+@include breakpoint('tablet-down'){
+    .locations-wrap .slimScrollDiv{
+        margin-top: 30px;
+    }
+}
+.#{$prefix}-m-accordion-locations {
+
+    .panel {
+        border: none;
+        width: 95%;
+        margin-bottom: 10px;
+        @include breakpoint('tablet-down'){
+            width: 100%;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .panel-body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .panel-title{
+        overflow: hidden;
+    }
+
+    .panel-heading {
+        background-color: $white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .location-type {
+        color: $sidebar-header;
+        @include setThemeColors(links, links);
+        @include fontBold;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 4.5px;
+    }
+
+    .location-title {
+        color: $header;
+        @include setThemeColors(headers, headers);
+        @include fontBold;
+        font-size: 24px;
+        line-height: 29px;
+        text-decoration: none;
+    }
+
+    .icon-box{
+        width: 10%;
+        display: inline-block;
+        vertical-align: middle;
+        @include breakpoint('tablet-up'){
+            width: 15%;
+        }
+    }
+
+    .info-box{
+        display: inline-block;
+        vertical-align: middle;
+        width: 90%;
+        @include breakpoint('tablet-up'){
+            width: 83%;
+        }
+    }
+
+    .right-icon {
+        text-align: center;
+        outline: none;
+        height: 24px;
+        width: 21px;
+        transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+        color: #508fbb;
+        @include onHover;
+        @include setThemeColors(links, links);
+        fill: currentColor;
+        svg {
+            height: 21px;
+            width: 21px;
+            -webkit-transform: translate3d(0, 0, 0);
+            fill: currentColor;
+        }
+    }
+
+    .panel-heading .right-icon {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .panel-heading .right-icon.collapsed {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .thumbnail {
+        cursor: pointer;
+        img {
+            width: 100%;
+            padding: 10px;
+            -webkit-transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .caption {
+        margin: 0 0 10px 0;
+    }
+
+    .street-address span, .location span {
+        @include fontARegular;
+        color: $general-paragraph;
+        @include setThemeColors(general-paragraph);
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 10px;
+        display: block;
+    }
+
+    .info-buttons {
+        height: 49px;
+        text-align: center;
+        cursor: pointer;
+
+        a {
+            @include fontBold;
+            color: $links;
+            @include setThemeColors(colorButton, colorButton, colorButton);
+            text-transform: uppercase;
+            line-height: 17px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .phone-number, .get-direction {
+            width: 50%;
+            height: 100%;
+            float: left;
+            border-top: 1px solid $border-button;
+            display: inline-block;
+            padding-top: 12px;
+            @include onHover;
+
+            span {
+                padding-right: 5px;
+                top: 5px;
+                position: relative;
+            }
+
+            svg {
+                height: 17px;
+                width: 17px;
+                fill: currentColor;
+            }
+        }
+
+        .get-direction {
+            border-left: 1px solid $border-button;
+            border-top: 1px solid $border-button;
+        }
+    }
+
+    @include breakpoint('desktop'){
+
+        .info-buttons {
+            height: 65px;
+
+            .phone-number, .get-direction {
+
+                span {
+                    display: block;
+                    padding-right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

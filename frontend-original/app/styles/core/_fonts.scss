@@ -1,0 +1,288 @@
+//
+// Typography
+// --------------------------------------------------
+
+/* ==========================================================================
+   Adelle
+   ========================================================================== */
+
+@font-face {
+    font-family: '#{$adellebold-italic}';
+    src: url('#{$font-url}/adelle/#{$adellebold_italic}.eot');
+    src: url('#{$font-url}/adelle/#{$adellebold_italic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/adelle/#{$adellebold_italic}.woff2') format('woff2'),
+         url('#{$font-url}/adelle/#{$adellebold_italic}.woff') format('woff'),
+         url('#{$font-url}/adelle/#{$adellebold_italic}.ttf') format('truetype'),
+         url('#{$font-url}/adelle/#{$adellebold_italic}.svg#{$adellebold-italic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$adelle-bold}';
+    src: url('#{$font-url}/adelle/#{$adelle-bold}.eot');
+    src: url('#{$font-url}/adelle/#{$adelle-bold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/adelle/#{$adelle-bold}.woff2') format('woff2'),
+         url('#{$font-url}/adelle/#{$adelle-bold}.woff') format('woff'),
+         url('#{$font-url}/adelle/#{$adelle-bold}.ttf') format('truetype'),
+         url('#{$font-url}/adelle/#{$adelle-bold}.svg#{$adelle-bold}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$adelle-regular}';
+    src: url('#{$font-url}/adelle/#{$adelle-regular}.eot');
+    src: url('#{$font-url}/adelle/#{$adelle-regular}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/adelle/#{$adelle-regular}.woff2') format('woff2'),
+         url('#{$font-url}/adelle/#{$adelle-regular}.woff') format('woff'),
+         url('#{$font-url}/adelle/#{$adelle-regular}.ttf') format('truetype'),
+         url('#{$font-url}/adelle/#{$adelle-regular}.svg#{$adelle-regular}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$adelle-italic}';
+    src: url('#{$font-url}/adelle/#{$adelle-italic}.eot');
+    src: url('#{$font-url}/adelle/#{$adelle-italic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/adelle/#{$adelle-italic}.woff2') format('woff2'),
+         url('#{$font-url}/adelle/#{$adelle-italic}.woff') format('woff'),
+         url('#{$font-url}/adelle/#{$adelle-italic}.ttf') format('truetype'),
+         url('#{$font-url}/adelle/#{$adelle-italic}.svg#{$adelle-italic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// /* ==========================================================================
+//    Proxima Nova
+//    ========================================================================== */
+@font-face {
+    font-family: '#{$pnova-black}';
+    src: url('#{$font-url}/proximanova/#{$pnova-black}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-black}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-black}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-black}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-black}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-black}.svg#{$pnova-black}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-bold}';
+    src: url('#{$font-url}/proximanova/#{$pnova-bold}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-bold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-bold}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-bold}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-bold}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-bold}.svg#{$pnova-bold}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-bold-italic}';
+    src: url('#{$font-url}/proximanova/#{$pnova-bold-italic}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-bold-italic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-bold-italic}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-bold-italic}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-bold-italic}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-bold-italic}.svg#{$pnova-bold-italic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-extrabold}';
+    src: url('#{$font-url}/proximanova/#{$pnova-extrabold}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-extrabold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-extrabold}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-extrabold}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-extrabold}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-extrabold}.svg#{$pnova-extrabold}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-light}';
+    src: url('#{$font-url}/proximanova/#{$pnova-light}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-light}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-light}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-light}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-light}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-light}.svg#{$pnova-light}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-light-italic}';
+    src: url('#{$font-url}/proximanova/#{$pnova-light-italic}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-light-italic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-light-italic}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-light-italic}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-light-italic}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-light-italic}.svg#{$pnova-light-italic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-regitalic}';
+    src: url('#{$font-url}/proximanova/#{$pnova-regitalic}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-regitalic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-regitalic}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-regitalic}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-regitalic}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-regitalic}.svg#{$pnova-regitalic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-regular}';
+    src: url('#{$font-url}/proximanova/#{$pnova-regular}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-regular}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-regular}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-regular}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-regular}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-regular}.svg#{$pnova-regular}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-semibold}';
+    src: url('#{$font-url}/proximanova/#{$pnova-semibold}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-semibold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold}.svg#{$pnova-semibold}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnova-semibold-italic}';
+    src: url('#{$font-url}/proximanova/#{$pnova-semibold-italic}.eot');
+    src: url('#{$font-url}/proximanova/#{$pnova-semibold-italic}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold-italic}.woff2') format('woff2'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold-italic}.woff') format('woff'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold-italic}.ttf') format('truetype'),
+         url('#{$font-url}/proximanova/#{$pnova-semibold-italic}.svg#{$pnova-semibold-italic}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// /* ==========================================================================
+//    Proxima Nova Condenced
+//    ========================================================================== */
+
+@font-face {
+    font-family: '#{$pnovacond-light}';
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-light}.eot');
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-light}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-light}.woff2') format('woff2'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-light}.woff') format('woff'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-light}.ttf') format('truetype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-light}.svg#{$pnovacond-light}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnovacond-lightit}';
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-lightit}.eot');
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-lightit}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-lightit}.woff2') format('woff2'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-lightit}.woff') format('woff'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-lightit}.ttf') format('truetype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-lightit}.svg#{$pnovacond-lightit}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnovacond-regular}';
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-regular}.eot');
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-regular}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regular}.woff2') format('woff2'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regular}.woff') format('woff'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regular}.ttf') format('truetype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regular}.svg##{$pnovacond-regular}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnovacond-regularit}';
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-regularit}.eot');
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-regularit}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regularit}.woff2') format('woff2'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regularit}.woff') format('woff'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regularit}.ttf') format('truetype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-regularit}.svg##{$pnovacond-regularit}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnovacond-semibold}';
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-semibold}.eot');
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-semibold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semibold}.woff2') format('woff2'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semibold}.woff') format('woff'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semibold}.ttf') format('truetype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semibold}.svg##{$pnovacond-semibold}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$pnovacond-semiboldit}';
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-semiboldit}.eot');
+    src: url('#{$font-url}/proximanovacond/#{$pnovacond-semiboldit}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semiboldit}.woff2') format('woff2'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semiboldit}.woff') format('woff'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semiboldit}.ttf') format('truetype'),
+         url('#{$font-url}/proximanovacond/#{$pnovacond-semiboldit}.svg##{$pnovacond-semiboldit}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// /* ==========================================================================
+//    UI Fonts
+//    ========================================================================== */
+// @font-face {
+//     font-family: 'uifonts';
+//     src: url('fonts/ui-font/ui-font-solid.eot');
+//     src: url('fonts/ui-font/ui-font-solid.eot?#iefix') format('embedded-opentype'),
+//          // url('../fonts/ui-font/ui-front-solid.woff2') format('woff2'),
+//          url('fonts/ui-font/ui-font-solid.woff') format('woff'),
+//          url('fonts/ui-font/ui-font-solid.ttf') format('truetype'),
+//          url('fonts/ui-font/ui-font-solid.svg#uifonts') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }

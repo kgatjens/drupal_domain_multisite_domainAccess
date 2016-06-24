@@ -1,0 +1,193 @@
+.search_icon a{
+	color: $white;
+	font-size: 1.5em;
+    height: 20px;
+    width: 20px;
+    display: block;
+    background: url('../images/svg/search_ico_global.svg') no-repeat;
+    background-size: 20px;
+    @include breakpoint(668px){
+        height: 24px;
+        width: 24px;
+        background-size: 24px;
+    }
+
+    .front &,
+    .patient-testimonials.has-banner & {
+        background: url('../images/svg/search_ico_global_front.svg') no-repeat;
+        background-size: 20px;
+        @include breakpoint(668px){
+            background-size: 24px;
+        }
+    }
+}
+
+.search_block{
+
+    padding: 0 !important;
+
+	.modal-dialog{
+		max-width: 100%;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		margin: 0;
+	}
+
+	.modal-content{
+		height: 100%;
+		top: 0;
+		background: url(../images/search_bg.png) transparent;
+	}
+
+    .modal-body{
+        @include breakpoint($desk){
+            padding: 5em 7em;
+        }
+    }
+
+	.search_title{
+        // font-family: $pnb;
+        @include pnovaBold();
+        font-size: 18px;
+        color: #90BEDC;
+        line-height: 22px;
+        display: none;
+        @include breakpoint($desk){
+            display: block;
+        }
+    }
+
+    input#edit-search-block-form--2{
+		// font-family: $pnb;
+		@include pnovaBold();
+        font-size: 72px;
+		color: #FFFFFF;
+		line-height: 86px;
+		background: transparent;
+        border: none;
+        border-bottom: 2px solid $mild-blue;
+        width: 100%;
+        @include breakpoint($desk){
+            font-size: 96px;
+            line-height: 115px;
+        }
+        @include breakpoint($desk-md){
+            font-size: 144px;
+            line-height: 173px;
+        }
+
+        &::placeholder{
+            color: #90BEDC;
+            opacity: 0.5;
+        }
+	}
+
+    .form-actions{
+        display: none;
+    }
+
+    a.search_close{
+        @extend a.share_close;
+        right: 2em !important;
+        top: 2em;
+        z-index: 1051;
+        cursor: pointer;
+        background-image: url('../images/close_white.png') !important;
+    }
+}
+
+.page-search-node{
+    #main{
+        min-height: 100vh;
+    }
+
+    #block-system-main .content >  .view-main-search{
+        max-width: 90%;
+        margin: 0 auto;
+        @include breakpoint($desk-md){
+            max-width: 1065px;
+        }
+
+        & > div{
+            margin-bottom: 3em;
+        }
+
+        #page-title{
+           font-size: 24px;
+            line-height: 29px;
+            max-width: 100%;
+            @include breakpoint($desk){
+                font-size: 48px;
+                line-height: 58px;
+            }
+        }
+
+        h3{
+            // font-family: $pnb;
+            @include pnovaBold();
+            color: $mild-blue;
+            font-size: 20px;
+            line-height: 24px;
+            border-bottom: 1px solid #d3d3d3;
+            margin-bottom: 2.5rem;
+        }
+
+        .views-row{
+            background: url('../images/svg/right_ico.svg') no-repeat white;
+            background-size: 20px;
+            background-position: right center;
+            border-right: 20px inset transparent;
+            height: 72px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+        }
+
+        .views-field-title,
+        .views-field-field-degree,
+        .views-field-body{
+            display: inline-block;
+        }
+
+        .views-field-title{
+            display: table;
+            @include breakpoint($tab){
+                display: inline-block;
+            }
+        }
+
+        .views-field-title a{
+            color: $dark-blue;
+            // font-family: $pnb;
+            @include pnovaBold();
+            font-size: 18px;
+            height: 72px;
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 1em;
+            @include breakpoint($tab){
+                display: inline;
+                line-height: 72px;
+                font-size: 24px;
+            }
+        }
+
+        .views-field-field-degree,
+        .views-field-body{
+            // font-family: $pnb;
+            @include pnovaBold();
+            color: $mild-blue;
+            font-size: 18px;
+            display: none;
+            @include breakpoint($desk){
+                display: inline-block;
+            }
+        }
+    }
+
+    .search-term{
+        // font-family: $pni;
+        @include pnovaBoldItalic();
+        text-transform: lowercase;
+    }
+}

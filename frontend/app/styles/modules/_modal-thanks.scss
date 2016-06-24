@@ -1,0 +1,129 @@
+.#{$prefix}-m-thanks-modal {
+    .close {
+        font-size: 30px;
+        color: $header;
+        @include setThemeColors(links, links);
+        width: 100%;
+        padding: 0.1em 0.8em;
+        text-align: right;
+    }
+
+    .modal-dialog {
+        width: 930px;
+
+        .modal-header h1 {
+            font-size: 48px;
+            margin-bottom: 0;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .modal-content {
+            .modal-body {
+                button {
+                    border-radius: 28px;
+                    border: 1px solid $links;
+                    width: 130px;
+                    height: 52px;
+                    background: #508FBB;
+                    @include setThemeColors('','' , links, links);
+                    color: $white;
+                    font-size: 18px;
+                    @include fontBold;
+                    display: block;
+                    margin: 3em auto;
+                }
+
+                h2 {
+                    font-size: 22px;
+                    line-height: 24px;
+                    @include fontBold;
+                    color: $header;
+                    @include setThemeColors(headers);
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $header;
+                    @include setThemeColors(general-paragraph);
+                    max-width: 320px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    @include breakpoint("tablet") {
+        .modal-dialog {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+
+            .modal-header h1 {
+                font-size: 35px;
+            }
+
+            .modal-content {
+                height: 100%;
+            }
+        }
+    }
+
+    @include breakpoint("phone") {
+        .close{
+            padding: 0.1em 0.2em;
+        }
+        .modal-dialog {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+
+            .modal-header h1 {
+                font-size: 30px;
+                line-height: 35px;
+                margin-bottom: 40px;
+                padding: 0;
+            }
+
+            .modal-content {
+                height: 100%;
+
+                .modal-body {
+                    background: #FFFFFF;
+                    button {
+                        margin: 0 auto;
+                    }
+
+                    h2 {
+                        margin-top: 0;
+                    }
+
+                    p {
+                         padding-bottom: 3em;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint("phone-landscape"){
+        .modal-dialog {
+
+            .modal-header h1 {
+                margin-bottom: 20px;
+            }
+
+            .modal-content {
+                
+                .modal-body {
+                    
+                    p {
+                         padding-bottom: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.treatments{
+  @extend .what-hurts;
+
+  .view-treatments{
+    @extend .view-what-hurts;
+
+    .view-header{
+      // font-family: $adr;
+      @include adelleRegular();
+      font-size: 14px;
+      color: #7D7D7D;
+      line-height: 32px;
+      width: 100%;
+      background: none;
+      float: none;
+      box-shadow: none;
+      height: auto;
+      position: inherit;
+      padding: 0;
+      @include breakpoint($desk-md){
+        width: 65%;
+      }
+    }
+
+    .view-content{
+        text-align: center;
+        @include breakpoint($desk){
+            text-align: left;
+        }
+    }
+  }
+}
+
+.node_treatment{
+  @extend .node_practice;
+
+  .view-related-conditions{
+    @extend .field-name-field-treatment;
+
+    .views-row{
+      @extend .field-item;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// core/_fonts.scss
+@mixin fontItalic {
+    font-family: #{$font-italic};
+}
+
+@mixin fontBold {
+    font-family: #{$font-bold};
+}
+
+@mixin fontBBold {
+    font-family: #{$font-b-bold};
+}
+
+@mixin fontARegular {
+    font-family: #{$font-a-regular};
+}
+
+@mixin fontBRegular {
+    font-family: #{$font-b-regular};
+}
+
+@mixin breakpoint($points) {
+    @each $point in $points {
+        @if $point == large {
+            @media (min-width: $screen-lg-min) {
+                @content;
+            }
+        }
+        @else if $point == desktop {
+            @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+                @content;
+            }
+        }
+        @else if $point == tablet-up {
+            @media (min-width: $screen-md-min) {
+                @content;
+            }
+        }
+        @else if $point == tablet {
+            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                @content;
+            }
+        }
+        @else if $point == tablet-down {
+            @media (max-width: $screen-sm-max) {
+                @content;
+            }
+        }
+        @else if $point == phone-up {
+            @media (min-width: $screen-sm-min) {
+                @content;
+            }
+        }
+        @else if $point == phone {
+            @media (max-width: $screen-xs-max) {
+                @content;
+            }
+        }
+        @else if $point == phone-landscape {
+            @media (min-width: 375px) and (max-width: 767px) and (orientation: landscape) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin retinabg($img, $width: 0, $height: 0) {
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background-image: $img;
+
+        @if $width != 0 {
+            background-size: $width $height;
+        }
+
+        @if $width == 0 {
+            background-size: contain;
+        }
+    }
+}
+
+@mixin fluid-ratio($large-size, $small-size) {
+    $width-large: nth($large-size, 1);
+    $width-small: nth($small-size, 1);
+    $height-large: nth($large-size, 2);
+    $height-small: nth($small-size, 2);
+    $slope: ($height-large - $height-small) / ($width-large - $width-small);
+    $height: $height-small - $width-small * $slope;
+
+    padding-top: $slope * 100%;
+    height: $height;
+    background-size: cover;
+    -moz-background-size: cover;
+
+    /* Firefox 3.6 */
+    background-position: center right;
+
+}
+
+@mixin onHover($bColor: null, $hover-color: null){
+    transition: all 0.3s ease-in;
+    &:hover, &:focus {
+        @if($hover-color){
+            color: darken($hover-color, 10%);
+        }@else{
+            color: #23527c;
+        }
+        @if ($bColor) {
+            border-color: $bColor;
+        }
+    }
+}
+
+
+
+/* use this mixin to styles different themes
+    $color -> for text color
+    $onHover -> for hovered color
+    $borderColor -> to change border color if element has
+
+    if need add another attribute,  place it at the end of the function parameters
+*/
+
+@mixin setThemeColors($color: null, $onHover: null, $borderColor:null, $background: null){
+    
+    @each $theme, $map in $themes {
+      .#{$theme} &{
+        @if($color){
+            color: map-get($map, $color);
+        }
+        @if($onHover){
+            @include onHover(null, map-get($map, $onHover));
+        }
+        @if($borderColor){
+            border-color: map-get($map, $borderColor);
+        }
+        @if($background){
+            background: map-get($map, $background);
+        }
+      }
+    }
+
+}
+
+
+
+
+
+
+
+
+

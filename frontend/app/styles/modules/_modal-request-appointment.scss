@@ -1,0 +1,151 @@
+.#{$prefix}-m-request-appointment {
+
+    label {
+        font-weight: 500;
+    }
+
+    .form-item.webform-component.webform-component-email.webform-component--or-email-me-at.webform-container-inline::after {
+        content: ".";
+    }
+
+    span.form-required {
+        display: none;
+        color: #f00;
+    }
+
+    .modal-dialog {
+        height: auto;
+        margin: 0 auto;
+
+        .modal-content {
+            height: auto;
+
+            .modal-body {
+                @include fontBRegular;
+                color: $header;
+                @include setThemeColors(headers);
+                font-size: 34px;
+                line-height: 70px;
+                padding: 1em 3em;
+
+                input {
+                    border: none;
+                    border-bottom: 2px inset #000000;
+                    width: 35%;
+                    text-align: center;
+                    line-height: 1.2;
+                    font-size: 24px;
+                    &:-moz-placeholder,
+                    &:focus,
+                    &:invalid{
+                        outline: none;
+                        box-shadow:none !important;
+                    }
+
+                    @include breakpoint("tablet") {
+                        font-size: 18px;
+                    }
+
+
+                    @include breakpoint("phone") {
+                        font-size: 3.2vw;
+                        &.field-email{
+                            font-size: 2.9vw;
+                        }
+                    }
+                }
+
+                input:-ms-input-placeholder {
+                    color: $paragraph-c;
+                    padding-bottom: 10px;
+                }
+
+                input[type=submit] {
+                    @include fontBold;
+                    background: $links;
+                    @include setThemeColors(null, null, null, links);
+                    border-radius: 45px;
+                    border: none;
+                    color: $white;
+                    display: block;
+                    font-size: 18px;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-top: 5em;
+                    margin: 5em auto;
+                    padding: 0;
+                    text-transform: uppercase;
+                    width: 150px;
+                    outline: none;
+                    &.disabled{
+                        // pointer-events: none;
+                    }
+                }
+
+                .error-field {
+                    border-bottom: 2px solid $error-field;
+                }
+
+                .form-item.webform-component.webform-component-textfield {
+                    display: inline;
+                }
+
+                .form-item.webform-component.webform-component-markup.webform-component--markup1 {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+
+            .modal-header {
+                h1 {
+                    margin: 2em 0 0 0.5em;
+                }
+
+                .close {
+                    color: $header;
+                    @include setThemeColors(links, links);
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    
+    @include breakpoint("tablet"){
+        .modal-dialog{
+            .modal-content{
+                .modal-body{
+                    input{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint("phone") {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    font-size: 20px;
+                    line-height: 36px;
+                    padding: 1em 1em;
+
+                    .form-item.webform-component.webform-component-textfield.webform-component--condition,
+                    .form-item.webform-component.webform-component-textfield.webform-component--phone {
+                        input {
+                            width: 50%;
+                        }
+                    }
+
+                    .form-item.webform-component.webform-component-textfield.webform-component--email {
+                        input {
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,62 @@
+.contact_overlay{
+
+    .newsletter_top{
+        @include breakpoint($desk){
+            max-width: 75%;
+        }
+        h2{
+            // font-family: $pnb;
+            @include pnovaBold();
+            color: $dark-blue;
+            font-size: 22px;
+            line-height: 26px;
+            margin: 0;
+            margin-top: 1.5em;
+            @include breakpoint($desk){
+                margin-top: 3.5em;
+            }
+        }
+
+        .pane-content{
+            // font-family: $adr;
+            @include adelleRegular();
+            font-size: 14px;
+            color: #6F6F6F;
+            line-height: 20px;
+            margin-top: 2em;
+        }
+    }
+
+    .newsletter_body{
+        label{
+            @include common_label;
+        }
+
+        ul.step-wrapper{
+            padding-left: 0;
+        }
+
+        span.form-required{
+            color: $mild-blue;
+        }
+
+        input.form-text{
+            @include common_text_field;
+            background-color: white;
+            width: 100%;
+        }
+
+        input#edit-submit{
+            @include submit_button;
+            width: 110px;
+            background-position: 83px 15px;
+            position: relative;
+            left: 6.5em;
+            -webkit-appearance: none;
+
+            @include breakpoint($desk){
+                left: 11em;
+            }
+        }
+    }
+}

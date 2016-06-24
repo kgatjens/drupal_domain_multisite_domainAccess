@@ -1,0 +1,104 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+    SetEnv DRUPAL_ENV preview
+	DocumentRoot /var/www/public
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/public/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+
+       	<Directory /var/www/html/eu/uk>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>
+
+
+ 	 <Directory /var/www/html/eu/it>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>    
+
+	 <Directory /var/www/html/eu/pl>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>
+
+	<Directory /var/www/html/eu/fr>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>
+
+	<Directory /var/www/html/me/sa>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>
+
+	<Directory /var/www/html/eu/se>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>
+
+	<Directory /var/www/html/eu/no>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+         </Directory>
+
+	#Header set Access-Control-Allow-Origin "*"
+    #Header set Access-Control-Max-Age "1728000"
+    #Header set Access-Control-Allow-Headers "WWW-Authenticate, Vary, X-Frame-Options, X-Powered-By"
+	#Header set Access-Control-Allow-Methods "POST, GET, PUT, OPTIONS
+
+    # BEGIN SEO
+    RewriteEngine on
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+    RewriteRule (.*) http://10.130.24.55:3000/%1? [P]
+    # END SEO
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    Alias /doc/ "/usr/share/doc/"
+    <Directory "/usr/share/doc/">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+        Allow from 127.0.0.0/255.0.0.0 ::1/128
+    </Directory>	
+
+</VirtualHost>
+

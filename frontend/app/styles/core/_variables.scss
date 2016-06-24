@@ -1,0 +1,76 @@
+//
+// Global variables
+// --------------------------------------------------
+
+$prefix: 'pure-oh';
+// .#{$prefix}-m   = module
+// .#{$prefix}-h  = helper
+// .#{$prefix}-mix = mixin
+// .#{$prefix}-is  = state
+// .#{$prefix}-f   = function
+
+// Typography Vars
+$font-url       : "../fonts";
+$font-italic    : "adells-italic-webfont";
+$font-bold      : "proximanova-bold-webfont";
+$font-b-bold    : "adelle-bold-webfont";
+$font-a-regular : "adelle-regular-webfont";
+$font-b-regular : "proximanova-regular-webfont";
+
+// Colors Vars
+$header             : #1F4265;
+$general-paragraph  : #7D7D7D;
+$links              : #508FBB;
+$color-button       : #337AB7;
+$border-button      : #D3D3D3;
+$white              : #FFFFFF;
+$sidebar-header     : #90BEDC;
+$sidebar-ribbon     : #5390B9;
+$background         : #F5F5F5;
+$link-active        : #1E4166;
+$modal-paragraph    : #404040;
+$background-tabs    : #EEF6FB;
+$cursor-search      : #1F4265;
+$paragraph-a        : #6F6F6F;
+$paragraph-b        : #61A1C7;
+$divider            : #D8D8D8;
+$color-button-hover : #23527C;
+$paragraph-c        : #C3C3C3;
+$error-field        : #FF0000;
+
+
+// Set theme colors, need to use same variables name
+$themes: (
+  coastalimaging: (
+  	mainColor: #e5183a,
+  	links: #e5183a, 
+  	sidebarHeader: #f58679, 
+  	headers: #636466,
+  	general-paragraph: #4c4d4f,
+  	cardButton: #757575,
+  	borderCard: #ececed,
+  	colorButton: #f58679,
+    linkActive: #58585a
+  ),
+
+  // theme2 and theme3 just for test replace them by real theme class
+  theme2: (
+  	mainColor: #192a8f,
+    links: #fd2221, 
+    sidebarHeader: #f58679, 
+    headers: #636466,
+    general-paragraph: #aaaaaa,
+    cardButton: #f6e700,
+    borderCard: #f6e700,
+    colorButton: #bbbbbb
+  ), 
+  theme3: (
+  	mainColor: #208883,
+    links: #e9e3a3, 
+    sidebarHeader: #003136, 
+    headers: #53a695,
+    general-paragraph: #000000
+  )
+);
+
+

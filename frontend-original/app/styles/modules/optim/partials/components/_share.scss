@@ -1,0 +1,161 @@
+.modal-dialog{
+	max-width: 320px;
+    min-width: 320px !important;
+    width: 100% !important;
+	height: 320px;
+	margin: 0;
+    padding: 0 !important;
+	@include breakpoint($desk){
+		margin: 30px auto;
+        max-width: 430px;
+	}
+
+    &#overlay{
+        @include breakpoint($desk){
+            position: absolute;
+            top: 25%;
+            left: 0;
+            right: 0;
+        }
+
+        #overlay-close-wrapper{
+            @include overlay_close_wrapper;
+
+            .overlay-close{
+                @include close_button(16, 25);
+            }
+        }
+    }
+
+	.modal-header{
+		border: none;
+
+		a.close{
+			@include close_button;
+            right: 0;
+			@include breakpoint($desk){
+				display: block;
+			}
+		}
+	}
+
+    .modal-content{
+		border-radius: 0;
+		height: 100vh;
+		position: relative;
+		top: 0;
+		@include breakpoint($desk){
+			height: 320px;
+			top: 50%;
+		}
+    }
+
+    #main{
+        @extend .modal-content;
+        width: 100%;
+        float: none;
+
+        .share_overlay_text{
+            @include breakpoint($desk){
+                padding-top: 1.75em;
+            }
+        }
+    }
+}
+
+.share_overlay_text{
+	// font-family: $pnb;
+	@include pnovaBold();
+	font-size: 32px;
+	color: #1F4265;
+	line-height: 38px;
+	text-align: center;
+	margin-top: 45%;
+	@include breakpoint($desk){
+		margin-top: 0;
+	}
+}
+
+#atstbx{
+	text-align: center;
+    display: table !important;
+    margin: 0 auto;
+}
+
+a.at-share-btn{
+	background: transparent !important;
+	max-width: 65px !important;
+	max-height: 90px !important;
+	margin-right: 2em !important;
+    display: table !important;
+    float: left;
+
+	&.at-svc-facebook{
+		margin-right: 2.2em !important;
+	}
+
+	&.at-svc-email{
+		margin-right: 0 !important;
+	}
+
+	span.at4-icon{
+		width: 65px !important;
+		height: 100px !important;
+		background-size: 65px !important;
+        text-indent: 0;
+        display: table-cell;
+        vertical-align: bottom;
+
+		&.aticon-facebook{
+			width: 78px !important;
+			background-size: 77px !important;
+		}
+
+        &:after{
+            // font-family: $pnb;
+            @include pnovaBold();
+            color: $dark-blue;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+        }
+	}
+}
+
+.at4-icon.aticon-facebook{
+	background: url('../images/share_fb.svg') no-repeat left !important;
+
+    &:after{
+        content: "facebook";
+    }
+}
+
+.at4-icon.aticon-twitter{
+	background: url('../images/share_twitter.svg') no-repeat left !important;
+
+    &:after{
+        content: "twitter";
+    }
+}
+
+.at4-icon.aticon-email{
+	background: url('../images/share_mail.svg') no-repeat left !important;
+
+    &:after{
+        content: "email";
+    }
+}
+
+.at-svc-compact{
+	display: none !important;
+}
+
+a.share_close{
+	@extend a.close;
+	position: absolute !important;
+	right: 2em !important;
+    display: block !important;
+	@include breakpoint(1025px){
+		right: 1em !important;
+	}
+}

@@ -1,0 +1,37 @@
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item">
+    <div class="pure-oh-m-cards modal-cards modal-team" data-filter="Hand">
+        <div class="panel">
+            <div class="panel-body col-eq-height modal-node modal-action" data-toggle="modal" data-target="#modalTeam" data-node="907">
+                <figure>
+                    <img src="../images/temp/th_02-Lower-back-pain.png" alt="">
+                </figure>
+                <h4>
+                    {{#if especiality }}
+                    {{ especiality }}
+                    {{else}}Radiology/Imaging
+                    {{/if}}
+                </h4>
+                <h2 class="name">
+                    {{#if name }}
+                    {{ name }}
+                    {{else}}Hewatt Sims
+                    {{/if}}
+                </h2>
+                <h3>
+                    {{#if abr}}
+                    {{ abr }}
+                    {{else}}
+                    MD
+                    {{/if}}
+                </h3>
+            </div>
+            <div class="panel-footer">
+                <div class="btn-group btn-group-justified buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn modal-action" data-toggle="modal" data-target="#modalTeam"><i class=" fa fa fa-eye"></i>  View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

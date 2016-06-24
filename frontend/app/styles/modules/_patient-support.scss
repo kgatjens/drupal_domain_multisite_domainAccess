@@ -1,0 +1,76 @@
+##{$prefix}-m-patient-support{
+	position: relative;
+	.portal-box{
+		position: absolute;
+		overflow: hidden;
+		p{
+			font-size: 14px;
+			line-height: 19px;
+		}
+		a{
+			color: #508FBB;
+			@include fontBold;
+			font-size: 12px;
+			line-height: 35px;
+			border: 1px solid #508FBB;
+			border-radius: 25px;
+			text-transform: uppercase;
+			text-decoration: none;
+			background: transparent;
+			@include onHover(#23527c);
+			@include setThemeColors(colorButton, colorButton, colorButton);
+			&:hover{
+				background: transparent;
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.portal-box{
+			top: 0;
+			right: 0%;
+			width: 48%;
+			p{
+				float: left;
+				width: 70%;
+			}
+			a{
+				width: 25%;
+				float: right;
+				padding: 0;
+			}
+		}
+	}
+
+	@include breakpoint("tablet") {
+		.portal-box{
+			width: 55%;
+			p{
+				font-size: 13px;
+				width: 75%;
+			}
+			a{
+				font-size: 9px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	@include breakpoint("phone") {
+		padding: 0 0 120px;
+		.portal-box{
+			left:  0;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			p{
+				text-align: left;
+			}
+			a{
+				padding: 0 1em;
+				margin: 0 auto;
+				display: inline-block;
+			}
+		}
+	}
+}

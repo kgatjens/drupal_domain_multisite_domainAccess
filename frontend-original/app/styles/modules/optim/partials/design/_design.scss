@@ -1,0 +1,80 @@
+////////////////////////
+// Design Partials
+//
+// Separate your Layout from Design
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+//
+// All styling, non box model properties go here
+////////////////////////
+
+body{
+    -webkit-font-smoothing: antialiased;
+    a,
+    a:hover,
+    a:focus,
+    a:visited{
+        text-decoration: none;
+        outline: none;
+    }
+
+    input{
+        outline: none;
+    }
+}
+
+.counter{
+    // font-family: $pnb;
+    @include pnovaBold();
+    color: $mild-blue;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+}
+
+.step-nav{
+    display: table;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .next,
+    .prev{
+        // font-family: $pnb;
+        @include pnovaBold();
+        color: $mild-blue;
+        border: 1px solid $mild-blue;
+        border-radius: 25px;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        height: 42px;
+        width: 85px;
+        line-height: 42px;
+        text-align: center;
+        margin: 0 5px;
+        cursor: pointer;
+        float: left;
+    }
+
+    .next{
+        background: url('../images/next_ico.svg') no-repeat right;
+        background-position: 60px center;
+        background-size: 8px;
+        padding-right: 20px;
+    }
+
+    .prev{
+        background: url('../images/prev_ico.svg') no-repeat right;
+        background-size: 8px;
+        background-position: 15px center;
+        padding-left: 20px;
+    }
+}
+
+.error{
+    color: #8c2e0b !important;
+}
+
+// Overide base theme class
+.element-invisible {
+    width: 1px;
+}

@@ -1,0 +1,19 @@
+.#{$prefix}-m-local-search{
+	.search-input{
+		width: 100%;
+		text-transform: uppercase;
+		color: $paragraph-c;
+		font-size: 15px;
+		padding-left: 1.75em;
+		@include fontBold;
+		border: $white;
+		border-radius: 3px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+		margin-bottom: 0.5em;
+		height: 58px;
+		line-height: 58px;
+		&::-ms-clear {
+			display: none;
+		}
+	}
+}

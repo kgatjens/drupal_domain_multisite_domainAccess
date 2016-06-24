@@ -1,0 +1,29 @@
+name = Optimhealth
+description = optimhealth
+core = 7.x
+
+
+stylesheets[all][] = public/styles/vendor.css
+stylesheets[all][] = public/styles/main.css
+stylesheets[all][] = system.menus.css
+
+scripts[vendor] = public/scripts/vendor.js
+scripts[main] = public/scripts/main.js
+
+regions[content] = Content
+regions[header] = Header
+regions[header_white] = Header White
+regions[footer] = Footer
+regions[footer_white] = Footer White
+regions[sidebar] = Sidebar
+regions[content_breadcrumbs] = Content Breadcrumbs
+regions[content_header] = Content Header
+regions[content_middle] = Content Middle
+regions[content_footer] = Content Footer
+
+
+
+
+
+
+

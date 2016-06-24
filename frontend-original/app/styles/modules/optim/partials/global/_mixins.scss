@@ -1,0 +1,272 @@
+@mixin home_carousel_img{
+	max-width: none;
+	width: 900px;
+	height: auto;
+	position: fixed;
+	margin-top: 0;
+	margin-left: -20em;
+	@include breakpoint(1025px){
+		max-width: 1440px;
+		width:100%;
+		margin: 0;
+		position: relative;
+	}
+}
+
+@mixin sidebar_bottom{
+	// font-family: $pnb;
+	@include pnovaBold();
+    color: $mild-blue;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+@mixin close_button($size: 15, $desk-size: 15){
+    display: block;
+    width: $size + px;
+	height: $size + px;
+    background: url(../images/svg/close.svg) no-repeat;
+    background-size: $size + px;
+	opacity: 1;
+	position: relative;
+	right: -2em;
+    @include breakpoint($desk){
+        right: 0;
+        width: $desk-size + px;
+        height: $desk-size + px;
+        background-size: $desk-size + px;
+    }
+}
+
+@mixin overlay_close_wrapper($right: 3, $top: 2){
+    right: $right + em;
+    margin-top: $top + em;
+}
+
+@mixin center_layout($mob-max-width: 95%, $desk-max-width: 1065){
+    max-width: $mob-max-width;
+    margin: 0 auto;
+    @include breakpoint($desk-hd){
+        max-width: $desk-max-width + px;
+    }
+}
+
+@mixin staff_links_top{
+    color: $mild-blue;
+    // font-family: $pnb;
+    @include pnovaBold();
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+}
+
+@mixin staff_links_bot{
+    // font-family: $adr;
+    @include adelleRegular();
+    font-size: 14px;
+    line-height: 20px;
+    color: #7D7D7D;
+}
+
+@mixin section_left($mob-padding: 1.5, $desk-padding: 2.5, $desk-md-padding: 2.5){
+    max-width: 95%;
+    margin: 0 auto;
+    padding: $mob-padding + em 0;
+    @include breakpoint($desk){
+        padding-left: 0;
+        padding-bottom: $desk-padding + em;
+    }
+    @include breakpoint($desk-md){
+        max-width: 1065px;
+        padding-bottom: $desk-md-padding + em;
+    }
+}
+
+@mixin fluid_layout{
+    @include section_left;
+    max-width: 100%;
+    width: 90%;
+}
+
+@mixin header_text{
+    // font-family: $adr;
+    @include adelleRegular();
+    font-size: 14px;
+    color: #7D7D7D;
+    line-height: 24px;
+    width: 100%;
+    background: none;
+    float: none;
+    box-shadow: none;
+    height: auto;
+    position: inherit;
+    padding: 0;
+    @include breakpoint($desk){
+        line-height: 32px;
+    }
+}
+
+@mixin long_search{
+    height: 65px;
+    .views-exposed-form {
+        input.form-text{
+            // font-family: $pnb;
+            @include pnovaBold();
+            background: $white;
+            color: $dark-blue;
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+            border-radius: 3px;
+            font-size: 15px;
+            line-height: 58px;
+            height: 58px;
+            width: 100% !important;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 0.5em;
+            padding-left: 1.75em;
+            text-transform: uppercase;
+            border-radius: 3px;
+
+            &::placehoder{
+                color: $light-gray;
+            }
+        }
+
+        .views-submit-button{
+            position: absolute;
+            // top: -0.5em;
+            top: 0.8em;
+            right: 1em;
+            left: auto;
+        }
+
+        input.form-submit{
+            background: url('../images/svg/search_ico.svg') no-repeat;
+            width: 24px !important;
+            color: transparent;
+            height: 24px;
+            background-size: 24px;
+            box-shadow: none;
+            border: none;
+        }
+
+        .views-exposed-widget{
+            float: none;
+            padding-top: .5em;
+            padding-right: 0;
+            @include breakpoint($tab){
+                padding-right: 1em;
+            }
+        }
+    }
+}
+
+@mixin next_prev_buttons{
+    // font-family: $pnb;
+    @include pnovaBold();
+    color: $mild-blue;
+    border: 1px solid $mild-blue;
+    border-radius: 25px;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    height: 42px;
+    width: 85px;
+    line-height: 42px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@mixin next_button{
+    background: url('../images/svg/next_ico.svg') no-repeat right;
+    background-position: 60px center;
+    background-size: 11px;
+    padding-right: 20px;
+}
+
+@mixin prev_button{
+    background: url('../images/svg/prev_ico.svg') no-repeat right;
+    background-size: 8px;
+    background-position: 15px center;
+    padding-left: 20px;
+}
+
+@mixin common_text_field($width: 280, $desk-width: 325){
+    // font-family: $pnb;
+    @include pnovaBold();
+    color: $mild-blue;
+    max-width: $width + px;
+    height: 64px;
+    line-height: 64px;
+    border: none;
+    box-shadow: none;
+    padding-left: 1em;
+    background: url('../images/form_bot_border.png') no-repeat bottom   left;
+    background-color: #EEF6FB;
+    background-size: 100%;
+    margin-top: 5px;
+    @include breakpoint($desk){
+        max-width: $desk-width + px;
+    }
+}
+
+@mixin common_text_area {
+    // font-family: $pnb;
+    @include pnovaBold();
+    color: $mild-blue;
+    border: none;
+    background-color: #EEF6FB;
+    padding: 1em;
+    margin-top: 5px;
+}
+
+@mixin common_label{
+    // font-family: $pnb;
+    @include pnovaBold();
+    color: $mild-blue;
+    font-size: 18px;
+    line-height: 22px;
+    display: block;
+}
+
+@mixin submit_button{
+    @include next_prev_buttons;
+    color: white;
+    background: url('../images/svg/check_ico.svg') no-repeat 60px 16px;
+    background-color: $mild-blue;
+    background-size: 13px;
+    padding-right: 20px;
+}
+
+@mixin multi_step{
+    // font-family: $pnb;
+    @include pnovaBold();
+    color: $mild-blue;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+}
+
+@mixin scrollbar{
+    width: 10px;
+}
+
+@mixin scrollbar_track{
+    box-shadow: none;
+    background: url('../images/scroll_bg.png') transparent repeat-y center;
+}
+
+@mixin scrollbar_thumb{
+    background-color: #B0B0B0;
+    outline: 0px solid blue;
+    border-radius: 10px;
+}
+
+//Global Styles
+
+.optim-hidden{
+  display: none!important;
+}

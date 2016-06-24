@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11//EN
+N:Therapy;Optim;;;
+FN:Optim Therapy
+TEL;type=pref:912.644.5333
+ADR;type=HOME;type=pref:;;210 East DeRenne Avenue;Savannah;GA;31405;
+item1.URL;type=pref:www.Therapy.OptimHealth.com
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:therapysupport@optimhealth.com
+item2.X-ABLabel:Email
+UID:65b2c7f0973dc9ef
+X-ABUID:29670E0B-82F3-4A4C-A35A-78575389D2DF:ABPerson
+END:VCARD

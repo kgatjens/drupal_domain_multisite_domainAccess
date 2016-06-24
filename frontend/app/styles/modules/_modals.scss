@@ -1,0 +1,79 @@
+.#{$prefix}-h-modals{
+    .modal-dialog{
+        background: #FFFFFF;
+    }
+	.close {
+	    font-size: 25px;
+	    position: absolute;
+	    z-index: 1;
+	    right: 20px;
+	    top: 0;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    margin: 0;
+	    @include onHover;
+	    @include breakpoint("phone"){
+	        color: #508FBB;
+	    }
+	    @include setThemeColors(links, links);
+    }
+
+    &.blank_color{
+        .close{
+            color: #508FBB;
+            @include onHover;
+            @include setThemeColors(links, links);
+        }
+    }
+    .modal-loader{
+        margin: 0 auto;
+        &:before {
+            content: 'loading';
+            position: absolute;
+            height: 50px;
+            // left: 50%;
+            // -webkit-transform: translate(-50%, -50%);
+            z-index: 9;
+            text-transform: uppercase;
+            color: #aaa;
+            font-weight: bold;
+            text-align: center;
+            top: 0px;
+            right: 0;
+            bottom: -80px;
+            left: 0;
+            margin: auto;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 300px;
+            height: 200px;
+            background: white url(../images/overlay-spinner.gif) no-repeat center;
+            background-size: 30%;
+            // top: 50%;
+            // left: 50%;
+            // -webkit-transform: translate(-50%, -50%);
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    	@include breakpoint("phone"){
+            width: 100%;
+
+        }
+        @include breakpoint("tablet"){
+            width: 600px;
+        }
+        @include breakpoint("tablet-up"){
+            width: 1020px;
+        }
+    }
+
+}
+

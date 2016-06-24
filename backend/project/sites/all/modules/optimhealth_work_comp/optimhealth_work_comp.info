@@ -1,0 +1,14 @@
+name = optimhealth_work_comp
+core = 7.x
+package = optimhealth
+dependencies[] = features
+dependencies[] = field_group
+dependencies[] = text
+features[ctools][] = field_group:field_group:1
+features[features_api][] = api:2
+features[field_base][] = field_work_comp_body
+features[field_group][] = group_work_comp_content|node|work_comp|form
+features[field_group][] = group_work_comp_gen_info|node|work_comp|form
+features[field_instance][] = node-work_comp-field_work_comp_body
+features[node][] = work_comp
+features_exclude[dependencies][ctools] = ctools

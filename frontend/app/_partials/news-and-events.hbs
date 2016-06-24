@@ -1,0 +1,39 @@
+<section class="pure-oh-m-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				{{> header }}
+				<div class="row">
+					{{> breadcrumb }}
+				</div>
+				<div id="news-and-events">
+					<h1>News & Events</h1>
+					<p class="description">Lorem ipsum Qui voluptate id eiusmod sit laboris.</p>
+					<div class="cards">
+						<div class="row row-eq-height">
+							{{> cards/card-news-events img='true' }}
+							{{> cards/card-news-events time="true"}}
+							{{> cards/card-news-events img='true' time="true"}}
+							{{> cards/card-news-events img='true'}}
+							{{> cards/card-news-events }}
+							{{> cards/card-news-events }}
+						</div>
+						<div id="load-more-button">
+							<div class="load-more-main">
+								<a href="" class="load-more" type="submit">LOAD MORE<i class="fa fa-spinner fa-pulse load-more-spinner" style="display:none;"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						{{> load-more}}
+					</div>
+				</div>
+				{{> footer }}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				{{> sidebar-flat }}
+			</div>
+		</div>
+	</div>
+</section>

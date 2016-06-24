@@ -1,0 +1,85 @@
+// fix font display
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// remove orange box on android active anchors
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+a {
+  outline: none !important;
+  text-decoration: none !important;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus{
+    outline: none !important;
+    text-decoration: none !important;
+  }
+}
+
+// Display content as table
+.#{$prefix}-h-table {
+  width: 100%;
+  display: table;
+  text-align: center;
+
+  > .h-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .h-is-top {
+    vertical-align: top;
+    padding-top: 50px;
+  }
+
+  .h-is-bottom {
+    vertical-align: bottom;
+    padding-bottom: 40px;
+  }
+
+}
+// Bootstrap remove gutter
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.#{$prefix}-h-modals{
+   .modal-dialog{
+      .modal-content{
+         background: $white;
+
+         .modal-header{
+            border: none;
+         }
+      }
+   }
+}
+
+.display-none{
+  display: none;
+}
+
+.error-details{
+  color: $error-field;
+}
+
+.cards, .row-eq-height{
+  overflow: hidden;
+}
+
+
+%break-line{
+  white-space: normal;
+  word-break: break-word;
+}
+
+.item-list ul li {
+  margin: 0 0 0.25em 1em; /* LTR */
+  padding: 0;
+}

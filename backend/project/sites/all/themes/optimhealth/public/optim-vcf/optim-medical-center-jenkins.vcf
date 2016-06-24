@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11//EN
+N:Medical Center-Jenkins;Optim;;;
+FN:Optim Medical Center-Jenkins
+item1.EMAIL;type=INTERNET;type=pref:jenkinssupport@optimhealth.com
+item1.X-ABLabel:email
+TEL;type=pref:478.982.4221
+ADR;type=HOME;type=pref:;;931 East Winthrope Ave;Millen;GA;30442;USA
+item2.URL;type=pref:www.Jenkins.OptimHealth.com
+item2.X-ABLabel:_$!<HomePage>!$_
+UID:1da06ea5121f6527
+X-ABUID:18B4B211-FFE6-4235-AD76-5182B95D0F25:ABPerson
+END:VCARD

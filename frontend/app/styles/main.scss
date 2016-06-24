@@ -1,0 +1,59 @@
+$icon-font-path: '../fonts/';
+
+@import "core/variables";
+
+// Custom Bootstrap
+@import "vendors/bootstrap/variables";
+@import "vendors/bootstrap/bootstrap";
+
+
+// Custom Helpers
+@import "helpers/mixins";
+@import "helpers/utils";
+
+
+// Core
+@import "core/buttons";
+@import "core/fonts";
+@import "core/typo";
+
+// bower:scss
+// endbower
+
+// Custom Vendors Modulos
+@import "vendors/bootstrap/table";
+@import "vendors/bootstrap/modal";
+
+// Custom Modulos
+@import "modules/animations";
+@import "modules/cards";
+@import "modules/card-download-sp";
+@import "modules/share";
+@import "modules/search";
+@import "modules/sidebar";
+@import "modules/footer";
+@import "modules/header";
+@import "modules/videos";
+@import "modules/single-page";
+@import "modules/modals";
+@import "modules/modal-about";
+@import "modules/modal-details";
+@import "modules/modal-share";
+@import "modules/modal-team";
+@import "modules/modal-request-appointment";
+@import "modules/modal-contact";
+@import "modules/modal-thanks-subscribing";
+@import "modules/modal-thanks";
+@import "modules/page";
+@import "modules/homepage";
+@import "modules/healthcare-homepage";
+@import "modules/locations-accordion";
+@import "modules/locations-search";
+@import "modules/search-local";
+@import "modules/what-hurts";
+@import "modules/testimonials";
+@import "modules/hero-image";
+@import "modules/search-withfilter";
+@import "modules/news-and-events";
+@import "modules/patient-support";
+@import "modules/group-filter";

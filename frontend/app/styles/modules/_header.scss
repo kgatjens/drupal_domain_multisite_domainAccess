@@ -1,0 +1,136 @@
+.#{$prefix}-m-header-dark {
+    padding: 1.5em 0;
+    .header-container{
+        line-height: 43px;
+    }
+    nav {
+        text-align: right;
+
+        @media (max-width: $screen-lg-min) {
+            margin: 1em 0 0;
+            text-align: left;
+            ul{
+                padding: 0;
+                text-align: left;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 0;
+
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                a {
+                    color: $sidebar-header;
+                    @include setThemeColors(links, links);
+                    @each $theme, $map in $themes {
+                      .#{$theme} .pure-oh-m-testimonials &{
+                        color: $white;
+                      }
+                    }
+
+                    @include fontBold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-decoration: none;
+                    outline: none;
+                    text-transform: uppercase;
+                    padding: 0 2em 0 0;
+                    display: block;
+                }
+                .active {
+                    color: $link-active;
+                }
+            }
+        }
+    }
+
+    .logo-optim-spine {
+        display: inline-block;
+        line-height: 12px;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .dinamic-logo{
+        width: 300px;
+        img{
+            width: 100%;
+        }
+        @include breakpoint("phone"){
+            width: initial;
+        }
+    }
+
+    .search-icon, .search-home-icon {
+        color: $links;
+        font-size: 24px;
+        padding-top: 0;
+        cursor: pointer;
+    }
+    .search-home-icon{
+
+        .fa{
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+        @include onHover;
+    }
+    .fa{
+    }
+
+    @include breakpoint("large"){
+       .logo-icon-dark {
+            // width: 82%;
+        }
+    }
+
+    @include breakpoint("phone") {
+        nav {
+            text-align: left;
+
+            ul {
+                padding-left: 0;
+            }
+        }
+
+        .logo-icon-dark {
+            max-width: 155px;
+        }
+
+        .search-icon {
+            font-size: 1em;
+        }
+        .dinamic-logo{
+            img{
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+.#{$prefix}-m-header-white {
+    .logo-icon-white {
+        path {
+            fill: $white;
+        }
+    }
+    .search-home-icon{
+        display: block;
+        height: 40px;
+        color: $white;
+    }
+
+    nav ul li a {
+        color: $white;
+    }
+
+    @include breakpoint("phone"){
+            margin-top: 0;
+
+    }
+}

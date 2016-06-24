@@ -1,0 +1,49 @@
+.#{$prefix}-m-share{
+	margin-bottom: 30px;
+	span{
+		position: absolute;
+		bottom: 0;
+		color: $header;
+		@include setThemeColors(links, links);
+		@include fontBold;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		&.facebook{
+			// left: calc(50% - 40px);
+			right: 0;
+           	bottom: 0;
+            left: 0;
+            margin: 0 auto;
+		}
+
+		&.twitter{
+			// left: calc(50% - 25px);
+			@extend .facebook;
+		}
+
+		&.email{
+			// left: calc(50% - 20px);
+			@extend .facebook;
+		}
+	}
+
+	a[class$="-share"]{
+		color: #1E4166;
+		@include setThemeColors(links);
+	}
+
+	.inline{
+		display: inline-block;
+	}
+	.share-facebook,
+	.share-twitter,
+	.share-email{
+		cursor: pointer;
+	}
+
+	.svg-icon{
+		width: 90px;
+		height: 90px;
+	}
+}

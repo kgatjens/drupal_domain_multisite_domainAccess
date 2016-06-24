@@ -1,0 +1,40 @@
+.group-filter{
+	.group-container{
+		padding: 20px 0;
+		border-bottom: 1px solid #d7d7d7;
+		border-top: 1px solid #FFF;
+		
+		&:first-child{
+			border-top: none;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+		h2{
+			font-family: $font-bold;
+			margin: 0 0 20px;
+			color: #1F4265;
+			@include setThemeColors(links);
+			font-size: 15px;
+			&.group-title{
+				text-transform: uppercase;
+			}
+		}
+		&.no-options{
+			border-top: none;
+			border-bottom: none;
+			padding: 0;
+			.group-title{
+				display: none;
+			}
+		}
+	}
+	.group-container:not('.no-options'):last-child{
+		background: red;
+	}
+}
+
+
+
+
+

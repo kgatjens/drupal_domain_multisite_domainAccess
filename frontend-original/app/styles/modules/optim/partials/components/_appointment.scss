@@ -1,0 +1,228 @@
+.appointment_form{
+    width: 320px !important;
+    position: absolute!important;
+    left: 0;
+    right: 0;
+    top: 50% !important;
+    transform: translateY(-50%);
+    min-width: 320px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    background: white;
+    @include breakpoint($tab){
+        width: 95% !important;
+    }
+    @include breakpoint($desk){
+        width: 930px !important;
+    }
+    @include breakpoint($desk-md){
+        padding: 3.5em !important;
+        width: 1150px !important;
+    }
+
+    #overlay-titlebar{
+        background: white;
+        white-space: normal !important;
+        padding-top: 2em;
+        @include breakpoint($desk){
+            padding-top: 0;
+        }
+    }
+
+    #overlay-title{
+        // font-family: $pnb;
+        @include pnovaBold();
+        color: $dark-blue;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+        @include breakpoint($tab){
+            font-size: 48px;
+            line-height: 59px;
+            margin: 0.5em 0 0 0.5em;
+        }
+    }
+
+    #main{
+        width: 100%;
+        padding: 0;
+        @include breakpoint($desk){
+            padding: 0 5em;
+        }
+        @include breakpoint($desk-md){
+            padding: 0;
+        }
+    }
+
+    #appointment-entityform-edit-form{
+        width: 95%;
+        margin: 0 auto;
+        @include breakpoint($tab){
+            width: 80%;
+        }
+        @include breakpoint($desk){
+            width: 770px;
+        }
+        @include breakpoint($desk-md){
+            margin-left: 8em;
+        }
+    }
+
+    label,
+    .label-description,
+    input.form-text{
+        // font-family: $pn;
+        @include pnovaRegular();
+        color: $dark-blue;
+        font-size: 20px;
+        line-height: 36px;
+        display: inline;
+        @include breakpoint($tab){
+            font-size: 34px;
+            line-height: 64px;
+        }
+    }
+
+    input.form-text,
+    input.form-text::placeholder{
+        color: $mild-blue;
+    }
+
+    label{
+        display: none;
+    }
+
+    .field-group-div{
+        margin-top: 2em;
+        @include breakpoint($desk){
+            margin-top: 3em;
+        }
+        @include breakpoint($desk-md){
+            margin-top: 5em;
+           }
+
+        div{
+            display: inline;
+        }
+    }
+
+    #edit-actions{
+        text-align: center;
+    }
+
+    #edit-submit{
+        // font-family: $pnb;
+        @include pnovaBold();
+        background: $mild-blue;
+        font-size: 18px;
+        line-height: 22px;
+        color: white;
+        text-transform: uppercase;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 45px;
+        margin-top: 3em;
+        border: none;
+        @include breakpoint($tab){
+            margin-top: 5em;
+        }
+
+        &.disabled{
+            opacity: 0.2;
+        }
+
+    }
+
+    input.form-text{
+        border: none;
+        border-bottom: 2px inset #000;
+        width: 45%;
+        @include breakpoint($desk){
+            width: 33%;
+        }
+    }
+
+    input#edit-field-email-und-0-email{
+        width: 60%;
+    }
+
+    #overlay-close-wrapper{
+        @include overlay_close_wrapper;
+        margin-top: -5em;
+        right: 1em;
+        @include breakpoint($tab){
+            right: 2em;
+            margin-top: -8em;
+        }
+        @include breakpoint($desk){
+            right: 2em;
+            margin-top: -6em;
+        }
+        @include breakpoint($desk-md){
+            right: 0;
+            margin-top: -9em;
+        }
+        #overlay-close{
+            @include close_button(16, 18);
+            right: 0;
+        }
+    }
+
+    #page-title,
+    span.form-required{
+        display: none;
+    }
+}
+
+.page-eform-appointment-confirm #overlay{
+    @extend .appointment_form;
+
+    .submission-text{
+        // font-family: $pn;
+        @include pnovaRegular();
+        color: $dark-blue;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0 auto;
+        max-width: 320px;
+        text-align: center;
+        margin-top: 5em;
+        padding-bottom: 1.5em;
+        @include breakpoint($desk){
+            max-width: 615px;
+            font-size: 32px;
+            line-height: 38px;
+            margin-top: 3em;
+            padding: 0;
+        }
+
+        .appointment_thanks{
+            // font-family: $pnb;
+            @include pnovaBold();
+        }
+    }
+
+    #overlay-close-wrapper{
+        margin-top: -5em;
+        right: 3em;
+    }
+
+    #overlay-titlebar{
+        margin-top: 3em;
+    }
+
+    #main{
+        width: 100%;
+    }
+
+    .appointment_done{
+        @extend #edit-submit;
+        width: 125px;
+        background: url(../images/check_ico.png) 90px 15px no-repeat $mild-blue;
+        background-size: 15px;
+        text-align: left;
+        padding-left: 1.5em;
+        margin-top: 7em;
+    }
+}

@@ -1,0 +1,47 @@
+<section class="pure-oh-m-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				{{> header }}
+				<div class="row">
+					{{> breadcrumb }}
+				</div>
+				{{!-- <h1>Conditions</h1>
+				<p class="description">Lorem ipsum Qui voluptate id eiusmod sit laboris.</p> --}}
+				{{!-- {{> what-hurts-header}} --}}
+				{{> search-with-filter }}
+				<div class="cards big-cards group-filter">
+					<div class="row row-eq-height group-container">
+						<h2 class="col-md-12 group-title">Group Title 1</h2>
+						{{> cards/card-without-button filter="Lower-Back,Middle-Back,Neck," title="Herniated Disc"}}
+						{{> cards/card-without-button filter="Neck" title="Complex Regional Pain Syndrome (CRPS)"}}
+						{{> cards/card-without-button filter="Neck" title="Cervical Radiculopathy"}}
+					</div>
+					<div class="row row-eq-height group-container">
+						<h2 class="col-md-12 group-title">Group Title 2</h2>
+						{{> cards/card-without-button filter="Middle-Back,Neck," title="Complex Spinal Conditions"}}
+						{{> cards/card-without-button filter="Middle-Back" title="Arthritis in the Spine"}}
+					</div>
+					<div class="row row-eq-height group-container">
+						<h2 class="col-md-12 group-title">Group Title 3</h2>
+						{{> cards/card-without-button filter="Middle-Back,Neck," title="Degenerative Disc"}}
+						{{> cards/card-without-button filter="Lower-Back" title="Lumbar Stenosis"}}
+					</div>
+					<div class="row row-eq-height group-container">
+						<h2 class="col-md-12 group-title">Group Title 4</h2>
+						{{> cards/card-without-button filter="Neck" title="Cervical Spondylosis"}}
+						{{> cards/card-without-button filter="Middle-Back" title="Post Laminectomy Syndrome"}}
+					</div>
+					<div class="row row-eq-height group-container">
+						<h2 class="col-md-12 group-title">Group Title 5</h2>
+						{{> cards/card-without-button filter="Lower-Back" title="Lumbar Radiculopathy"}}
+					</div>
+				</div>
+				{{> footer }}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				{{> sidebar-flat }}
+			</div>
+		</div>
+	</div>
+</section>

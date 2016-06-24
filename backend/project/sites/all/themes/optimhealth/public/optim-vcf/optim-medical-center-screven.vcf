@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11//EN
+N:Medical Center-Screven;Optim;;;
+FN:Optim Medical Center-Screven
+EMAIL;type=INTERNET;type=HOME;type=pref:screvensupport@optimhealth.com
+TEL;type=pref:912.564.7426
+ADR;type=HOME;type=pref:;;215 Mims Road;Sylvania;GA;30467;USA
+item1.URL;type=pref:www.Screven.OptimHealth.com
+item1.X-ABLabel:_$!<HomePage>!$_
+UID:8aa9e5711a0e2da
+X-ABUID:34DFECA5-D993-46A9-9177-675B5E903A72:ABPerson
+END:VCARD

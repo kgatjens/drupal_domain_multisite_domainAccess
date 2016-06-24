@@ -1,0 +1,184 @@
+.page-locations{
+    .view-locations-featured-content{
+        padding: 0 !important;
+        .views-field-body{
+            // font-family: $adr;
+            @include adelleRegular();
+            font-size: 14px;
+            color: #7D7D7D;
+            line-height: 32px;
+        }
+    }
+    .view-locations{
+        margin: 0 auto;
+        @include breakpoint(668px){
+            max-width: 95%;
+            width: 90%;
+        }
+        @include breakpoint($desk){
+            height: 82vh;
+        }
+        @include breakpoint($desk-md){
+            max-width: 1060px;
+        }
+
+        .view-header .gmap-control{
+            width: 100% !important;
+            height: 320px !important;
+            @include breakpoint($desk){
+                width: 60% !important;
+                height: 600px !important;
+                float: right;
+            }
+        }
+    }
+
+    .view-locations .view-content{
+        margin-top: 1em;
+        padding: 0 1em;
+        padding-bottom: 8em;
+        @include  breakpoint($desk){
+            padding: 0;
+            max-height: 600px;
+            overflow-y: scroll;
+        }
+
+        &::-webkit-scrollbar{
+            @include scrollbar;
+        }
+
+        &::-webkit-scrollbar-track{
+            @include scrollbar_track;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            @include scrollbar_thumb;
+        }
+    }
+
+    .view-locations .views-row{
+        background: white;
+        max-width: 95%;
+        margin-bottom: 10px;
+
+        .views-field{
+            display: none;
+            padding: 1em;
+        }
+
+        .views-field-field-image{
+            padding: 0;
+        }
+    }
+
+    .view-locations .views-field-body{
+        // font-family: $adr;
+        @include adelleRegular();
+        color: #7D7D7D;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .views-field-address{
+        @extend .views-field-body;
+        @include adelleBold;
+        // font-family: $adb;
+    }
+
+    .views-field-field-phone-number,
+    .views-field-nothing{
+        width: 50%;
+        padding: 1em;
+        overflow: hidden;
+        text-align: center;
+        border-top: 1px solid #d3d3d3;
+
+        a{
+            // font-family: $pnb;
+            @include pnovaBold();
+            color: $mild-blue;
+            text-transform: uppercase;
+            padding-left: 1.5em;
+            line-height: 17px;
+            font-size: 14px;
+        }
+    }
+
+    .views-field-field-phone-number{
+        float: left;
+
+        a{
+            background: url('../images/phn_slant_ico.svg') no-repeat center left transparent;
+            background-size: 17px;
+        }
+    }
+
+    .views-field-nothing {
+        border-left: 1px solid #d3d3d3;
+
+        a{
+            background: url('../images/map_fold_ico.svg') no-repeat center left transparent;
+            background-size: 17px;
+        }
+    }
+
+    .location-card-wrapper{
+        display: block !important;
+
+        &.active .location_card{
+            background: url('../images/right_down_ico.svg') no-repeat transparent right center;
+            background-size: 20px;
+        }
+
+        &.active ~ .views-field{
+            display: block;
+        }
+    }
+
+    .location_card{
+        cursor: pointer;
+        background: url('../images/right_ico.svg') no-repeat transparent right center;
+        background-size: 20px;
+        .location_type{
+            color: $border-blue;
+            // font-family: $pnb;
+            @include pnovaBold();
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .location_title{
+            color: $dark-blue;
+            // font-family: $pnb;
+            @include pnovaBold();
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+
+    #block-views-exp-locations-page{
+        display: none;
+        width: 90%;
+        max-width: 95%;
+        margin: 0 auto;
+        position: relative;
+        @include breakpoint($desk){
+            display: block;
+        }
+        @include breakpoint($desk-hd){
+            max-width: 1065px;
+        }
+    }
+
+    #views-exposed-form-locations-page{
+        @include long_search;
+    }
+
+
+    #block-menu-menu-footer-menu {
+        @include breakpoint($desk){
+            margin-top: -9rem;
+            padding-bottom: 7rem;
+        }
+    }
+}

@@ -1,0 +1,221 @@
+.#{$prefix}-m-search-result{
+	
+	ul{
+		list-style: none;
+		@include fontBold;
+		padding: 0;
+		li{
+			margin-bottom: 1.5em;
+		}
+	}
+	legend{
+
+	    color: #508FBB;
+	    font-size: 20px;
+	    line-height: 24px;
+	    border-bottom: 1px solid #d3d3d3;
+	    margin-bottom: 2.5rem;
+	}
+	h2{
+		color: $links ;
+		
+		@include setThemeColors(links);
+
+		font-size: 20px;
+		line-height: 24px;
+		border-bottom: 1px solid $border-button;
+		margin-bottom: 2.5rem;
+	}
+	.view-content{
+		background: $white ;
+		background-size: 20px;
+	    background-position: right center;
+	    border-right: 20px inset transparent;
+	    min-height: 72px;
+	    padding: 5px 5px 5px 5px;
+	    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+	    position: relative;
+	    .text-content{
+	    	width: 90%;
+	    	margin: 0 auto;
+	    	h3{
+	    		display: inline;
+	    	    
+	    	    
+	    	    height: 100%;
+	    	    margin: 0;
+	    	}
+	    	p{
+	    		color: $links;
+	    		@include setThemeColors(general-paragraph);
+	    		font-size: 18px;
+	    		display: inline;
+	    	}
+	    	.views-field-title{
+	    		font-size: 24px;
+	    		color: $header ;
+	    		@include setThemeColors(links);
+	    	}
+	    }
+		
+		.result-icon{
+			width: 22px;
+			height: 22px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			
+			right: 0px;
+			color: #508FBB;
+			svg{
+				width: 100%;
+				height: 100%;
+				fill: currentColor;
+			}
+			@include onHover;
+			@include setThemeColors(links, links);
+		}
+
+	    @include breakpoint('phone'){
+	    	.text-content{
+		    	width: 85%;
+		    	margin: 0;
+		    	padding: 0 0 0 10px;
+	    	}
+	    	.result-icon{
+				width: 10%;
+	    	}
+	    }
+	}
+
+	@media (max-width: $screen-lg-min){
+		.view-content{
+		    height: auto;
+		    overflow: hidden;
+			p{
+				font-size: 16px;
+			
+				display: block;
+			}
+			.views-field-title{
+				line-height: 24px;
+			}
+		}
+	}
+
+	@include breakpoint('tablet-down'){
+		.view-content{
+			
+			p{
+				font-size: 14px;
+			}
+			.views-field-title{
+				font-size: 20px;
+			}
+			
+		}
+	}
+
+	@media (max-width: $screen-sm-min){
+		.box{
+			width: 100%;
+		}
+	}
+
+	@include breakpoint('phone'){
+		.search-results{
+			padding: 0 0 80px;
+		}
+	}
+
+}
+
+#search-modal{
+	background: $link-active;
+	@include setThemeColors(null, null, null, linkActive);
+	@include fontBold;
+	.modal-dialog{
+		width: 100%;
+		padding: 0;
+		margin: 30px 0 10px;
+	}
+	.form-text{
+		font-size: 72px;
+		color: $white;
+		line-height: 86px;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid $links;
+		@include setThemeColors(null, null, links );
+		width: 100%;
+		outline: none;
+	}
+	.modal-header{
+		text-align: right;
+	}
+	label{
+		display: none;
+	}
+	.search_title{
+		font-size: 18px;
+		color: $sidebar-header;
+		@include setThemeColors(sidebarHeader);
+		line-height: 22px;
+		display: none;
+		-webkit-font-smoothing: antialiased;
+	}
+	.close{
+		position: absolute;
+		right: 15px;
+		top: 0;
+		border: none;
+		text-indent: -9999px;
+		z-index: 9;
+		cursor: pointer;
+		width: 15px;
+		height: 15px;
+		background: url('../images/temp/close_white.png') no-repeat;
+		background-size: 100%;
+		outline: none;
+		padding: 0;
+	}
+	.form-submit{
+		visibility: hidden;
+	}
+	.ui-menu-item{
+		a{
+			@include setThemeColors(links);
+		}
+	}
+	@include breakpoint('large'){
+		.modal-body{
+			padding: 5em 7em;
+		}
+		.close{
+			right: 7em;
+		}
+		.form-text{
+			font-size: 96px;
+			line-height: 115px;
+		}
+		.search_title{
+			display: block;
+		}
+	}
+}
+
+.ui-autocomplete{
+	z-index: 9999;
+	z-index: 9999;
+	background: $white;
+	list-style: none;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100% !important;
+	li{
+		margin: 0 0 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<section class="pure-oh-m-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				{{> header }}
+				<h1>Treatments</h1>
+				<p class="description">Once we understand what’s causing your pain we can develop a treatment plan that’s designed just for you. Learn about the treatment options that we offer our patients or make an appointment so that we can get you back to you.</p>
+				{{> search-local }}
+				<div class="cards">
+					<div class="row">
+						{{> cards/card-1-button  img="true" cr="true"}}
+						{{> cards/card-2-buttons }}
+						{{> cards/card-testimonial }}
+						{{> cards/card-download }}
+						{{> cards/card-team-optim }}
+					</div>
+				</div>
+				{{> footer }}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				{{> sidebar }}
+			</div>
+		</div>
+	</div>
+</section>

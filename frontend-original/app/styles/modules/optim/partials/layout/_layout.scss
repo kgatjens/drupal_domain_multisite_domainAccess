@@ -1,0 +1,83 @@
+////////////////////////
+// Layouts Partials
+//
+// Separate your Layout from Design
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+//
+// All box model properties go here
+////////////////////////
+@include add-grid(12);
+@include add-gutter(0);
+.front{
+	#header{
+		@include breakpoint($tab){
+			margin-right: 264px;;
+		}
+	}
+}
+
+.not-front .header-wrapper{
+    @include breakpoint(787px){
+        margin-right: 261px;
+    }
+    header#header{
+        @include section_left;
+    }
+}
+
+#main{
+    background: #f5f5f5;
+    @include breakpoint($tab){
+        margin-right: 261px;
+    }
+
+    .node_team &{
+        margin-right: 0;
+    }
+}
+
+#block-panels-mini-right-sidebar{
+}
+
+.node_condition,
+.node_practice,
+.patient_testimonial_video{
+  display: block !important;
+  max-width: 1200px;
+  width: 100% !important;
+  min-width: 320px !important;
+
+  #main{
+    @include grid-span(12);
+    @include add-gutter(0);
+    #block-system-main{
+      @include grid-span(12);
+      @include add-gutter(0);
+      @include breakpoint(737px){
+        @include grid-span(8, 1);
+      }
+    }
+
+    #block-panels-mini-right-sidebar-overlay{
+      display: none;
+      position: relative;
+      @include breakpoint(737px){
+        @include grid-span(4, 9);
+        display: block;
+      }
+    }
+  }
+}
+
+.moa_overlay{
+  #main{
+    @include grid-span(12);
+  }
+}
+
+.contact_overlay{
+    #main{
+        @include grid-span(12);
+        height: 430px;
+    }
+}

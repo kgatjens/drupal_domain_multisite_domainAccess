@@ -1,0 +1,175 @@
+.mobile_footer{
+	position: fixed;
+    z-index: 10000;
+	bottom: 0;
+	background: white;
+	width: 100%;
+    max-width: 100%;
+	padding: 1em 2em;
+	@include breakpoint(737px){
+		display: none;
+	}
+
+    #overlay &{
+        display: none;
+    }
+
+	.mobile_footer_info{
+		width: 56px;
+		height: 56px;
+		background: url('../images/info_ico.svg') #fff center no-repeat;
+		background-size: 28px;
+		position: relative;
+		top: -3em;
+		left: 1em;
+        float: right;
+		cursor: pointer;
+		border-radius: 30px;
+		box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.20);
+
+		&:active + #block-panels-mini-right-sidebar{
+			display: block;
+		}
+	}
+
+	.mobile_footer_call{
+		background: url('../images/phn_ico.svg') no-repeat transparent;
+		background-size: 15px 40px;
+    	padding-left: 2.25em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+		.mobile_footer_call_top{
+			// font-family: $pnb;
+			@include pnovaBold();
+            color: $mild-blue;
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		.mobile_footer_call_bot{
+			// font-family: $pnb;
+			@include pnovaBold();
+            color: $mild-blue;
+			font-size: 22px;
+			line-height: 26px;
+		}
+	}
+}
+
+#block-menu-menu-footer-menu{
+    max-width: 1065px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    padding-bottom: 12rem;
+    @include breakpoint($tab){
+        padding-bottom: 2rem;
+    }
+
+    .front &{
+        position: absolute;
+        bottom: 22%;
+        padding-bottom: 0;
+	    @include breakpoint($tab){
+		    bottom:	 3%;
+	    }
+
+        ul.menu{
+            @include breakpoint($tab){
+	            padding-left: 5em;
+	        }
+
+            li{
+                display: block;
+                border-right: 0;
+                @include breakpoint($tab){
+                    display: inline-block;
+                    border-right: 1px solid $white;
+                }
+            }
+        }
+    }
+
+	ul.menu{
+		padding: 0;
+		margin: 0;
+		padding-left: 1em;
+
+		li{
+			list-style: none;
+			padding-right: 12px;
+            display: inline-block;
+            border-right: 1px solid ;
+
+			&.last{
+				border-right: none;
+			}
+
+			a{
+				// font-family: $pnb;
+				@include pnovaBold();
+                color: #FFFFFF;
+				font-size: 16px;
+				line-height: 26px;
+				text-transform: uppercase;
+				text-decoration: none;
+                @include breakpoint(668px){
+                    line-height: 19px;
+                }
+			}
+		}
+	}
+
+    .not-front & ul.menu li {
+        border-right: 1px solid $mild-blue;
+
+        &.last{
+            border-right: none;
+        }
+
+        a{
+            color: $mild-blue;
+        }
+    }
+}
+
+#block-block-3{
+    // font-family: $pn;
+    @include pnovaRegular();
+    color: white;
+    font-size: 8px;
+    line-height: 10px;
+    position: absolute;
+    bottom: 15%;
+    max-width: 250px;
+    text-align: left;
+    font-weight: 600;
+    left: 2rem;
+    @include breakpoint($tab) {
+        max-width: 300px;
+        font-size: 12px;
+        line-height: 14px;
+        bottom: 3%;
+        left: auto;
+        right: 3rem;
+        text-align: right;
+    }
+}
+
+
+@media screen and (max-height: 400px) and (orientation: landscape) {
+    .mobile_footer {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    .mobile_footer_call_top {
+        font-size: 14px;
+    }
+
+    .mobile_footer_call_bot {
+        font-size: 18px;
+    }
+}

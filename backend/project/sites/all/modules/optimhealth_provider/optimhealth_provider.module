@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the optimhealth_provider feature.
+ */
+
+include_once 'optimhealth_provider.features.inc';

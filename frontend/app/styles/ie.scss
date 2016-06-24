@@ -1,0 +1,14 @@
+
+// hide label ie9
+.mdl-textfield__label {
+  text-align: right;
+}
+
+.pure-oh-m-modal-details{
+	.modal-dialog{
+		.close{
+			top: -4px;
+			right: 20px;
+		}
+	}
+}

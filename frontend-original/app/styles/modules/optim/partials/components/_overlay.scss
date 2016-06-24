@@ -1,0 +1,144 @@
+#overlay-content{
+    #main{
+        background-color: transparent;
+    }
+
+}
+
+body:not(.page-contact-optim) {
+    #block-system-main {
+        padding-bottom: 110px;
+    }
+}
+
+#overlay-container{
+    z-index: 1500 !important;
+    @include breakpoint(668px){
+        z-index: 500 !important;
+    }
+
+    body {
+        padding: 0;
+    }
+}
+
+#overlay{
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    @media screen and (max-width: 480px) {
+        position: fixed;
+        height: 100%;
+        display: block;
+        top: 0;
+    }
+
+
+    @include breakpoint($desk-md) {
+        overflow: visible;
+    }
+
+    #main{
+        margin: 0;
+    }
+}
+
+@keyframes slidein {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+.overlay-modal-background{
+    animation: opacity linear 0.15s 1;
+    display: block;
+
+    &:after {
+        content: '';
+        display:block;
+        width: 300px;
+        height: 200px;
+        background: white url("../images/overlay-spinner.gif") no-repeat center;
+        background-size: 30%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    &:before {
+        content: 'loading';
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        z-index: 9;
+        text-transform: uppercase;
+        color: #aaa;
+        font-weight: bold;
+        text-align: center;
+
+        @media screen and (max-width: 480px) {
+            top: 62%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &:before,
+        &:after {
+            width: 200px;
+            height: 100px;
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+  .overlay-modal-background:after {
+    top: 40%;
+    left: 40%;
+  }
+  .overlay-modal-background:before {
+    top: 57%;
+    left: 48.5%;
+  }
+}
+
+@keyframes opacity {
+    0%  {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transition: all 0.15s linear;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #block-panels-mini-right-sidebar,
+    #block-panels-mini-right-sidebar-overlay {
+        z-index: 1000;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .overlay.contact-optim {
+        padding: 0;
+
+        #main {
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) and (max-height: 500px) {
+    .mobile-offer-block {
+        position: static !important;
+        margin: 0 -4em 0 -1em;
+        width: initial !important;
+    }
+}

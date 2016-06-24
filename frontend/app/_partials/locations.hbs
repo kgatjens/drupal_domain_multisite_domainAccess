@@ -1,0 +1,24 @@
+<section class="pure-oh-m-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				{{> header }}
+				<h1>Locations</h1>
+				<p class="description">We are conveniently located in 24 satellite areas in southeast Georgia. Use this map and search below to see where the closest Optim Spine office is to you.</p>
+				{{> search-locations }}
+				<div class="row locations-wrap">
+					<div class="col-md-8 col-md-push-4 pdr">
+						{{> gmap }}
+					</div>
+					<div class="col-md-4 col-md-pull-8 pdr">
+						{{> accordion-locations }}
+					</div>
+				</div>
+				{{> footer }}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				{{> sidebar }}
+			</div>
+		</div>
+	</div>
+</section>

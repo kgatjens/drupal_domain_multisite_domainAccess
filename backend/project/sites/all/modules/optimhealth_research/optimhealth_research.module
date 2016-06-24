@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the optimhealth_research feature.
+ */
+
+include_once 'optimhealth_research.features.inc';

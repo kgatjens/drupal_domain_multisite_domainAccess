@@ -1,0 +1,179 @@
+#block-panels-mini-right-sidebar-overlay,
+#block-panels-mini-right-sidebar{
+    color: $mild-blue;
+    @include adelleItalic;
+    // font-family: $adi;
+    display: none;
+    padding: 1em;
+    font-size: 16px;
+    line-height: 24px;
+    position: fixed;
+    z-index: 1005;
+    top:0;
+    padding-top: 0.5em;
+    padding-right: 4em;
+    padding-bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: $white;
+    @include breakpoint(668px)  {
+        background: transparent;
+        width: 274px;
+        right: 0;
+        display: block;
+        padding: 0;
+        z-index: auto;
+        top: -1.5em;
+        height: calc(100vh + 24px);
+    }
+
+    .panel-pane{
+        @include breakpoint(668px) {
+            padding: 0 7.5%;
+        }
+
+        &.offer-block{
+            padding: 1em 0;
+        }
+    }
+
+    .appointment-block{
+        @include breakpoint(668px) {
+            margin-top: 1em;
+        }
+    }
+
+    .right_bottom{
+        // font-family: $pnb;
+        @include pnovaBold();
+        color: $mild-blue;
+        font-size: 24px;
+        line-height: 29px;
+        text-decoration: none;
+        margin-bottom: 1.5em;
+        padding-right: 1em;
+    }
+
+    .appointment_button{
+        // font-family: $pnb;
+        @include pnovaBold();
+        border: 1px solid $border-blue;
+        color: $border-blue;
+        border-radius: 28px;
+        font-size: 12px;
+        line-height: 14px;
+        text-decoration: none;
+        padding: 1em 1.25em;;
+        text-transform: uppercase;
+
+        i{
+            font-size: 28px;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    .pane-share{
+        margin-top: 1%;
+        @include breakpoint(668px) {
+            margin-top: 15%;
+        }
+    }
+
+    .pane-contact a,
+    .pane-share a,
+    .pane-call a{
+        @include sidebar_bottom;
+    }
+
+    .pane-system-main-menu ul.menu{
+        padding: 0;
+        margin: 0;
+        @include breakpoint($desk) {
+            margin-top: 25%;
+        }
+
+        li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            a{
+                // font-family: $pn;
+                @include pnovaBold();
+                color: $mild-blue;
+                font-size: 16px;
+                line-height: 36px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover,
+                &.active{
+                    // font-family: $pnb;
+                    @include pnovaBold();
+                }
+            }
+        }
+    }
+
+    a.mobile_close{
+        @include close_button;
+        float: right;
+        @include breakpoint(668px) {
+            display: none;
+        }
+    }
+}
+
+#block-panels-mini-right-sidebar-overlay{
+    background: $white;
+    height: auto;
+    @include breakpoint($desk) {
+        padding: 0 1em;
+    }
+
+    @include breakpoint($desk-md) {
+        padding: 0 4em;
+    }
+}
+
+@include breakpoint(668px) {
+    .front #block-panels-mini-right-sidebar {
+        box-sizing: border-box;
+        width: 278px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        & > .content {
+            position: absolute;
+            right: 0;
+        }
+        .panel-pane {
+            padding: 13px 26px 13px 32px;
+            &.offer-block {
+                left: 14px;
+                padding: 1em 0;
+            }
+        }
+    }
+}
+
+.not-front #block-panels-mini-right-sidebar {
+    position: fixed;
+    @include breakpoint(668px) {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-left: 13px;
+
+        & > .content {
+            background: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            & > .panel-1col {
+                background: white;
+            }
+        }
+    }
+}

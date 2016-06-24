@@ -1,0 +1,33 @@
+.#{$prefix}-m-locations-search{
+	.search-input{
+		@include fontBold;
+	    background: $white;
+	    color: $cursor-search;
+	    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+	    border-radius: 3px;
+	    font-size: 15px;
+	    line-height: 58px;
+	    height: 58px;
+	    width: 100%;
+	    border: none;
+	    border-radius: 0;
+	    margin-bottom: 0.5em;
+	    padding-left: 1.75em;
+	    text-transform: uppercase;
+	    border-radius: 3px;
+	}
+	.form-submit {
+	    background: url(../images/svg/search_ico.svg) no-repeat;
+	    width: 24px !important;
+	    color: transparent;
+	    height: 24px;
+	    background-size: 24px;
+	    box-shadow: none;
+	    border: none;
+		top: 19px;
+		right: 35px;
+		position: absolute;
+		@include onHover;
+	}
+
+}

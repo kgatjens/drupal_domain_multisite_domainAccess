@@ -1,0 +1,11 @@
+name = "Custom optimhealth"
+description = "Custom settings for optimhealth site"
+package = "optimhealth"
+core = 7.x
+dependencies[] = domain
+dependencies[] = search_api
+
+files[] = includes/callback_domain_filter.inc
+files[] = includes/processor_domain.inc
+files[] = custom_optimhealth.module
+

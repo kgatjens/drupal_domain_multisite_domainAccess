@@ -1,0 +1,300 @@
+.#{$prefix}-m-sidebar{
+	// flat sidebar
+		.heading-flat {
+			color: #fff !important;
+		}
+	//
+	@include breakpoint('phone-up'){
+		max-width: 245px;
+		position: fixed;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 245px;
+		overflow-y:auto;
+		background: $white;
+	}
+	
+	.ribbon{
+		position: relative;
+		text-transform: uppercase;
+		clear: both;
+		margin: 0 0 1em;
+		&::before{
+			// display: block;
+			// width: 10px;
+			// height: 0px;
+			// position: absolute;
+			// bottom: -10px;
+			// left: 0;
+			// content: "";
+			// border-bottom: 10px solid transparent;
+			// border-right: 10px solid #3e3e3e;
+		}
+		h2{
+			color: $white;
+			text-align: left
+		}
+	}
+
+	.sidebar{
+		.appointment{
+			@include fontBold;
+			border: 1px solid $sidebar-header;
+			color: $sidebar-header;
+			@include setThemeColors(sidebarHeader, sidebarHeader, sidebarHeader);
+			border-radius: 28px;
+			font-size: 12px;
+			line-height: 14px;
+			padding: 1em 1.5em;
+			text-transform: uppercase;
+			margin-left: 30px;
+			outline: none;
+			text-decoration: none;
+			@include onHover;
+			&:hover{
+				border-color: #23527c;
+				@include setThemeColors(sidebarHeader, sidebarHeader, sidebarHeader);
+			}
+		}
+
+		.appointment-modal{
+			margin-left: 0;
+		}
+
+		.contacts{
+			padding-left: 0;
+			margin-left: 30px;
+
+			li{
+				list-style: none;
+				margin: 1em 0;
+
+				a{
+					@include fontBold;
+					font-size: 16px;
+					line-height: 19px;
+					text-transform: uppercase;
+					color: $links;
+					@include setThemeColors(links, links);
+					outline: none;
+					text-decoration: none;
+					@include onHover;
+				}
+			}
+		}
+
+		.contacts-modal{
+			margin-left: 0;
+			padding-top: 35px;
+		}
+
+		.first{
+			color: $links;
+			@include setThemeColors(links);
+			@include fontItalic;
+			font-size: 16px;
+			line-height: 24px;
+			margin-left: 30px;
+			padding-top: 10em;
+			&.header-content{
+				padding-top: 0;
+			}
+		}
+
+		.first-modal{
+			width: 205px;
+			margin-left: 0;
+		}
+
+		.line {
+			color: $links;
+			@include setThemeColors(links);
+			margin:0 0 10px;
+		}
+
+		.header{
+			padding: 1em;
+			margin-bottom: 1em;
+			color: $white;
+
+			h2{
+				@include fontBold;
+				font-size: 24px;
+				line-height: 29px;
+				text-transform: uppercase;
+				margin: 0;
+			}
+
+			a{
+				display: block;
+				color: $white;
+				border: 1px solid $white;
+				font-size: 12px;
+				@include fontBold;
+				border-radius: 25px;
+				text-transform: uppercase;
+				line-height: 15px;
+				padding: 10px 0;
+				text-decoration: none;
+				outline: none;
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			p{
+				font-size: 16px;
+				@include fontARegular;
+				line-height: 22px;
+				margin: 0 0 12.5px;
+				color: $white;
+			}
+		}
+
+		.options{
+			margin-top: 25%;
+			list-style: none;
+			padding-left: 0;
+			margin-left: 30px;
+
+			li{
+				margin: 0;
+				padding: 0;
+
+				a{
+					@include fontBRegular;
+					font-size: 16px;
+					line-height: 36px;
+					text-decoration: none;
+					text-transform: uppercase;
+					color: $links;
+					@include setThemeColors(links);
+					outline: none;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		.second{
+			@include fontBold;
+			color: $links;
+			@include setThemeColors(links);
+			font-size: 24px;
+			line-height: 29px;
+			margin-bottom: 1.5em;
+			padding-right: 1em;
+			margin-left: 30px;
+		}
+
+		.second-modal{
+			margin-left: 0;
+		}
+	}
+
+	.default-sidebar{
+		.header{
+			// padding-top: 0;
+		}
+	}
+
+	.sidebar-modal{
+		top: 0;
+		height: 100%;
+		position: relative;
+	}
+
+	.mobile-footer{
+		position: fixed;
+		z-index: 1000;
+		background: $white;
+		padding: 1em 0.5em 0.3em 1em;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+		.contact-mobile{
+			p{
+				@include fontBold;
+				color: $links;
+				@include setThemeColors(links);
+				a{
+					color: $links;
+					@include setThemeColors(links);
+				}
+				&:nth-child(odd){
+					font-size: 16px;
+					line-height: 19px;
+					margin-bottom: 0;
+				}
+
+				&:nth-child(even){
+					font-size: 22px;
+					line-height: 26px;
+				}
+			}
+		}
+
+		.info-icon{
+			height: 56px;
+			width: 56px;
+			position: relative;
+			cursor: pointer;
+			border-radius: 30px;
+			box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+			top: -35px;
+			background: $white;
+			padding: 0.6em;
+			left: 0;
+		}
+
+		.phn-icon{
+			height: 40px;
+			float: left;
+			width: 40px;
+		}
+	}
+
+	@include breakpoint('phone'){
+		max-width: 100%;
+		width: 100%;
+		.sidebar{
+			position: fixed;
+			width: 100% !important;
+			max-width: 100%;
+			height: 100% !important;
+			margin-top: 0;
+			padding-bottom: 100px;
+			z-index: 1;
+			right: 0;
+			top: 0;
+			margin-left: 0;
+			overflow-y: auto;
+			background: #FFFFFF;
+			.first {
+				padding: 0 47px 0 0;
+				font-size: 15px;
+				margin-top: 18px;
+			}
+
+			.close{
+				color: $header;
+				font-size: 32px;
+				cursor: pointer;
+				position: absolute;
+				top: 1%;
+				right: 5%;
+			}
+		}
+		.slimScrollDiv{
+			height: auto !important;
+			overflow: visible !important;
+			.slimScrollBar, .slimScrollRail{
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,220 @@
+<?php 
+
+/**
+ * Overrides the json result from views and parse the html fields
+ * @param  current view
+ */
+function custom_optimhealth_views_post_execute(&$view) {
+  // search for collection view
+  if ($view->name == 'view_content_node') {
+    $results = &$view->result;
+    foreach($results as $key => $result){
+      $element_data = &$result->_field_data['nid'];
+      $element_node = $element['entity']->field_illness_custom_scripts;
+
+      //validate each custom scripts and decode the html characters returned on the view
+      if(!empty($result->field_field_article_custom_scripts)){
+        $field_article_custom_scripts = $result->field_field_article_custom_scripts[0]['rendered']['#markup'];
+        $results[$key]->field_field_article_custom_scripts[0]['rendered']['#markup']= htmlspecialchars_decode($field_article_custom_scripts);
+      }
+      if(!empty($result->field_field_treatment_custom_scripts)){
+        $field_treatment_custom_scripts = $result->field_field_treatment_custom_scripts[0]['rendered']['#markup'];  
+        $results[$key]->field_field_treatment_custom_scripts[0]['rendered']['#markup'] = htmlspecialchars_decode($field_treatment_custom_scripts);
+      }
+      if(!empty($result->field_field_illness_custom_scripts)){
+        $field_illness_custom_scripts = $result->field_field_illness_custom_scripts[0]['rendered']['#markup'];
+        $results[$key]->field_field_illness_custom_scripts[0]['rendered']['#markup'] = htmlspecialchars_decode($field_illness_custom_scripts);
+       }
+
+
+    }
+  }
+}
+
+function custom_optimhealth_views_query_alter(&$view, &$query) {                         
+  if ($view->name == "view_landing_conditions_group") {         
+    $join_element &= $query->table_queue['field_collection_item_field_data_field_grouping_conditions']['join'];
+    
+    $join_element->type = 'INNER';                                   
+    //$query->table_queue['field_collection_item_field_data_field_grouping_conditions']['join']->type = 'INNER';         
+    $query->distinct = 0;                                                       
+  }                                                                             
+}
+
+/**
+ * This function overrides the search results and group by type.
+ * @param  drupal variables
+ */
+function custom_optimhealth_preprocess_search_results(&$variables) {
+  $variables['search_results'] = '';
+  $resultTypes = array();
+  global $_domain;
+  // Divide results
+  foreach ($variables['results'] as $result) {
+     if ( in_array( $_domain['domain_id'], $result['node']->domains ) ) {
+        $resultTypes[$result['type']][] = $result;
+
+      }  
+  }
+ 
+  // Create fieldsets
+  foreach ($resultTypes as $resultType => $resultTypeResults) {
+    $value = '';
+ 
+    foreach ($resultTypeResults as $result) {
+      $_value = theme('search_result', array('result' => $result, 'module' => $variables['module']));
+      optimhealth_update_result_link( $resultType, $_value );
+      $value .= $_value;
+    }
+ 
+    $variables['search_results'] .= theme('fieldset', array('element' => array('#title' => $resultType, '#value' => $value)));
+  }
+}
+
+/**
+ * This function modify a drupal form with specific fields
+ * @param  Drupal form
+ * @param  Drupal form state
+ * @param  Drupal form Id
+ * @return formatted drupal form
+ */
+function custom_optimhealth_form_system_site_information_settings_alter(&$form, &$form_state, $form_id) {
+    include('custom_optimhealth_contact_form.php'); 
+    include('custom_optimhealth_about_form.php');  
+    include('custom_optimhealth_sidebar_msg_form.php');  
+    return system_settings_form($form);
+}
+
+/**
+ * This function add the support for domain access to new form fields
+ * @return formatted fields
+ */
+function custom_optimhealth_domain_batch() {
+    $batch = array();
+    include('custom_optimhealth_contact_domain.php');
+    include('custom_optimhealth_about_domain.php');
+    include('custom_optimhealth_sidebar_msg_domain.php');
+    return $batch;
+}
+
+ function custom_optimhealth_form_alter(&$form, $form_state, $form_id) {
+  $host = $_SERVER['HTTP_HOST'];
+  if($host != 'spine.optimhealth.com') {
+    switch ($form_id) {
+        // This is our form ID.
+        case 'condition_node_form':
+          //unset($form['#fieldgroups']['group_illness_diagnostics']);
+          $form['#fieldgroups']['group_illness_diagnostics']->format_type = 'hidden';
+          // Hide the elements inside the field group.
+          foreach (array_keys($form['#group_children'], 'group_illness_diagnostics') as $field_name) {
+            $form[$field_name]['#access'] = FALSE;
+          }  
+
+          break;
+          case 'staff_node_form':
+          
+            $form['field_location_fix']['und'][0]['#attributes']['style'][] = 'display:none;';
+          break;   
+    }
+  }
+    
+    return $form;
+}
+
+function custom_optimhealth_field_widget_form_alter(&$element, &$form_state, $context){
+  if($context['instance']['bundle'] == 'condition'){
+    if ($element['#field_name'] == 'field_grouping_conditions') {
+      
+      include(dirname(__FILE__).'/admin_fields/conditions_field_grouping_conditions.php');
+
+    }
+    if($element['#field_name'] == 'field_illness_category') {
+      
+      include(dirname(__FILE__).'/admin_fields/conditions_field_illness_category.php');
+
+    }
+  }
+
+  if($context['instance']['bundle'] == 'service'){
+    if ($element['#field_name'] == 'field_services_grouping_services') {
+      
+      include(dirname(__FILE__).'/admin_fields/conditions_field_services_grouping_services.php');
+
+    }
+    if($element['#field_name'] == 'field_services_filter') {
+      
+      include(dirname(__FILE__).'/admin_fields/conditions_field_services_filter.php');
+
+    }
+  }
+
+  if($context['instance']['bundle'] == 'treatment'){
+    if ($element['#field_name'] == 'field_grouping_procedures') {
+      
+      include(dirname(__FILE__).'/admin_fields/conditions_field_grouping_procedures.php');
+
+    }
+    if($element['#field_name'] == 'field_treatment_category') {
+      
+      include(dirname(__FILE__).'/admin_fields/conditions_field_treatment_category.php');
+
+    }
+  }
+}
+
+
+function custom_optimhealth_views_pre_render(&$view) {
+  if(($view->name == 'view_staff_results')) {
+    // Support for Video field.
+    if(!empty($view->result)) {
+      
+      // Process each View result.
+      $results = &$view->result; 
+      foreach($results as $row => $result) {
+        // Only process the entity fields defined by the View.
+        
+        $node = node_load($result->nid);
+        
+        $wrapper  = entity_metadata_wrapper('node', $node);
+        
+        $formtype = field_get_items('node', $node, 'field_other_info');
+        
+        if ($formtype) {
+          $final_fields = array();
+          foreach ($formtype as $itemid) {
+            
+            
+            $tmp_array = array();
+            $item      = field_collection_field_get_entity($itemid);
+            $array_form_fields = array('text' =>'field_other_info_text', 'title'=>'field_other_info_title');
+            foreach ($array_form_fields as $field_form) {
+              $tmp = $item->$field_form;
+              if (isset($tmp[$node->language])) {
+                if (isset($tmp[$node->language][0]['uri'])) {
+                  $tmp_array[array_search($field_form, $array_form_fields)] = file_create_url($tmp[$node->language][0]['uri']);
+                } else {
+                  
+                  $tmp_array[array_search($field_form, $array_form_fields)] = $tmp[$node->language][0]['value'];
+                }
+              }
+            }
+
+            array_push($final_fields, $tmp_array);
+          }
+          
+        }
+
+        $result->field_field_other_info = array($result->field_field_other_info[0]);
+
+        $result->field_field_other_info[0]['rendered']['#markup'] = ''.(json_encode($final_fields));
+        
+        
+        
+        
+
+      }
+    }
+  }
+  
+}
+

@@ -1,0 +1,38 @@
+//
+// Bootstrap Buttons
+// --------------------------------------------------
+
+.btn {
+  font-weight: bold;
+  border-width: 2px;
+
+  &.btn-primary {
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: $brand-primary;
+    border-color: $brand-primary;
+    padding-left:  30px;
+    padding-right:  30px;
+
+    &:hover {
+      color: darken($brand-primary, 12%);
+      border-color: darken($brand-primary, 12%);
+    }
+
+    &.disable{
+      color: #797979;
+      background-color: #D9D9DA;
+      border-color: #797979;
+    }
+
+    &.loading{
+      span{
+        left: 25px;
+        position: absolute;
+        display: block;
+      }
+    }
+
+  }
+}
+

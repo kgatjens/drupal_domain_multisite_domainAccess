@@ -1,0 +1,50 @@
+	// search icon for local and search with filter
+	.icon-search {
+		position: absolute;
+		top: 20%;
+		font-size: 23px;
+		right: 5%;
+		color: $links;
+		@include setThemeColors(links, links);
+		@include onHover;
+		@include breakpoint("tablet"){
+			right: 13%;
+		}
+		@include breakpoint("phone"){
+			right: 8%;
+		}
+	}
+
+// load more icon
+
+    #load-more-button {
+        margin: 37px 0 40px 0;
+        .load-more-main{
+	        overflow: hidden;
+	        text-align: center;
+        }
+    }
+
+	.load-more {
+		@include fontBold;
+		background: #F5F5F5;
+		border-radius: 39px;
+		display: inline-block;
+		border: 1px solid $links;
+		color: $links;
+		padding: 0 27px;
+		font-size: 18px;
+		line-height: 58px;
+		text-align: center;
+		outline: none;
+		@include onHover(#23527c);
+		@include setThemeColors(colorButton, colorButton, colorButton);
+		.load-more-spinner{
+			margin: 0 0.3em;
+		}
+		&:hover,
+		&:focus,
+		&:active{
+			outline: none;
+		}
+	}

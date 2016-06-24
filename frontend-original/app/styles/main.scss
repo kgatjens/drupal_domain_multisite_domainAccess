@@ -1,0 +1,72 @@
+$icon-font-path: '../fonts/';
+
+@import "core/variables";
+
+// Custom Bootstrap
+@import "vendors/bootstrap/variables";
+@import "vendors/bootstrap/bootstrap";
+
+
+// Custom Helpers
+@import "helpers/mixins";
+@import "helpers/utils";
+
+
+// Core
+@import "core/fonts";
+@import "core/typo";
+@import "core/forms";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/susy/sass/_susy.scss";
+// endbower
+
+// Custom Vendors Modulos
+@import "vendors/bootstrap/table";
+@import "vendors/bootstrap/modal";
+@import "vendors/bootstrap/buttons";
+
+// Custom Modules
+@import "modules/footer";
+
+// Custom Modules/optim
+@import "modules/optim/partials/global/breakpoints";
+@import "modules/optim/partials/global/mixins";
+@import "modules/optim/partials/global/base";
+@import "modules/optim/partials/styleguide/style-guide";
+@import "modules/optim/partials/layout/layout";
+@import "modules/optim/partials/design/design";
+
+@import "modules/optim/partials/components/appointment";
+@import "modules/optim/partials/components/contact";
+@import "modules/optim/partials/components/footer";
+@import "modules/optim/partials/components/header";
+@import "modules/optim/partials/components/home";
+@import "modules/optim/partials/components/hurts";
+@import "modules/optim/partials/components/locations";
+@import "modules/optim/partials/components/newsletter";
+@import "modules/optim/partials/components/offer";
+@import "modules/optim/partials/components/overlay";
+@import "modules/optim/partials/components/practice";
+@import "modules/optim/partials/components/search";
+@import "modules/optim/partials/components/share";
+@import "modules/optim/partials/components/sidebar";
+@import "modules/optim/partials/components/static";
+@import "modules/optim/partials/components/team";
+@import "modules/optim/partials/components/testimonials";
+@import "modules/optim/partials/components/tips";
+@import "modules/optim/partials/components/treatments";
+
+
+
+
+// Pages
+.svg-icon svg{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  &:hover {
+    fill: red;
+  }
+}

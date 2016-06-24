@@ -1,0 +1,165 @@
+.#{$prefix}-m-modal-details {
+    .modal-dialog, .modal-content{
+        margin: 0 auto;
+        border: none;
+    }
+
+    .modal-dialog {
+        h2 {
+            text-transform: uppercase;
+            @include fontBold;
+            color: $header;
+            @include setThemeColors(mainColor);
+            line-height: 50px;
+            font-size: 32px;
+            margin: 0;
+            @include breakpoint("phone"){
+                margin-left: 0;
+                text-align: left;
+            }
+            @include breakpoint("tablet"){
+                text-align: left;
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+        .modal-content{
+            .close{
+                right: 20px;
+                @include breakpoint("tablet-up"){
+                    right: 30px;
+                }
+            }
+        }
+
+        .leftcol {
+            overflow-y: auto;
+            height: 85vh;
+            @include breakpoint('tablet'){
+                height: 90vh;
+                .modal-icons-group{
+                    display: block;
+                    overflow: hidden;
+                    line-height: 25px;
+                    .link-share{
+                        float: left;
+                        margin: 0;
+                    }
+                    .down-icon{
+                        float: right;
+                    }
+                }
+            }
+            @include breakpoint('phone'){
+                height: 90vh;
+            }
+            figure {
+                margin-bottom: 1.5em;
+                img {
+                    height: auto;
+                }
+            }
+
+            .details {
+                @include fontARegular;
+                font-size: 18px;
+                line-height: 36px;
+                color: $modal-paragraph;
+                @include setThemeColors(general-paragraph);
+                margin: 1.5em 0;
+            }
+
+            .link-share, .link-download {
+                text-transform: uppercase;
+                color: $color-button;
+                outline: none;
+                text-decoration: none;
+                margin: 1em 0;
+                font-size: 14px;
+                @include onHover;
+                @include setThemeColors(links, links);
+            }
+
+            .link-download {
+                padding-left: 5px;
+            }
+
+            .references {
+                font-size: 14px;
+                @include breakpoint("phone"){
+                    margin-bottom: 90px;
+                }
+
+                p {
+                    color: $modal-paragraph;
+                    @include setThemeColors(general-paragraph);
+                }
+
+                .reference {
+                    color: $color-button;
+                    @include setThemeColors(colorButton);
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .rightcol{
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .modal-icons-group{
+            @include fontBold;
+            .down-icon{
+                margin-left: 50px;
+            }
+
+        }
+        .modal-body {
+            @include breakpoint("phone"){
+                padding: 0;
+            }
+            img{
+                width: 100%;
+                max-width: 100%;
+                height: auto !important;
+            }
+        }
+        .no-frame {
+            .modal-body {
+
+                .leftcol {
+                    figure {
+                        margin-bottom: 0;
+                    }
+                    .details {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .modal-header{
+                padding-bottom: 0;
+                h2{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .pure-oh-m-sidebar{
+            width: 100%;
+            position: relative;
+            @include breakpoint('phone-up'){
+                height: 90vh;
+            }
+            .sidebar{
+                @include breakpoint('phone'){
+                    position: relative;
+                }
+                .header h2{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+}

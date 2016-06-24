@@ -1,0 +1,83 @@
+<section class="pure-oh-m-page pure-oh-m-what-hurts">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				{{> header }}
+					<div class="step-content">
+						<div class="step-info">
+							<div class="step-box">
+								<h2 class="stp-1-header">What Hurts</h2>
+								<p>Click the area of your back that hurts and then answer two simple
+								questions about your pain to explore what might be causing it.</p>
+								<a href="#" class="btn btn-steps transition-item hidden-xs">SEE ALL CONDITIONS</a>
+							</div>
+							<div class="step-box question-box">
+								<div class="step-question">
+									<h2>Does the pain radiate?</h2>
+									<div class="selection-box">
+										<a href="#" data-question="0">&nbsp;</a>
+										<a href="#" data-question="0">&nbsp;</a>
+									</div>
+								</div>
+
+							</div>
+							<div class="step-box question-box">
+								<div class="step-question">
+									<h2>Have you had previous surgery for your condition or pain?</h2>
+									<div class="selection-box">
+										<a href="#" data-question="0">&nbsp;</a>
+										<a href="#" data-question="0">&nbsp;</a>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="btn btn-steps step-back transition-item">
+								<span class="btn-arrow-left">
+									<i class="fa fa-arrow-left"></i>
+								</span>BACK
+							</a>
+						</div>
+						<div id="image-box" class="image-content">
+							<img src="images/what-hurts/spine-image.png" class="oval-00" alt="spine image" />
+							<img src="images/what-hurts/cervical-selected.jpg" class="oval-01" alt="spine image" />
+							<img src="images/what-hurts/thoracic-selected.jpg" class="oval-02" alt="spine image" />
+							<img src="images/what-hurts/lumbar-selected.jpg" class="oval-03" alt="spine image" />
+							<ul>
+								<li id="oval-01" class="lumbar-pain" data-body-part="25">
+									<span id="circle-01" class="circle"></span>
+									{{!-- <a href="#">&nbsp;</a> --}}
+									<p class="title">Cervical</p>
+									<span class="separator-line"></span>
+									<span class="description">My neck hurts</span>
+								</li>
+								<li id="oval-02" class="lumbar-pain" data-body-part="24">
+									<span id="circle-02" class="circle"></span>
+									{{!-- <a href="#">&nbsp;</a> --}}
+									<p class="title">Thoracic</p>
+									<span class="separator-line"></span>
+									<span class="description">The middle of my back hurts</span>
+								</li>
+								<li id="oval-03" class="lumbar-pain" data-body-part="23">
+									<span id="circle-03" class="circle"></span>
+									{{!-- <a href="#">&nbsp;</a> --}}
+									<p class="title">Lumbar</p>
+									<span class="separator-line"></span>
+									<span class="description">The lower back hurts</span>
+								</li>
+							</ul>
+						</div>
+						<div class="step-counter">
+							<button href="#" class="active" data-num="1">1</button>
+							<button href="#" class="disabled" data-num="2">2</button>
+							<button href="#" class="disabled" data-num="3">3</button>
+							<a href="#" class="hide-btn">SEE ALL CONDITIONS</a>
+						</div>
+						<a href="#" class="btn btn-steps transition-item visible-xs">SEE ALL CONDITIONS</a>
+					</div>
+				{{> footer }}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				{{> sidebar }}
+			</div>
+		</div>
+	</div>
+</section>

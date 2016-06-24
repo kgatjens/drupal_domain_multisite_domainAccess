@@ -1,0 +1,111 @@
+.#{$prefix}-m-hero-image {
+    margin-top: -190px;
+    width: calc(100% - 245px);
+    header {
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 130%;
+    }
+    figure.fluid-ratio {
+    /* This element will have fluid ratio from 4:1 at 1200px to 2:1 at 300px. */
+    @include fluid-ratio(1200px 839px, 300px 150px);
+    }
+    .wrap-hero-description {
+        position: relative;
+        display: inline-block;
+        top: -472px;
+        left: 92px;
+        width: 32%;
+        transition: transform 0.15s linear;
+        .hero-title a {
+            color: $white;
+            @include fontBold;
+            font-size: 42px;
+            line-height: 50px;
+            text-decoration: none;
+        }
+        .hero-description p {
+            color: $white;
+            @include fontARegular;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 30px;
+            a {
+                color: $color-button;
+                text-decoration: none;
+                &:hover, &:active {
+                    color: $color-button-hover;
+                }
+            }
+        }
+    }
+    @include breakpoint('desktop'){
+        margin-top: -160px;
+        header{
+            top: 150px;
+        }
+        .wrap-hero-description{
+            left: 56px;
+            .hero-title a{
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+    }
+    @include breakpoint('tablet'){
+        margin-top: -240px;
+        header{
+            top: 240px;
+            left: -3px;
+            width: 150%;
+        }
+        .wrap-hero-description{
+            top: -73px;
+            left: 0;
+            width: 100%;
+            &:hover{
+                transform: scale(1.04);
+            }
+            .hero-description p{
+                display: none;
+            }
+            .hero-title a{
+                font-size: 28px;
+                line-height: 28px;
+                background-color: rgba( $links, .6 );
+                width: 100%;
+                display: block;
+                padding: 15px 15px 30px 15px;
+            }
+        }
+    }
+    @include breakpoint('phone'){
+        margin-top: -189px;
+        header{
+            top: 190px;
+            left: -4px;
+            width: 100%;
+        }
+        .wrap-hero-description{
+            top: -63px;
+            left: 0;
+            width: 100%;
+            &:hover{
+                transform: scale(1.04);
+            }
+            .hero-description p{
+                display: none;
+            }
+            .hero-title a{
+                font-size: 24px;
+                line-height: 28px;
+                background-color: rgba( $links, .6 );
+                width: 100%;
+                display: block;
+                padding: 15px 15px 20px 15px;
+            }
+
+        }
+    }
+}

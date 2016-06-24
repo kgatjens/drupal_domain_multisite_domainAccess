@@ -1,0 +1,32 @@
+#news-and-events{
+	.pure-oh-m-cards{
+		.card-date{
+			margin-top: 18px;
+		}
+		.panel-body{
+			& > a{
+				display: block;
+				outline: none;
+				height: 100%;
+				&:hover, &:active, &:visited, &:focus{
+					outline: none;
+					text-decoration: none;
+				}
+			}
+			p{
+				margin-top: 0;
+			}
+			.card-date{
+				margin: 18px 0 0;
+			}
+		}
+		.panel{
+			.panel-footer{
+				margin: 0;
+				.the-permalink{
+					padding-top: 8px;
+				}
+			}
+		}
+	}
+}

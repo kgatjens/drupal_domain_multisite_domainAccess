@@ -1,0 +1,379 @@
+.patient-testimonials{
+    @extend .what-hurts;
+
+
+    .view-patient-testimonials{
+        @extend .view-what-hurts;
+
+        .views-row{
+            min-height: auto;
+            @include breakpoint(788px){
+                min-height: 340px;
+            }
+        }
+
+        .view-content{
+            text-align: center;
+            @include breakpoint(788px){
+                text-align: left;
+            }
+        }
+
+        &.view-display-id-block_1 {
+            position: absolute  ;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &.view-display-id-page_1 {
+            padding-top: 32px;
+        }
+    }
+
+    .views-field-type{
+        // font-family: $pnb;
+        @include pnovaBold();
+        color: $mild-blue;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 0 1.5em;
+        margin-top: 2em;
+        text-transform: uppercase;
+    }
+
+    .view-patient-testimonials .views-field-title{
+        padding: 0 1.5em !important;
+        margin-bottom: 1.5em;
+    }
+
+    .card_buttons{
+        text-align: center;
+
+        .pt-read a{
+            background: url('../images/svg/arrow_right_ico.svg') no-repeat left center;
+            background-size: 15px;
+            padding-left: 1.5em;
+            line-height: 29px;
+        }
+    }
+
+    .views-field-nothing{
+        text-align: center;
+    }
+
+    .pt-video{
+        position: relative;
+        cursor: pointer;
+        .pt-video-overlay,
+        .pt-video-overlay-watch{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            @include breakpoint($desk){
+                max-width: 340px;
+            }
+        }
+
+        .pt-video-overlay-watch{
+        }
+    }
+
+
+    #block-panels-mini-right-sidebar{
+        position: fixed;
+    }
+}
+
+.patient_testimonial{
+    @extend .node_condition;
+
+    .views-field-field-pdf{
+        display: none;
+    }
+
+    .views-field-nothing{
+        text-align: left;
+        margin-left: 2rem;
+    }
+}
+
+.patient_testimonial_video{
+    background: #f5f5f5;
+    max-width: 950px;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    padding: 10% 0!important;
+    top: -7.3em !important;
+    transform: translateY(15%);
+    min-height: 640px!important;
+    @include breakpoint($tab){
+        background: #fff;
+        max-width: 850px;
+        top: 40% !important;
+        transform: translateY(-40%);
+        padding: 0 !important;
+        min-height: auto !important;
+    }
+    @include breakpoint($desk-md){
+        max-width: 960px;
+    }
+
+    #overlay-close-wrapper{
+        @include overlay_close_wrapper(3, -1.5);
+        z-index: 5000;
+        @include breakpoint($tab){
+            margin-top: 0;
+        }
+    }
+
+    #overlay-close{
+        @include close_button;
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
+    }
+
+    #overlay-content{
+        padding: 0 !important;
+        margin-top: 3em;
+        @include breakpoint($tab){
+            padding: 0 1rem !important;
+            padding-top: 3em !important;
+        }
+    }
+
+    .views-field-field-moa{
+        @include breakpoint(788px){
+            max-width: 95%;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    .views-field-field-moa .field-content{
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        @include breakpoint($tab){
+            max-width: 480px;
+        }
+        @include breakpoint($desk-md){
+            max-width: 580px;
+        }
+    }
+
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 640px;
+        max-height: 360px;
+    }
+
+    .views-field-type{
+        // font-family: $pnb;
+        @include pnovaBold();
+        color: $mild-blue;
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 95%;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    #page-title{
+        line-height: 32px;
+        margin-top: 1rem;
+    }
+
+    #block-panels-mini-right-sidebar-overlay{
+        @include breakpoint($tab){
+            width: 40% !important;
+        }
+    }
+
+}
+
+.patient-testimonials.has-banner {
+    #page-title{
+        display: none;
+    }
+
+    .header-wrapper{
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center right;
+
+        @media screen and (max-width: 480px) {
+            background-position: 90% 0;
+        }
+
+        .logo_light{
+            display: block;
+        }
+
+        .logo_dark{
+            display: none;
+        }
+
+
+        #block-menu-menu-top-menu{
+            display: none;
+            @include breakpoint(668px){
+                display: block;
+                opacity: 1;
+            }
+            a{
+                color: $white;
+            }
+        }
+
+        .search_icon {
+            margin-right: 0;
+            margin-top: -2em;
+        }
+
+        header#header {
+            width: 100%;
+            @include breakpoint(788px) {
+                width: 90%;
+            }
+        }
+
+        #block-block-1,
+        #block-panels-mini-search {
+            padding: 0 5%;
+            @include breakpoint($tab) {
+                padding: 0;
+            }
+        }
+
+        #block-views-patient-testimonials-block-1{
+            height: 355px;
+            position: relative;
+            bottom: 0;
+            @include breakpoint($desk){
+                height: 750px;
+            }
+            .views-row{
+                background: url('../images/dark_blue_bg_trans.png') transparent;
+                max-width: 100%;
+                box-shadow: none;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                top: 20px;
+                border-radius: 0;
+                padding: 1.7em 1em;
+                margin-bottom: 0;
+                @media screen and (max-width: 788px) {
+                    margin: 0 !important;
+                }
+                @include breakpoint(788px) {
+                    background: transparent;
+                    max-width: 65%;
+                    transform: translateY(-5%);
+                    padding: 1em;
+                }
+                @include breakpoint($desk){
+                    max-width: 47%;
+                    transform: translateY(-58%);
+                }
+
+                @media screen and (max-width: 1180px) and (min-width: 1025px) {
+                    transform: translateY(-88%);
+                }
+
+                @include breakpoint($desk-md){
+                    left: 2em;
+                }
+            }
+
+            .views-field-title{
+                margin-bottom: 1.25em;
+                @include breakpoint($tab){
+                    margin-bottom: 0.75em;
+                }
+
+                a{
+                    color: white;
+                    font-size: 28px;
+                    line-height: 28px;
+                    text-transform: capitalize;
+                    @include breakpoint($desk){
+                        font-size: 36px;
+                        line-height: 43px;
+                    }
+                    @include breakpoint($desk-md){
+                        font-size: 42px;
+                        line-height: 50px;
+                    }
+                }
+            }
+
+            .views-field-body{
+                margin-bottom: 1em;
+                display: none;
+                @include breakpoint(788px){
+                    display: block;
+                    font-weight: bold;
+                }
+                span{
+                    color: white;
+                    @include breakpoint($desk){
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                    @include breakpoint($desk-md){
+                        font-size: 24px;
+                        line-height: 36px;
+                    }
+                }
+            }
+
+            .views-field-views-conditional {
+                margin-left: 1em;
+                a{
+                    // font-family: $pnb;
+                    @include pnovaBold();
+                    color: white;
+                    font-size: 19px;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                    background: url('../images/play_white_ico.png') no-repeat left center;
+                    background-size: 21px;
+                    padding-left: 1.5em;
+                    @include breakpoint($desk-md){
+                        font-size: 24px;
+                        line-height: 29px;
+                        background-size: 26px;
+                    }
+                }
+            }
+
+            .views-field-field-image{
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 786px) and (min-width: 668px) {
+        .header-wrapper {
+            background-position: -261px !important;
+        }
+    }
+}
+
+.patient-testimonials:not(.has-banner) {
+    .header-wrapper #block-menu-menu-top-menu a {
+        color: #508FBB;
+    }
+}

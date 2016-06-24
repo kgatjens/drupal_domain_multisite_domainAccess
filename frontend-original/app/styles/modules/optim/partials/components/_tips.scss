@@ -1,0 +1,32 @@
+.tools-tips{
+  @extend .our-practice;
+
+  .view-tools-tips{
+    @extend .view-our-practice;
+
+    .view-filters{
+        width: 100%;
+    }
+
+    .continue{
+      padding: 0.5em 0;
+    }
+
+    .views-exposed-form{
+        top: 0;
+        display: block;
+        margin-top: 0;
+    }
+
+    .view-filters+.view-content{
+        text-align: left;
+    }
+  }
+
+  #views-exposed-form-tools-tips-page-1{
+    @include long_search;
+  }
+}
+.node_tips{
+  @extend .node_practice;
+}

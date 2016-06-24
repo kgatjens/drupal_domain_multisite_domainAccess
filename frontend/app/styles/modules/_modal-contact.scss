@@ -1,0 +1,208 @@
+.#{$prefix}-m-modal-contact{
+	.modal-dialog{
+		margin: 30px auto;
+		max-width: 800px;
+		width: 70%;
+		.captcha-error {
+			color: red;
+		}
+		.modal-content{
+			.modal-body{
+				padding: 0;
+				.contact-col{
+					background: $white;
+					padding-bottom: 2em;
+					h2{
+						@include fontBold;
+						color: $header;
+						@include setThemeColors(mainColor);
+						font-size: 48px;
+						margin-top: 1.2em;
+						text-transform: uppercase;
+					}
+					.address-container{
+						width: 90%;
+						margin: 0.8em auto;
+					}
+					.email,
+					.phone{
+						word-break: break-all;
+						word-wrap: break-word;
+						color: $link-active;
+						a{
+							color: $link-active;
+							@include setThemeColors(links, links);
+						}
+						@include fontBold;
+						font-size: 16px;
+						margin-bottom: 0;
+						overflow: hidden;
+					}
+					.fa-phone,
+					.fa-envelope{
+						color: $header;
+						@include setThemeColors(mainColor);
+					}
+					.info-details{
+						margin-bottom: 1em;
+						.info{
+							@include fontBold;
+							color: $links;
+							@include setThemeColors(general-paragraph);
+							font-size: 16px;
+							margin: 0;
+						}
+						.institution{
+							@include fontBold;
+							color: $link-active;
+							@include setThemeColors(links);
+							font-size: 16px;
+							margin: 0;
+						}
+					}
+					.line{
+						border-bottom: 1px solid $divider;
+						margin: 0.8em auto;
+						width: 90%;
+					}
+					.save-contact{
+						@include fontBold;
+						background: $white;
+						border-radius: 28px;
+						border: 1px solid $links;
+						color: $links;
+						cursor: pointer;
+						font-size: 12px;
+						height: 42px;
+						margin-bottom: 1.5em;
+						margin-left: 4.5em;
+						outline: none;
+						padding: 0.8em 1em;
+						text-align: center;
+						text-decoration: none;
+						text-transform: uppercase;
+						width: 149px;
+						@include onHover(#23527c);
+						@include setThemeColors(links, links, links);
+					}
+				}
+				.signup-col{
+					background: $background-tabs;
+					h4{
+						@include fontBold;
+						color: $link-active;
+						@include setThemeColors(mainColor);
+						font-size: 22px;
+						margin-left: 1em;
+					}
+					input{
+						@include fontBold;
+						background-color: $white;
+						background-size: 100%;
+						background-image: url(../images/form_bot_border.png);
+						background-position: bottom;
+						background-repeat: no-repeat;
+						border: none;
+						color: $links;
+						font-size: 18px;
+						padding: 25px;
+						width: 90%;
+						margin-left: 25px;
+					}
+					input[type=submit]{
+						@include fontBold;
+						background: $background-tabs;
+						border-radius: 45px;
+						border: 1px solid $links;
+						color: $links;
+						font-size: 12px;
+						height: 42px;
+						margin: 4% 50% 3% 0;
+						padding: 0;
+						text-transform: uppercase;
+						width: 92px;
+						margin-left: 25px;
+						@include onHover(#23527c);
+						@include setThemeColors(links, links, links);
+					}
+					::-webkit-input-placeholder{
+						color: $links;
+					}
+
+					label{
+						@include fontBold;
+						color: $links;
+						@include setThemeColors(mainColor);
+						font-size: 18px;
+						margin-left: 25px;
+					}
+					.error-details{
+						margin-left: 25px;
+						@include fontARegular;
+						font-size: 14px;
+					}
+					.error-field{
+						border-bottom: 2px solid $error-field;
+					}
+					.captcha{
+						margin: 4% 0;
+						margin-left: 25px;
+					}
+					.close{
+						color: $header;
+						@include setThemeColors(links, links);
+						font-size: 30px;
+						margin: 0.1em 0.8em;
+					}
+					.paragraph{
+						@include fontARegular;
+						color: $paragraph-a;
+						@include setThemeColors(general-paragraph);
+						font-size: 14px;
+						margin-left: 1.5em;
+						width: 80%;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: $screen-sm-min){
+	    .modal-content, .modal-dialog{
+	        min-width: 630px;
+	    }
+	}
+	@include breakpoint('phone'){
+		.modal-dialog{
+			width: 100%;
+			margin: 0;
+			.modal-content{
+				.modal-body{
+					padding-bottom: 90px;
+					.signup-col{
+						input{
+							width: 100%;
+							margin-left: 0;
+						}
+						input[type=submit]{
+							margin: 0 auto;
+							display: block;
+						}
+						.captcha {
+							width: 300px;
+							margin: 0 auto;
+						}
+						.close{
+							position: fixed;
+							right: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+div.rc-button-default {
+	z-index: 9000;
+}

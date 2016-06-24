@@ -1,0 +1,74 @@
+.#{$prefix}-m-page{
+
+    .search-home-icon i {
+        @include breakpoint("tablet-down"){
+            // padding-right: 10px;
+        }
+    }
+
+	background: $background;
+	height: 100%;
+	min-height: 100vh;
+
+	.patient-stories .block-easy-breadcrumb {
+		padding: 0 15px;
+		margin-bottom: 20px;
+	}
+	.easy-breadcrumb{
+		font-size: 13px;
+			a{
+				@include fontARegular;
+				color: $general-paragraph;
+				@include setThemeColors(general-paragraph);
+				outline: none;
+				outline-style: none;
+				&:active{
+					color: $links;
+					@include setThemeColors(links);
+					@include fontBBold;
+				}
+				&:hover, &:focus, &:active {
+					outline: none;
+					outline-style: none;
+					text-decoration: none;
+				}
+			}
+			.easy-breadcrumb_segment-title  {
+				color: $links;
+			}
+	}
+	.description{
+		font-size: 16px;
+		color: $general-paragraph;
+		@include setThemeColors(general-paragraph);
+		@include fontARegular;
+		line-height: 25px;
+		margin-bottom: 40px;
+		a{
+			color: $links;
+		}
+	}
+	.jumbotron{
+		margin-bottom: 0;
+		overflow: hidden;
+		@include breakpoint('phone'){
+			margin-bottom: -46px;
+		}
+	}
+
+	ol li, ul li {
+		color: #7D7D7D;
+	} 
+	.search-input::-ms-clear {
+		display: none;
+	}
+
+	@include breakpoint('phone'){
+		.dropdown-menu {
+			position: relative;
+		}
+		.jumbotron{
+			width: 100vw;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.#{$prefix}-m-search-withfilter{
+	padding-bottom: 1em;
+	.filter{
+		width: 100%;
+		.btn{
+			text-align: left;
+			border-radius: 3px;
+			font-size: 14px;
+			width: 100%;
+			height: 51px;
+			box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+		}
+		.btn-default{
+			border: $white;
+			color: $paragraph-c;
+			@include fontBold;
+		}
+		.dropdown-menu{
+			width: 100%;
+			a{
+				color: $paragraph-c;
+				@include fontBold;
+				@extend %break-line;
+			}
+		}
+		.dropdown-toggle{
+			background: $white;
+			padding: 0 1em;
+			overflow: hidden;
+			span{
+				float: left;
+				line-height: 51px;
+				text-transform: uppercase;
+				@extend %break-line;
+			}
+			.fa{
+				line-height: 51px;
+				color: #508FBB;
+				@include setThemeColors(links);
+			}
+		}
+	}
+
+	.search-input{
+		width: 100%;
+		text-transform: uppercase;
+		color: $paragraph-c;
+		font-size: 15px;
+		padding: 1em;
+		@include fontBold;
+		border: $white;
+		border-radius: 3px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+		margin-bottom: 1em;
+	}
+}

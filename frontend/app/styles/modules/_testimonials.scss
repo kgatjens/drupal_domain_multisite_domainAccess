@@ -1,0 +1,157 @@
+.#{$prefix}-m-testimonials {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 3em;
+
+    .search-home-icon i {
+        color: $white;
+        @include breakpoint("tablet-down"){
+            padding-right: 10px;
+        }
+    }
+
+    .banner {
+
+        .bannerImage {
+            width: calc(100% - 245px);
+            height: auto;
+        }
+
+        .wrap-hero-description {
+            position: absolute;
+            display: inline-block;
+            width: 25%;
+            transition: transform 0.15s linear;
+
+            .hero-description {
+                p {
+                    color: $white;
+
+                    @include fontARegular;
+
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 30px;
+
+                    a {
+                        color: $color-button;
+                        text-decoration: none;
+                        &:active,
+                        &:hover {
+                            color: $color-button-hover;
+                        }
+                        @include setThemeColors(links, links);
+                    }
+                }
+            }
+
+            .hero-title {
+                a {
+                    color: $white;
+                    @include fontBold;
+                    font-size: 42px;
+                    line-height: 50px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @include breakpoint("tablet-up") {
+        .wrap-hero-description{
+            top: 32%;
+        }
+    }
+
+
+    @include breakpoint("desktop") {
+
+        .banner {
+
+            .wrap-hero-description {
+                .hero-title {
+                    a {
+                        font-size: 3.5vw;
+                        line-height: 4.1vw;
+                    }
+                }
+                .hero-description{
+                    p{
+                        font-size: 1.4vw;
+                        line-height: 2.4vw;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint("tablet") {
+
+        .banner {
+
+            .wrap-hero-description {
+                position: absolute;
+                display: inline-block;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                &:hover {
+                    transform: scale(1.04);
+                }
+
+                .hero-description {
+                    display: none;
+                }
+
+                .hero-title {
+                    a {
+                        font-size: 28px;
+                        line-height: 28px;
+                        background-color: rgba($links, 0.6);
+                        width: 100%;
+                        display: block;
+                        padding: 15px 15px 30px 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint("phone") {
+        width: 100%;
+        margin-bottom: 2em;
+        .banner {
+
+            .bannerImage{
+                width: 100%
+            }
+
+            .wrap-hero-description {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+
+                &:hover {
+                    transform: scale(1.04);
+                }
+
+                .hero-description {
+                    display: none;
+                }
+
+                .hero-title {
+                    a {
+                        font-size: 24px;
+                        line-height: 28px;
+                        background-color: rgba($links, 0.6);
+                        width: 100%;
+                        display: block;
+                        padding: 15px 15px 20px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

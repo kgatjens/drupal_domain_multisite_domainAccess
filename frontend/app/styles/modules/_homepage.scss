@@ -1,0 +1,408 @@
+
+
+.#{$prefix}-m-homepage {
+    background: #727c80;
+    .header-home{
+        padding-top: 1.5em;
+        margin-bottom: 7%;
+    }
+    .arrow-title {
+        position: absolute;
+        left: 17px;
+        transition: 0.3s ease-in-out;
+        -webkit-transition: 0.3s ease-in-out;
+    }
+
+    .search-home-icon {
+        text-decoration: none;
+        display: inline-block;
+        .fa{
+            color: $white;
+        }
+    }
+
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include breakpoint("tablet-up"){
+            width: 92%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 1em;
+        margin-top: calc(15% - 40px);
+        width: 100%;
+        left: 0;
+        padding: 0 15px;
+        &.flow-container {
+            position: absolute;
+            bottom: 0;
+        }
+        ul {
+            padding-left: 0;
+
+            li {
+                list-style: none;
+                display: inline-block;
+                border-left: 1px solid $white;
+                padding: 0 12px;
+                &:first-child {
+                    padding-left: 0;
+                    border-left: none;
+                }
+
+                a {
+                    color: $white;
+                    font-size: 16px;
+                    line-height: 26px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    @include fontBold;
+                }
+            }
+        }
+
+        p {
+            display: inline-block;
+            @include fontBRegular;
+            font-size: 11.35px;
+            line-height: 17px;
+            max-width: 300px;
+            font-weight: 600;
+            text-align: right;
+            color: $white;
+        }
+    }
+
+    .accordion {
+        margin-top: 13%;
+        padding-left: 35px;
+
+        @include breakpoint("tablet-down") {
+            padding-left: 20px;
+        }
+
+        .accordion-item {
+            background: none;
+            border: none;
+            margin-bottom: 7%;
+            box-shadow: none;
+
+            a {
+                text-decoration: none;
+                outline: none;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                display: inline-block;
+
+                @include fontBold;
+
+                font-size: 48px;
+                line-height: 48px;
+                cursor: pointer;
+                color: $white;
+                margin: 0;
+
+                a {
+                    color: $white;
+                }
+            }
+
+            .accordion-body {
+                @include fontARegular;
+
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 0 0 8%;
+                width: 70%;
+                color: $white;
+
+                .more {
+                    border: 1px solid $white;
+                    border-radius: 40px;
+                    margin-top: 1em;
+
+                    @include fontBold;
+
+                    font-size: 14px;
+                    line-height: 42px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 12px 20px;
+                    color: $white;
+                }
+            }
+
+            .accordion-heading {
+                border: none;
+                padding: 0;
+                display: inline-block;
+                outline: none;
+                a{
+                    display: block;
+                }
+            }
+
+            .ui-accordion-content {
+                display: none;
+                box-sizing: content-box;
+            }
+        }
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        right: 245px;
+        bottom: 0;
+        left: 0;
+        background-color: #727c80;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background 0.3s ease-in-out;
+        background-position: center;
+        overflow-y: auto;
+
+        @include breakpoint("tablet") {
+            background-position: 80%;
+        }
+    }
+
+    .icon-logo {
+        max-width: 100%;
+    }
+
+    .icon-search {
+        font-size: 24px;
+        position: relative;
+        right: 0;
+        line-height: 16px;
+        padding-top: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        float: none !important;
+    }
+
+    .orthopedic-homepage{
+        .icon-logo,
+        .orthopedic-name{
+            float: left;
+        }
+        .icon-logo, .search-home-icon {
+            margin: 0;
+            padding-top: 1.5em;
+
+        }
+        .orthopedic-name{
+            color: #FFFFFF;
+            line-height: 21px;
+            border-left: 1px solid #FFFFFF;
+            padding-left: 12px;
+            margin: 37px 0 0 12px;
+            height: 25px;
+        }
+        .search-home-icon{
+            float: right;
+            .fa{
+                position: relative;
+                padding: 0;
+                margin: 0;
+                line-height: 42px;
+            }
+        }
+    }
+
+    @include breakpoint("tablet") {
+
+        .tattnall footer .disclaimer{
+            margin-top: 67px;
+        }
+
+        .accordion {
+            width: 100%;
+
+            .accordion-item {
+                h2 {
+                    font-size: 36px;
+                }
+            }
+        }
+
+        .orthopedic-homepage{
+            .icon-logo{
+                width: 200px;
+            }
+            .orthopedic-name{
+                margin-top: 29px;
+                height: 24px;
+            }
+            .search-home-icon{
+                .fa{
+                    line-height: 24px;
+                }
+            }
+        }
+
+    }
+
+
+    @include breakpoint("tablet-down") {
+        footer {
+            ul {
+                padding-left: 0;
+
+                li {
+                    display: block;
+                    border: none;
+                    padding-left: 0;
+                    &:first-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        .accordion {
+            width: 100%;
+
+            .accordion-item {
+                h2 {
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+
+                .accordion-body {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+
+    @media (max-height: 700px){
+        footer {
+            position: relative !important;
+        }
+    }
+    @include breakpoint("phone") {
+        .icon-logo {
+            max-width: 90%;
+            margin: 0;
+        }
+
+        .orthopedic-homepage{
+            .orthopedic-name{
+                line-height: 12px;
+                padding-left: 5px;
+                margin: 30px 0 0 5px;
+                height: 12px;
+                font-size: 12px;
+            }
+            .search-home-icon{
+                margin-left: 10px;
+                .fa{
+                    position: relative;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 19px;
+                }
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            margin: 20px 0 80px;
+            &.flow-container {
+                position: relative;
+            }
+            ul {
+                padding-left: 0;
+
+                li {
+                    display: block;
+
+                    &:first-child {
+                        padding-right: 0;
+                    }
+
+                    &:last-child {
+                        padding-left: 0;
+                        border: none;
+                    }
+                }
+            }
+
+            p {
+                font-size: 8px;
+                line-height: 10px;
+                text-align: left;
+                float: left;
+            }
+        }
+
+        .accordion {
+            margin-left: 0;
+
+            .accordion-item {
+                h2 {
+                    line-height: 32px;
+                    font-size: 27px;
+                }
+            }
+        }
+
+        .background {
+            right: 0;
+            background-position: 80% center;
+        }
+    }
+
+
+    @media (max-width: 350px) {
+        .icon-logo{
+            width: 100%;
+        }
+        .search-home-icon{
+            .fa{
+                font-size: 7.5vw;
+            }
+        }
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2 / 3) and (orientation: portrait) {
+
+        // footer {
+        //     position: relative !important;
+        //     bottom: 0;
+        //     padding-bottom: 100px;
+        // }
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape){
+        footer{
+            padding-bottom: 5em;
+        }
+    }
+
+}
+
+@include breakpoint("tablet") {
+    .tattnall footer .disclaimer{
+        margin-top: 67px;
+    }
+}

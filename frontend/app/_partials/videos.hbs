@@ -1,0 +1,33 @@
+<section class="pure-oh-m-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				{{> header }}
+				<div class="row">
+					{{> breadcrumb }}
+				</div>
+				<div id="videos-page">
+					<h1>Videos</h1>
+					<p class="description">Lorem ipsum Qui voluptate id eiusmod sit laboris.</p>
+					<div class="cards">
+						<div class="row row-eq-height">
+							{{> cards/card-videos title="Title 1" description="Description 1" videoId="sGbxmsDFVnE"}}
+							{{> cards/card-videos title="Title 2" description="Description 2" videoId="TYLZhDTITr0" }}
+							{{> cards/card-videos title="Title 3" description="Description 3" videoId="sGbxmsDFVnE" }}
+							{{> cards/card-videos title="Title 4" description="Description 4" videoId="TYLZhDTITr0" }}
+							{{> cards/card-videos title="Title 5" description="Description 5" videoId="sGbxmsDFVnE" }}
+							{{> cards/card-videos title="Title 6" description="Description 6" videoId="TYLZhDTITr0" }}
+						</div>
+					</div>
+					<div class="row">
+						{{> load-more}}
+					</div>
+				</div>
+				{{> footer }}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				{{> sidebar-flat }}
+			</div>
+		</div>
+	</div>
+</section>

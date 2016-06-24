@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11//EN
+N:Imaging;Optim;;;
+FN:Optim Imaging
+EMAIL;type=INTERNET;type=HOME;type=pref:imagingsupport@optimhealth.com
+TEL;type=pref:912.644.5313
+ADR;type=HOME;type=pref:;;210 East DeRenne Avenue;Savannah;GA;31405;USA
+item1.URL;type=pref:www.Imaging.OptimHealth.com
+item1.X-ABLabel:_$!<HomePage>!$_
+UID:43a9e570966111a0
+X-ABUID:7D3025CB-B83E-4A9E-8B16-FE355C991FBB:ABPerson
+END:VCARD

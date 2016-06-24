@@ -1,0 +1,100 @@
+<div class="modal fade pure-oh-h-modals pure-oh-m-modal-team" id="modalTeam" tabindex="-1" role="dialog" aria-labelledby="modalTeam">
+	<div class="modal-loader"></div>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="leftcol">
+					<span data-dismiss="modal" aria-label="Close" class="pull-right close"><i class="fa fa-times"></i></span>
+					<figure class="modal-img">
+					</figure>
+					<header class="main-header-info">
+					</header>
+			    	<div>
+			    		<ul class="nav nav-pills nav-tabs" role="tablist">
+			    			<li role="presentation" class="text-center">
+			    				<a href="#info" aria-controls="info" role="tab" data-toggle="tab">
+			    				<i class="fa fa-info-circle icon"></i>Info</a>
+			    			</li>
+			    			<li role="presentation" class="text-center">
+			    				<a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">
+			    				<i class="fa fa-map-marker icon"></i>Locations</a>
+			    			</li>
+			    			<li role="presentation" class="text-center">
+			    				<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+			    				<i class="fa fa-envelope icon"></i>Contact</a>
+			    			</li>
+			    			<li role="presentation" class="text-center">
+			    				<a href="#share" class="card-share" aria-controls="share" role="tab" data-toggle="tab">
+			    				<i class="fa fa-share-square-o icon"></i>Share</a>
+			    			</li>
+			    			<li role="presentation" class="text-center">
+			    				<a href="#links" aria-controls="links" role="tab" data-toggle="tab">
+			    				<i class="fa fa-link icon"></i>Links</a>
+			    			</li>
+			    		</ul>
+			    		<div class="tab-content">
+			    			<div role="tabpanel" class="tab-pane active certifications-info" id="info">
+			    			</div>
+			    			<div role="tabpanel" class="tab-pane locations-tab" id="locations">
+			    			</div>
+			    			<div role="tabpanel" class="tab-pane" id="contact">
+			    				<div class="row">
+			    					<div class="col-xs-10 col-xs-offset-1">
+			    						<p class="description">Complete the following form to contact this doctor.</p>
+			    					</div>
+			    				</div>
+			    				<div class="error-details col-xs-10 col-xs-offset-1"></div>
+			    				<form class="webform-client-form webform-client-form-143 has-validation-callback" enctype="multipart/form-data" action="/team-optim" method="post" id="webform-client-form-143" accept-charset="UTF-8">
+			    					<div>
+			    						<div class="form-item webform-component webform-component-textfield webform-component--name">
+											<label class="element-invisible" for="edit-submitted-name--3">Name <span class="form-required" title="This field is required.">*</span></label>
+										 	<input required="required" placeholder="Name*" type="text" id="edit-submitted-name--3" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required field-name">
+										</div>
+										<div class="form-item webform-component webform-component-email webform-component--email">
+											<label class="element-invisible" for="edit-submitted-email--3">Email <span class="form-required" title="This field is required.">*</span></label>
+										 	<input required="required" class="email form-text form-email required field-email" placeholder="Email Address*" type="email" id="edit-submitted-email--3" name="submitted[email]" size="60" required="required">
+										</div>
+										<div class="form-item webform-component webform-component-textarea webform-component--message">
+										  	<label class="element-invisible" for="edit-submitted-message">Message <span class="form-required" title="This field is required.">*</span></label>
+										 	<div class="form-textarea-wrapper">
+										 		<textarea required="required" placeholder="Message*" id="edit-submitted-message" name="submitted[message]" cols="60" rows="5" class="form-textarea required field-message" required="required"></textarea>
+										 	</div>
+										</div>
+										<input type="hidden" name="details[sid]">
+										<input type="hidden" name="details[page_num]" value="1">
+										<input type="hidden" name="details[page_count]" value="1">
+										<input type="hidden" name="details[finished]" value="0">
+										<input type="hidden" name="form_build_id" value="form-ukydY_Q8O_sbhaE0EUpnA8gm4gXWWOTFe7LO-_4N8zc">
+										<input type="hidden" name="form_id" value="webform_client_form_143">
+										<div class="form-actions">
+											<input class="webform-submit button-primary form-submit" type="submit" name="op" value="Submit">
+										</div>
+									</div>
+								</form>
+			    			</div>
+			    			<div role="tabpanel" class="tab-pane" id="share">
+			    				<div class="row">
+			    					<div class="col-xs-10 col-xs-offset-1 text-center">
+			    						<p class="share-info">Get social, share Dr. Jack Considine’s information through:</p>
+			    					</div>
+			    				</div>
+			    				<div class="row">
+			    					<div class="col-xs-12 text-center">
+			    						{{> share }}
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div role="tabpanel" class="tab-pane links-tab" id="links">
+
+			    			</div>
+
+			    		</div>
+			    	</div>
+				</div>
+		    	<div class="visible-xs footer">
+		    		{{> sidebar-modal }}
+		    	</div>
+			</div>
+		</div>
+	</div>
+</div>

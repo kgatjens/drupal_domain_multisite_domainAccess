@@ -1,0 +1,46 @@
+//
+// Global variables
+// --------------------------------------------------
+
+$prefix: 'demo';
+// .#{$prefix}-m   = module
+// .#{$prefix}-h  = helper
+// .#{$prefix}-mix = mixin
+// .#{$prefix}-is  = state
+// .#{$prefix}-f   = function
+
+//== Typography Vars
+$font-url:        "../fonts";
+// Adelle
+$adelle-regular: "adelle-regular-webfont";
+$adellebold-italic: "adelle-bold-italic-webfont";
+$adelle-bold: "adelle-bold-webfont";
+$adelle-italic: "adells-italic-webfont";
+// Proxima Nova
+$pnova-black: "proximanova-black-webfont";
+$pnova-bold: "proximanova-bold-webfont";
+$pnova-bold-italic: "proximanova-boldit-webfont";
+$pnova-extrabold: "proximanova-extrabold-webfont";
+$pnova-light: "proximanova-light-webfont";
+$pnova-light-italic: "proximanova-lightitalic-webfont";
+$pnova-regitalic: "proximanova-regitalic-webfont";
+$pnova-regular: "proximanova-regular-webfont";
+$pnova-semibold: "proximanova-semibold-webfont";
+$pnova-semibold-italic: "proximanova-semibolditalic-webfont";
+// Proxima Nova Condenced
+$pnovacond-light: "proximanovacond-light-webfont";
+$pnovacond-lightit: "proximanovacond-lightit-webfont";
+$pnovacond-regular: "proximanovacond-regular-webfont";
+$pnovacond-regularit: "proximanovacond-regularit-webfont";
+$pnovacond-semibold: "proximanovacond-semibold-webfont";
+$pnovacond-semiboldit: "proximanovacond-semiboldit-webfont";
+
+//== Colors Vars
+$black: #000;
+$white: #fff;
+$mild-blue: #508FBB;
+$border-blue: #90BEDC;
+$dark-blue: #1F4265;
+$light-gray: #c3c3c3;
+
+// $pnb : 'proxima_nova_rgbold';
